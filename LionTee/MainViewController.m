@@ -270,19 +270,30 @@
 	_orderNumber = [NSString stringWithFormat:@"order_lionshirt_%f", date.timeIntervalSince1970];
     NSString *path = [NSString stringWithFormat:@"./%@/", _orderNumber];
 	
-//	_createDirectory = [[BRRequestCreateDirectory alloc] initWithDelegate:self];
-//	_createDirectory.path = [NSString stringWithFormat:@"/%@/", _orderNumber];
-//	_createDirectory.hostname = myHostname;
-//	_createDirectory.username = myUsername;
-//	_createDirectory.password = myPassword;
-//	[_createDirectory start];
-
     [client createDirectoryAtPath:path success:^(void) {
         // Success!
         NSLog(@"Just created my new folder %@",path);
+        
+        _countUploading = 0;
+        _allUploading = 0;
+        _createDirectory = nil;
+        
+        [self uploadAllDataToFTP];
+        
+        [self showWaitView:YES];
+        
+        _countUploading --;
+        if (!_countUploading) {
+            [_hudProgress hide:YES afterDelay:0.5];
+            [self performSegueWithIdentifier:@"orderComplete" sender:self];
+        }
+        
     } failure:^(NSError *error) {
         // Display an error...
         NSLog(@"Failed to create my new folder %@",path);
+        NSLog(@"Error is %@",error);
+        _createDirectory = nil;
+        [self showWaitView:NO];
     }];
 }
 
@@ -1452,49 +1463,8 @@
 }
 
 
-#pragma mark - BRRequest delegate implementation
 
-/// requestCompleted
-/// Indicates when a request has completed without errors.
-/// \param request The request object
 
-- (void)requestCompleted:(BRRequest *)request
-{
-
-    NSLog(@"requestCompleted");
-	if (request == _createDirectory) {
-		NSLog(@"folder is created");
-        _countUploading = 0;
-        _allUploading = 0;
-		_createDirectory = nil;
-
-        [self uploadAllDataToFTP];
-        
-        [self showWaitView:YES];
-        
-		return;
-	}
-    
-    _countUploading --;
-    if (!_countUploading) {
-        [_hudProgress hide:YES afterDelay:0.5];
-        [self performSegueWithIdentifier:@"orderComplete" sender:self];
-
-    }
-    
-	NSLog(@"%@ completed!", request);
-}
-
-/// requestFailed
-/// \param request The request object
-- (void)requestFailed:(BRRequest *)request
-{
-	if (request == _createDirectory) {
-		_createDirectory = nil;
-	}
-    [self showWaitView:NO];
-	NSLog(@"faile: %@", request.error.message);
-}
 
 /// shouldOverwriteFileWithRequest
 /// \param request The request object;
