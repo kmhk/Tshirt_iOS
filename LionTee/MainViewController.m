@@ -42,14 +42,10 @@
     UIApplication * application = [UIApplication sharedApplication];
     
     //production
-    //        myHostname = @"ftp.ipmapp.com";
-    //        myUsername = @"nicoleaza";
-    //        myPassword = @"Nicoleaza1!";
+    myHostname = @"ftp.ipmapp.com";
+    myUsername = @"nicoleaza";
+    myPassword = @"Nicoleaza1!";
     
-    //localhost
-    myHostname = @"192.168.0.100";
-    myUsername = @"iii";
-    myPassword = @"1A3d4f5g";
     
     if([[UIDevice currentDevice] respondsToSelector:@selector(isMultitaskingSupported)])
     {
@@ -77,14 +73,14 @@
             {
                 NSTimeInterval seconds = [[UIApplication sharedApplication] backgroundTimeRemaining];
                 if (seconds < 1000) {
-                    NSLog(@"Background time Remaining: %f\n",seconds);
+//                    NSLog(@"Background time Remaining: %f\n",seconds);
                     if (didCreateDirectoryToFtp != YES) {
                         didCreateDirectoryToFtp = YES;
                         [weakSelf createDirectoryToFtp];
                     }
                 }
                 
-                [NSThread sleepForTimeInterval:1]; //wait for 1 sec
+//                [NSThread sleepForTimeInterval:1]; //wait for 1 sec
             }
             //#### background task ends
             
@@ -874,13 +870,18 @@
 }
 - (IBAction)onAddShirtColor:(id)sender
 {
-	NSInteger index = [sender tag] - 1;
+    UIButton *button = (UIButton *)sender;
+    NSInteger bTag = button.tag;
+    
+    NSLog(@"onAddShirtColor - %ld",(long)bTag);
+	int index = bTag - 1;
 	
 	_index = 1;
 	_colorIndex = index;
 	
 	for (NSInteger i = 0; i < 3; i ++) {
-		NSString *name = [NSString stringWithFormat:@"%@%d.png", _ShirtColors[index], i + 1];
+		NSString *name = [NSString stringWithFormat:@"%@%ld.png", _ShirtColors[index], i + 1];
+        NSLog(@"Name is %@",name);
 		
 		UIImageView *imgView = _imgViewShirts[i];
 		[imgView setImage:[UIImage imageNamed:name]];

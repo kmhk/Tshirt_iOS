@@ -1105,6 +1105,7 @@
 				ORGANIZATIONNAME = Bai;
 				TargetAttributes = {
 					3FFCDCDB19EFBFB600A7C43B = {
+						DevelopmentTeam = E75PFKJV58;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
