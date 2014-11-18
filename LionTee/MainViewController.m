@@ -41,6 +41,16 @@
     // Do any additional setup after loading the view.
     UIApplication * application = [UIApplication sharedApplication];
     
+    //production
+    //        myHostname = @"ftp.ipmapp.com";
+    //        myUsername = @"nicoleaza";
+    //        myPassword = @"Nicoleaza1!";
+    
+    //localhost
+    myHostname = @"192.168.0.100";
+    myUsername = @"iii";
+    myPassword = @"1A3d4f5g";
+    
     if([[UIDevice currentDevice] respondsToSelector:@selector(isMultitaskingSupported)])
     {
         NSLog(@"Multitasking Supported");
@@ -60,18 +70,14 @@
             
             //### background task starts
             NSLog(@"Running in the background\n");
-            BOOL didCreateDirectoryToFTP = NO;
+            
+            client = [FTPClient clientWithHost:myHostname port:21 username:myUsername password:myPassword];
+            
             while(TRUE)
             {
                 NSTimeInterval seconds = [[UIApplication sharedApplication] backgroundTimeRemaining];
                 if (seconds < 1000) {
                     NSLog(@"Background time Remaining: %f\n",seconds);
-                }
-
-                if (didCreateDirectoryToFTP != YES && [[UIApplication sharedApplication] backgroundTimeRemaining] < 1000) {
-                    NSLog(@"Going to create the FTP Directory from the background task");
-                    didCreateDirectoryToFTP = YES;
-                    [weakSelf createDirectoryToFtp];
                 }
                 
                 [NSThread sleepForTimeInterval:1]; //wait for 1 sec
@@ -87,18 +93,6 @@
     {
         NSLog(@"Multitasking Not Supported");
     }
-    
-    //production
-    //        myHostname = @"ftp.ipmapp.com";
-    //        myUsername = @"nicoleaza";
-    //        myPassword = @"Nicoleaza1!";
-    
-    //localhost
-    myHostname = @"192.168.0.100";
-    myUsername = @"iii";
-    myPassword = @"1A3d4f5g";
-    
-    client = [FTPClient clientWithHost:myHostname port:21 username:myUsername password:myPassword];
 	
     //basePrice = 19.99;
     _isFullImage = self.isFull_Flag;
@@ -352,7 +346,7 @@
     [client uploadFile:localFilePath to:path progress:NULL success:^(void) {
         NSLog(@"Uploaded the %@ sucesfully", path);
     } failure:^(NSError *error) {
-        NSLog(@"Error @% for the path: %@",error,path);
+        NSLog(@"Error %@ for the path: %@",error,path);
     }];
 }
 
@@ -379,23 +373,22 @@
     
     _countUploading ++;
     _allUploading ++;
-
     
-    //TODO: upload string to ftp
-//	_dataText = [[NSData alloc] initWithData:data];
-//	
-//	_uploadText = [[BRRequestUpload alloc] initWithDelegate:self];
+    NSString *localFilePath = [NSHomeDirectory() stringByAppendingString:[NSString stringWithFormat:@"/text.txt"]];
+    if ([data writeToFile:localFilePath atomically:YES]) {
+        NSLog(@"sendStringToFTP: save ok %@",localFilePath);
+    }
+    else {
+        NSLog(@"sendStringToFTP: save failed %@",localFilePath);
+    }
 	
 	NSString *path = [NSString stringWithFormat:@"/%@/%@", _orderNumber, @"text.txt"];
-//	
-//	//----- for anonymous login just leave the username and password nil
-//	_uploadText.path = path;
-//	_uploadText.hostname = myHostname;
-//	_uploadText.username = myUsername;
-//	_uploadText.password = myPassword;
-//	
-//	//----- we start the request
-//	[_uploadText start];
+    
+    [client uploadFile:localFilePath to:path progress:NULL success:^(void) {
+        NSLog(@"Uploaded the %@ sucesfully", path);
+    } failure:^(NSError *error) {
+        NSLog(@"Error %@ or the path: %@",error,path);
+    }];
 }
 
 - (void)sendShippingTo:(NSString *)shippingAddress
@@ -407,24 +400,19 @@
     
     [data appendData:[shippingAddress dataUsingEncoding:NSUTF8StringEncoding]];
 
-    //TODO: upload shipping info
-//    _dataShipping = [[NSData alloc] initWithData:data];
-//    
-//    _uploadShipping = [[BRRequestUpload alloc] initWithDelegate:self];
-    
+    NSString *localFilePath = [NSHomeDirectory() stringByAppendingString:[NSString stringWithFormat:@"/shippingAddress.txt"]];
+    if ([data writeToFile:localFilePath atomically:YES]) {
+        NSLog(@"sendStringToFTP: save ok %@",localFilePath);
+    }
+    else {
+        NSLog(@"sendStringToFTP: save failed %@",localFilePath);
+    }
     NSString *path = [NSString stringWithFormat:@"/%@/%@", _orderNumber, @"shippingAddress.txt"];
-    
-    //----- for anonymous login just leave the username and password nil
-//    _uploadShipping.path = path;
-//    _uploadShipping.hostname = myHostname;
-//    _uploadShipping.username = myUsername;
-//    _uploadShipping.password = myPassword;
-//    
-////    NSLog(@"Data: %@", _dataShipping);
-//    
-//    //----- we start the request
-//    [_uploadShipping start];
-    
+    [client uploadFile:localFilePath to:path progress:NULL success:^(void) {
+        NSLog(@"Uploaded the %@ sucesfully", path);
+    } failure:^(NSError *error) {
+        NSLog(@"Error %@ or the path: %@",error,path);
+    }];
 }
 
 - (void)sendShippingString:(NSString *)shippingString
@@ -435,24 +423,20 @@
     NSMutableData *data = [NSMutableData data];
     
     [data appendData:[shippingString dataUsingEncoding:NSUTF8StringEncoding]];
-
-    //TODO: upload shipping string
-//    _dataShipping = [[NSData alloc] initWithData:data];
-//    
-//    _uploadShipping = [[BRRequestUpload alloc] initWithDelegate:self];
+    NSString *localFilePath = [NSHomeDirectory() stringByAppendingString:[NSString stringWithFormat:@"/Order Information.txt"]];
+    if ([data writeToFile:localFilePath atomically:YES]) {
+        NSLog(@"sendStringToFTP: save ok %@",localFilePath);
+    }
+    else {
+        NSLog(@"sendStringToFTP: save failed %@",localFilePath);
+    }
     
     NSString *path = [NSString stringWithFormat:@"/%@/%@", _orderNumber, @"Order Information.txt"];
-    
-    //----- for anonymous login just leave the username and password nil
-//    _uploadShipping.path = path;
-//    _uploadShipping.hostname = myHostname;
-//    _uploadShipping.username = myUsername;
-//    _uploadShipping.password = myPassword;
-//    
-//    //    NSLog(@"Data: %@", _dataShipping);
-//    
-//    //----- we start the request
-//    [_uploadShipping start];
+    [client uploadFile:localFilePath to:path progress:NULL success:^(void) {
+        NSLog(@"Uploaded the %@ sucesfully", path);
+    } failure:^(NSError *error) {
+        NSLog(@"Error %@ or the path: %@",error,path);
+    }];
     
 }
 

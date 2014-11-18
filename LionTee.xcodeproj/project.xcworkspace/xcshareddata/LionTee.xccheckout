@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>4F97AF0C-8013-4123-B356-26CA9E45815C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>LionTee</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>658F9A17EE22E56FD6929854A30FB76092402522</key>
+		<string>https://bitbucket.org/www_eugenehp_tk/liontee.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>LionTee.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>658F9A17EE22E56FD6929854A30FB76092402522</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://bitbucket.org/www_eugenehp_tk/liontee.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>658F9A17EE22E56FD6929854A30FB76092402522</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>658F9A17EE22E56FD6929854A30FB76092402522</string>
+			<key>IDESourceControlWCCName</key>
+			<string>LionTee-10</string>
+		</dict>
+	</array>
+</dict>
+</plist>

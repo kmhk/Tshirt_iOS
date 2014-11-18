@@ -109,16 +109,6 @@
 		3F064B1E19F123440018C248 /* InfHSBSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F064B1519F123440018C248 /* InfHSBSupport.m */; };
 		3F064B1F19F123440018C248 /* InfSourceColorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F064B1719F123440018C248 /* InfSourceColorView.m */; };
 		3F064B2719F12A520018C248 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F064B2619F12A520018C248 /* CoreImage.framework */; };
-		3F0DD5EF19F4FB09003773FB /* BRRequest+_UserData.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0DD5DC19F4FB09003773FB /* BRRequest+_UserData.m */; };
-		3F0DD5F019F4FB09003773FB /* BRRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0DD5DE19F4FB09003773FB /* BRRequest.m */; };
-		3F0DD5F119F4FB09003773FB /* BRRequestCreateDirectory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0DD5E019F4FB09003773FB /* BRRequestCreateDirectory.m */; };
-		3F0DD5F219F4FB09003773FB /* BRRequestDelete.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0DD5E219F4FB09003773FB /* BRRequestDelete.m */; };
-		3F0DD5F319F4FB09003773FB /* BRRequestDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0DD5E419F4FB09003773FB /* BRRequestDownload.m */; };
-		3F0DD5F419F4FB09003773FB /* BRRequestError.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0DD5E619F4FB09003773FB /* BRRequestError.m */; };
-		3F0DD5F519F4FB09003773FB /* BRRequestListDirectory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0DD5E819F4FB09003773FB /* BRRequestListDirectory.m */; };
-		3F0DD5F619F4FB09003773FB /* BRRequestQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0DD5EA19F4FB09003773FB /* BRRequestQueue.m */; };
-		3F0DD5F719F4FB09003773FB /* BRRequestUpload.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0DD5EC19F4FB09003773FB /* BRRequestUpload.m */; };
-		3F0DD5F819F4FB09003773FB /* BRStreamInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0DD5EE19F4FB09003773FB /* BRStreamInfo.m */; };
 		3F0DD60419F55041003773FB /* UIImage+tintImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0DD60319F55041003773FB /* UIImage+tintImage.m */; };
 		3F12EA4C19F795BC00AADDFB /* Stripe+ApplePay.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F12EA3C19F795BC00AADDFB /* Stripe+ApplePay.m */; };
 		3F12EA4D19F795BC00AADDFB /* STPAPIConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F12EA3E19F795BC00AADDFB /* STPAPIConnection.m */; };
@@ -379,27 +369,6 @@
 		3F064B1619F123440018C248 /* InfSourceColorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfSourceColorView.h; sourceTree = "<group>"; };
 		3F064B1719F123440018C248 /* InfSourceColorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfSourceColorView.m; sourceTree = "<group>"; };
 		3F064B2619F12A520018C248 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
-		3F0DD5DA19F4FB09003773FB /* BRGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRGlobal.h; sourceTree = "<group>"; };
-		3F0DD5DB19F4FB09003773FB /* BRRequest+_UserData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BRRequest+_UserData.h"; sourceTree = "<group>"; };
-		3F0DD5DC19F4FB09003773FB /* BRRequest+_UserData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BRRequest+_UserData.m"; sourceTree = "<group>"; };
-		3F0DD5DD19F4FB09003773FB /* BRRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRRequest.h; sourceTree = "<group>"; };
-		3F0DD5DE19F4FB09003773FB /* BRRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRRequest.m; sourceTree = "<group>"; };
-		3F0DD5DF19F4FB09003773FB /* BRRequestCreateDirectory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRRequestCreateDirectory.h; sourceTree = "<group>"; };
-		3F0DD5E019F4FB09003773FB /* BRRequestCreateDirectory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRRequestCreateDirectory.m; sourceTree = "<group>"; };
-		3F0DD5E119F4FB09003773FB /* BRRequestDelete.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRRequestDelete.h; sourceTree = "<group>"; };
-		3F0DD5E219F4FB09003773FB /* BRRequestDelete.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRRequestDelete.m; sourceTree = "<group>"; };
-		3F0DD5E319F4FB09003773FB /* BRRequestDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRRequestDownload.h; sourceTree = "<group>"; };
-		3F0DD5E419F4FB09003773FB /* BRRequestDownload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRRequestDownload.m; sourceTree = "<group>"; };
-		3F0DD5E519F4FB09003773FB /* BRRequestError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRRequestError.h; sourceTree = "<group>"; };
-		3F0DD5E619F4FB09003773FB /* BRRequestError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRRequestError.m; sourceTree = "<group>"; };
-		3F0DD5E719F4FB09003773FB /* BRRequestListDirectory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRRequestListDirectory.h; sourceTree = "<group>"; };
-		3F0DD5E819F4FB09003773FB /* BRRequestListDirectory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRRequestListDirectory.m; sourceTree = "<group>"; };
-		3F0DD5E919F4FB09003773FB /* BRRequestQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRRequestQueue.h; sourceTree = "<group>"; };
-		3F0DD5EA19F4FB09003773FB /* BRRequestQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRRequestQueue.m; sourceTree = "<group>"; };
-		3F0DD5EB19F4FB09003773FB /* BRRequestUpload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRRequestUpload.h; sourceTree = "<group>"; };
-		3F0DD5EC19F4FB09003773FB /* BRRequestUpload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRRequestUpload.m; sourceTree = "<group>"; };
-		3F0DD5ED19F4FB09003773FB /* BRStreamInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRStreamInfo.h; sourceTree = "<group>"; };
-		3F0DD5EE19F4FB09003773FB /* BRStreamInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRStreamInfo.m; sourceTree = "<group>"; };
 		3F0DD60219F55041003773FB /* UIImage+tintImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+tintImage.h"; sourceTree = "<group>"; };
 		3F0DD60319F55041003773FB /* UIImage+tintImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+tintImage.m"; sourceTree = "<group>"; };
 		3F12EA3B19F795BC00AADDFB /* Stripe+ApplePay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Stripe+ApplePay.h"; sourceTree = "<group>"; };
@@ -714,34 +683,6 @@
 			path = InfColorPicker;
 			sourceTree = "<group>";
 		};
-		3F0DD5D919F4FB09003773FB /* BlackRaccoon */ = {
-			isa = PBXGroup;
-			children = (
-				3F0DD5DA19F4FB09003773FB /* BRGlobal.h */,
-				3F0DD5DB19F4FB09003773FB /* BRRequest+_UserData.h */,
-				3F0DD5DC19F4FB09003773FB /* BRRequest+_UserData.m */,
-				3F0DD5DD19F4FB09003773FB /* BRRequest.h */,
-				3F0DD5DE19F4FB09003773FB /* BRRequest.m */,
-				3F0DD5DF19F4FB09003773FB /* BRRequestCreateDirectory.h */,
-				3F0DD5E019F4FB09003773FB /* BRRequestCreateDirectory.m */,
-				3F0DD5E119F4FB09003773FB /* BRRequestDelete.h */,
-				3F0DD5E219F4FB09003773FB /* BRRequestDelete.m */,
-				3F0DD5E319F4FB09003773FB /* BRRequestDownload.h */,
-				3F0DD5E419F4FB09003773FB /* BRRequestDownload.m */,
-				3F0DD5E519F4FB09003773FB /* BRRequestError.h */,
-				3F0DD5E619F4FB09003773FB /* BRRequestError.m */,
-				3F0DD5E719F4FB09003773FB /* BRRequestListDirectory.h */,
-				3F0DD5E819F4FB09003773FB /* BRRequestListDirectory.m */,
-				3F0DD5E919F4FB09003773FB /* BRRequestQueue.h */,
-				3F0DD5EA19F4FB09003773FB /* BRRequestQueue.m */,
-				3F0DD5EB19F4FB09003773FB /* BRRequestUpload.h */,
-				3F0DD5EC19F4FB09003773FB /* BRRequestUpload.m */,
-				3F0DD5ED19F4FB09003773FB /* BRStreamInfo.h */,
-				3F0DD5EE19F4FB09003773FB /* BRStreamInfo.m */,
-			);
-			path = BlackRaccoon;
-			sourceTree = "<group>";
-		};
 		3F12EA3919F795BC00AADDFB /* Stripe */ = {
 			isa = PBXGroup;
 			children = (
@@ -1023,7 +964,6 @@
 				219A765F1A0B821E0050A70F /* PaymentKit */,
 				3F7695261A032CAA000B517D /* ARFontPicker */,
 				3F12EA3919F795BC00AADDFB /* Stripe */,
-				3F0DD5D919F4FB09003773FB /* BlackRaccoon */,
 				3F064B0719F123440018C248 /* InfColorPicker */,
 				3F064B0319F11E180018C248 /* MovableImageVIew */,
 				3F064AFF19F11C050018C248 /* MovableLabel */,
@@ -1381,10 +1321,8 @@
 				3F064B1E19F123440018C248 /* InfHSBSupport.m in Sources */,
 				3F12EA5019F795BC00AADDFB /* STPUtils.m in Sources */,
 				3F12EA4D19F795BC00AADDFB /* STPAPIConnection.m in Sources */,
-				3F0DD5F719F4FB09003773FB /* BRRequestUpload.m in Sources */,
 				21BC87F21A12170E00071CBA /* LaunchViewController.m in Sources */,
 				21BA0C8C1A14975D0000B172 /* SelectShapeViewController.m in Sources */,
-				3F0DD5F019F4FB09003773FB /* BRRequest.m in Sources */,
 				3F064B1D19F123440018C248 /* InfColorSquarePicker.m in Sources */,
 				219A76C11A0BB1E60050A70F /* STPTestCardStore.m in Sources */,
 				3FFCDCF019EFBFB600A7C43B /* AppDelegate.m in Sources */,
@@ -1395,37 +1333,29 @@
 				219A76C21A0BB1E60050A70F /* STPTestDataTableViewController.m in Sources */,
 				219A76931A0B821E0050A70F /* PTKView.m in Sources */,
 				2282B1281A155F4B0004FF8C /* OrderConfirmationViewController.m in Sources */,
-				3F0DD5EF19F4FB09003773FB /* BRRequest+_UserData.m in Sources */,
 				3F064B1819F123440018C248 /* InfColorBarPicker.m in Sources */,
 				3FFCDD1619EFC18A00A7C43B /* MainViewController.m in Sources */,
 				3F064B1A19F123440018C248 /* InfColorPickerController.m in Sources */,
 				219A76C31A0BB1E60050A70F /* STPTestPaymentSummaryViewController.m in Sources */,
-				3F0DD5F319F4FB09003773FB /* BRRequestDownload.m in Sources */,
 				3F064B0619F11E3A0018C248 /* MovableImageView.m in Sources */,
 				219A768B1A0B821E0050A70F /* PTKAddressZip.m in Sources */,
 				219A768A1A0B821E0050A70F /* MBProgressHUD.m in Sources */,
 				3F064B1919F123440018C248 /* InfColorIndicatorView.m in Sources */,
-				3F0DD5F119F4FB09003773FB /* BRRequestCreateDirectory.m in Sources */,
 				3F12EA5119F795BC00AADDFB /* Stripe.m in Sources */,
-				3F0DD5F519F4FB09003773FB /* BRRequestListDirectory.m in Sources */,
 				3FFCDCEC19EFBFB600A7C43B /* main.m in Sources */,
 				219A768D1A0B821E0050A70F /* PTKCardCVC.m in Sources */,
 				3F064B0219F11C050018C248 /* MovableLabel.m in Sources */,
 				219A76911A0B821E0050A70F /* PTKTextField.m in Sources */,
-				3F0DD5F819F4FB09003773FB /* BRStreamInfo.m in Sources */,
 				3F064B1B19F123440018C248 /* InfColorPickerNavigationController.m in Sources */,
 				3F12EA4C19F795BC00AADDFB /* Stripe+ApplePay.m in Sources */,
 				219A76AF1A0B82DE0050A70F /* ShippingManager.m in Sources */,
 				219A768F1A0B821E0050A70F /* PTKCardNumber.m in Sources */,
-				3F0DD5F219F4FB09003773FB /* BRRequestDelete.m in Sources */,
 				219A768C1A0B821E0050A70F /* PTKCard.m in Sources */,
 				219A76AE1A0B82DE0050A70F /* PaymentViewController.m in Sources */,
 				3F0DD60419F55041003773FB /* UIImage+tintImage.m in Sources */,
-				3F0DD5F619F4FB09003773FB /* BRRequestQueue.m in Sources */,
 				3F064B1F19F123440018C248 /* InfSourceColorView.m in Sources */,
 				3F12EA4F19F795BC00AADDFB /* STPToken.m in Sources */,
 				219A76921A0B821E0050A70F /* PTKUSAddressZip.m in Sources */,
-				3F0DD5F419F4FB09003773FB /* BRRequestError.m in Sources */,
 				219A76BF1A0BB1E60050A70F /* PKPayment+STPTestKeys.m in Sources */,
 				3F12EA4E19F795BC00AADDFB /* STPCard.m in Sources */,
 				219A76901A0B821E0050A70F /* PTKComponent.m in Sources */,
