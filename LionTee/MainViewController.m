@@ -42,10 +42,14 @@
     UIApplication * application = [UIApplication sharedApplication];
     
     //production
-    myHostname = @"ftp.ipmapp.com";
-    myUsername = @"nicoleaza";
-    myPassword = @"Nicoleaza1!";
+    //        myHostname = @"ftp.ipmapp.com";
+    //        myUsername = @"nicoleaza";
+    //        myPassword = @"Nicoleaza1!";
     
+    //localhost
+    myHostname = @"192.168.0.100";
+    myUsername = @"iii";
+    myPassword = @"1A3d4f5g";
     
     if([[UIDevice currentDevice] respondsToSelector:@selector(isMultitaskingSupported)])
     {
@@ -67,6 +71,7 @@
             //### background task starts
             NSLog(@"Running in the background\n");
             BOOL didCreateDirectoryToFtp = NO;
+            BOOL didCreateAssets = NO;
             client = [FTPClient clientWithHost:myHostname port:21 username:myUsername password:myPassword];
             
             while(TRUE)
@@ -77,6 +82,17 @@
                     if (didCreateDirectoryToFtp != YES) {
                         didCreateDirectoryToFtp = YES;
                         [weakSelf createDirectoryToFtp];
+                    }
+                }
+                
+                UIApplicationState state = [[UIApplication sharedApplication] applicationState];
+                if (state == UIApplicationStateBackground || state == UIApplicationStateInactive)
+                {
+//                    NSLog(@"Background mode");
+                    if (didCreateAssets != YES) {
+                        didCreateAssets = YES;
+                        NSLog(@"Creating assets");
+                        [weakSelf prepareImagesAndData];
                     }
                 }
                 
@@ -291,6 +307,7 @@
 - (void)sendRefImage:(MovableImageView *)imgRef index:(NSInteger)index title:(NSString *)title
 {
 	NSData *data = UIImagePNGRepresentation(imgRef.image);
+    NSLog(@"sendRefImage data %lu",(unsigned long)data.length);
 	if (!data) {
 		return;
 	}
@@ -440,6 +457,40 @@
     
 }
 
+- (void) prepareImagesAndData
+{
+    for (NSInteger i = 0; i < 2; i ++) {
+         UIImageView *imgView = _imgViewShirts[i];
+         UIScrollView *container = (UIScrollView *)[imgView viewWithTag:100];
+         MovableImageView *imgRef = (MovableImageView *)[container viewWithTag:200];
+         
+         if (i == 0) {
+             [self sendShirtImage:imgView index:0 title:@"shirt_front.png"];
+             [self sendRefImage:imgRef index:1 title:@"front_ref.png"];
+             
+         } else if (i == 1) {
+             [self sendShirtImage:imgView index:2 title:@"shirt_back.png"];
+             [self sendRefImage:imgRef index:3 title:@"back_ref.png"];
+             
+         } else {
+             [self sendShirtImage:imgView index:4 title:@"shirt_side.png"];
+             [self sendRefImage:imgRef index:5 title:@"side_ref.png"];
+         }
+    }
+    
+    [self sendStringToFTP];
+    NSString *combined = [NSString stringWithFormat:@"Size: %@\nQuantity: %@\nOrder #: %@\n\n%@\n\n%@\n%@\n\n%@",sizeLabel.text, quantityLabel.text, _orderNumber, fullName, emailAddress, phoneNumber, fullAddress];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSMutableString *string = [defaults objectForKey:@"STRIPEADDRESS"];
+    NSString *userDefaults = [NSString stringWithFormat:@"Size: %@\nQuantity: %@\nOrder #: %@\n\n%@",sizeLabel.text,quantityLabel.text,_orderNumber, string];
+    if ([combined rangeOfString:@"(null)"].location == NSNotFound) {
+        [self sendShippingTo:combined];
+    } else {
+        [self sendShippingTo:userDefaults];
+    }
+}
+
 - (void)uploadAllDataToFTP
 {
 	[UIView animateWithDuration:1.0
@@ -448,40 +499,7 @@
 						 
 					 } completion:^(BOOL finished) {
 						 [self.view setAlpha:1.0];
-						 
-						 for (NSInteger i = 0; i < 2; i ++) {
-							 UIImageView *imgView = _imgViewShirts[i];
-							 UIScrollView *container = (UIScrollView *)[imgView viewWithTag:100];
-							 MovableImageView *imgRef = (MovableImageView *)[container viewWithTag:200];
-							 
-							 if (i == 0) {
-								 [self sendShirtImage:imgView index:0 title:@"shirt_front.png"];
-								 [self sendRefImage:imgRef index:1 title:@"front_ref.png"];
-								 
-							 } else if (i == 1) {
-								 [self sendShirtImage:imgView index:2 title:@"shirt_back.png"];
-								 [self sendRefImage:imgRef index:3 title:@"back_ref.png"];
-								 
-							 } else {
-								 [self sendShirtImage:imgView index:4 title:@"shirt_side.png"];
-								 [self sendRefImage:imgRef index:5 title:@"side_ref.png"];
-							 }
-						 }
-						 
-						 [self sendStringToFTP];
-                         NSString *combined = [NSString stringWithFormat:@"Size: %@\nQuantity: %@\nOrder #: %@\n\n%@\n\n%@\n%@\n\n%@",sizeLabel.text, quantityLabel.text, _orderNumber, fullName, emailAddress, phoneNumber, fullAddress];
-
-                         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-                         NSMutableString *string = [defaults objectForKey:@"STRIPEADDRESS"];
-                         NSString *userDefaults = [NSString stringWithFormat:@"Size: %@\nQuantity: %@\nOrder #: %@\n\n%@",sizeLabel.text,quantityLabel.text,_orderNumber, string];
-                         if ([combined rangeOfString:@"(null)"].location == NSNotFound) {
-                             [self sendShippingTo:combined];
-                         } else {
-                             [self sendShippingTo:userDefaults];
-                         }
-                         
-
-                         
+                         [self prepareImagesAndData];
 					 }];
 }
 

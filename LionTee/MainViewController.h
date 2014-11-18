@@ -44,7 +44,7 @@ SelectShapeDelegate
 >
 {
 	//IBOutlet UIImageView						*_imgViewTShirt;
-	IBOutletCollection(UIImageView) NSArray		*_imgViewShirts;
+	__strong IBOutletCollection(UIImageView) NSArray		*_imgViewShirts;
     NSMutableArray * addImgs;
     
     NSString *myHostname;
