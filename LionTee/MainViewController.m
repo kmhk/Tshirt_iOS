@@ -276,10 +276,8 @@
         
         _countUploading = 0;
         _allUploading = 0;
-        _createDirectory = nil;
         
         [self uploadAllDataToFTP];
-        
         [self showWaitView:YES];
         
         _countUploading --;
@@ -292,7 +290,6 @@
         // Display an error...
         NSLog(@"Failed to create my new folder %@",path);
         NSLog(@"Error is %@",error);
-        _createDirectory = nil;
         [self showWaitView:NO];
     }];
 }
@@ -304,111 +301,24 @@
 		return;
 	}
     
-    UIButton * but;
-    
-    
     _countUploading ++;
     _allUploading ++;
+    
+    NSString *localFilePath = [NSHomeDirectory() stringByAppendingString:[NSString stringWithFormat:@"/image.%@.png",title]];
+    if ([data writeToFile:localFilePath atomically:YES]) {
+        NSLog(@"save ok %@",localFilePath);
+    }
+    else {
+        NSLog(@"save failed %@",localFilePath);
+    }
 	
-	NSString *path = [NSString stringWithFormat:@"/%@/%@", _orderNumber, title];
-	
-	switch (index) {
-		case 0:
-		{
-			_dataShirt1 = [[NSData alloc] initWithData:data];
-			_uploadShirt1 = [[BRRequestUpload alloc] initWithDelegate:self];
-			
-			//----- for anonymous login just leave the username and password nil
-			_uploadShirt1.path = path;
-			_uploadShirt1.hostname = myHostname;
-			_uploadShirt1.username = myUsername;
-			_uploadShirt1.password = myPassword;
-			
-			//----- we start the request
-			[_uploadShirt1 start];
-		}
-			break;
-			
-		case 1:
-		{
-			_dataImage1 = [[NSData alloc] initWithData:data];
-			_uploadImage1 = [[BRRequestUpload alloc] initWithDelegate:self];
-			
-			//----- for anonymous login just leave the username and password nil
-			_uploadImage1.path = path;
-			_uploadImage1.hostname = myHostname;
-			_uploadImage1.username = myUsername;
-			_uploadImage1.password = myPassword;
-			
-			//----- we start the request
-			[_uploadImage1 start];
-		}
-			break;
-			
-		case 2:
-		{
-			_dataShirt2 = [[NSData alloc] initWithData:data];
-			_uploadShirt2 = [[BRRequestUpload alloc] initWithDelegate:self];
-			
-			//----- for anonymous login just leave the username and password nil
-			_uploadShirt2.path = path;
-			_uploadShirt2.hostname = myHostname;
-			_uploadShirt2.username = myUsername;
-			_uploadShirt2.password = myPassword;
-			
-			//----- we start the request
-			[_uploadShirt2 start];
-		}
-			break;
-			
-		case 3:
-		{
-			_dataImage2 = [[NSData alloc] initWithData:data];
-			_uploadImage2 = [[BRRequestUpload alloc] initWithDelegate:self];
-			
-			//----- for anonymous login just leave the username and password nil
-			_uploadImage2.path = path;
-			_uploadImage2.hostname = myHostname;
-			_uploadImage2.username = myUsername;
-			_uploadImage2.password = myPassword;
-			
-			//----- we start the request
-			[_uploadImage2 start];
-		}
-			break;
-			
-		case 4:
-		{
-			_dataShirt3 = [[NSData alloc] initWithData:data];
-			_uploadShirt3 = [[BRRequestUpload alloc] initWithDelegate:self];
-			
-			//----- for anonymous login just leave the username and password nil
-			_uploadShirt3.path = path;
-			_uploadShirt3.hostname = myHostname;
-			_uploadShirt3.username = myUsername;
-			_uploadShirt3.password = myPassword;
-			
-			//----- we start the request
-			[_uploadShirt3 start];
-		}
-			break;
-			
-		case 5:
-		{
-			_dataImage3 = [[NSData alloc] initWithData:data];
-			_uploadImage3 = [[BRRequestUpload alloc] initWithDelegate:self];
-			
-			//----- for anonymous login just leave the username and password nil
-			_uploadImage3.path = path;
-			_uploadImage3.hostname = myHostname;
-			_uploadImage3.username = myUsername;
-			_uploadImage3.password = myPassword;
-			
-			//----- we start the request
-			[_uploadImage3 start];
-		}
-			break;
-	}
+    NSString *path = [NSString stringWithFormat:@"./%@/%@", _orderNumber, title];
+    
+    [client uploadFile:localFilePath to:path progress:NULL success:^(void) {
+        NSLog(@"Uploaded the %@ sucesfully", path);
+    } failure:^(NSError *error) {
+        NSLog(@"Error @% for the path: %@",error,path);
+    }];
 }
 
 - (void)sendShirtImage:(UIImageView *)imgShirt index:(NSInteger)index title:(NSString *)title
@@ -429,105 +339,21 @@
     _countUploading ++;
     _allUploading ++;
 	
-	NSString *path = [NSString stringWithFormat:@"/%@/%@", _orderNumber, title];
-	
-	switch (index) {
-		case 0:
-		{
-			_dataShirt1 = [[NSData alloc] initWithData:data];
-			_uploadShirt1 = [[BRRequestUpload alloc] initWithDelegate:self];
-			
-			//----- for anonymous login just leave the username and password nil
-			_uploadShirt1.path = path;
-			_uploadShirt1.hostname = myHostname;
-			_uploadShirt1.username = myUsername;
-			_uploadShirt1.password = myPassword;
-			
-			//----- we start the request
-			[_uploadShirt1 start];
-		}
-			break;
-			
-		case 1:
-		{
-			_dataImage1 = [[NSData alloc] initWithData:data];
-			_uploadImage1 = [[BRRequestUpload alloc] initWithDelegate:self];
-			
-			//----- for anonymous login just leave the username and password nil
-			_uploadImage1.path = path;
-            _uploadImage1.hostname = myHostname;
-            _uploadImage1.username = myUsername;
-            _uploadImage1.password = myPassword;
-			
-			//----- we start the request
-			[_uploadImage1 start];
-		}
-			break;
-			
-		case 2:
-		{
-			_dataShirt2 = [[NSData alloc] initWithData:data];
-			_uploadShirt2 = [[BRRequestUpload alloc] initWithDelegate:self];
-			
-			//----- for anonymous login just leave the username and password nil
-			_uploadShirt2.path = path;
-			_uploadShirt2.hostname = myHostname;
-			_uploadShirt2.username = myUsername;
-			_uploadShirt2.password = myPassword;
-			
-			//----- we start the request
-			[_uploadShirt2 start];
-		}
-			break;
-			
-		case 3:
-		{
-			_dataImage2 = [[NSData alloc] initWithData:data];
-			_uploadImage2 = [[BRRequestUpload alloc] initWithDelegate:self];
-			
-			//----- for anonymous login just leave the username and password nil
-			_uploadImage2.path = path;
-			_uploadImage2.hostname = myHostname;
-			_uploadImage2.username = myUsername;
-			_uploadImage2.password = myPassword;
-			
-			//----- we start the request
-			[_uploadImage2 start];
-		}
-			break;
-			
-		case 4:
-		{
-			_dataShirt3 = [[NSData alloc] initWithData:data];
-			_uploadShirt3 = [[BRRequestUpload alloc] initWithDelegate:self];
-			
-			//----- for anonymous login just leave the username and password nil
-			_uploadShirt3.path = path;
-			_uploadShirt3.hostname = myHostname;
-			_uploadShirt3.username = myUsername;
-			_uploadShirt3.password = myPassword;
-			
-			//----- we start the request
-			[_uploadShirt3 start];
-		}
-			break;
-			
-		case 5:
-		{
-			_dataImage3 = [[NSData alloc] initWithData:data];
-			_uploadImage3 = [[BRRequestUpload alloc] initWithDelegate:self];
-			
-			//----- for anonymous login just leave the username and password nil
-			_uploadImage3.path = path;
-			_uploadImage3.hostname = myHostname;
-			_uploadImage3.username = myUsername;
-			_uploadImage3.password = myPassword;
-			
-			//----- we start the request
-			[_uploadImage3 start];
-		}
-			break;
-	}
+    NSString *localFilePath = [NSHomeDirectory() stringByAppendingString:[NSString stringWithFormat:@"/image.%@.png",title]];
+    if ([data writeToFile:localFilePath atomically:YES]) {
+        NSLog(@"save ok %@",localFilePath);
+    }
+    else {
+        NSLog(@"save failed %@",localFilePath);
+    }
+    
+    NSString *path = [NSString stringWithFormat:@"./%@/%@", _orderNumber, title];
+    
+    [client uploadFile:localFilePath to:path progress:NULL success:^(void) {
+        NSLog(@"Uploaded the %@ sucesfully", path);
+    } failure:^(NSError *error) {
+        NSLog(@"Error @% for the path: %@",error,path);
+    }];
 }
 
 - (void)sendStringToFTP
@@ -553,21 +379,23 @@
     
     _countUploading ++;
     _allUploading ++;
-	
-	_dataText = [[NSData alloc] initWithData:data];
-	
-	_uploadText = [[BRRequestUpload alloc] initWithDelegate:self];
+
+    
+    //TODO: upload string to ftp
+//	_dataText = [[NSData alloc] initWithData:data];
+//	
+//	_uploadText = [[BRRequestUpload alloc] initWithDelegate:self];
 	
 	NSString *path = [NSString stringWithFormat:@"/%@/%@", _orderNumber, @"text.txt"];
-	
-	//----- for anonymous login just leave the username and password nil
-	_uploadText.path = path;
-	_uploadText.hostname = myHostname;
-	_uploadText.username = myUsername;
-	_uploadText.password = myPassword;
-	
-	//----- we start the request
-	[_uploadText start];
+//	
+//	//----- for anonymous login just leave the username and password nil
+//	_uploadText.path = path;
+//	_uploadText.hostname = myHostname;
+//	_uploadText.username = myUsername;
+//	_uploadText.password = myPassword;
+//	
+//	//----- we start the request
+//	[_uploadText start];
 }
 
 - (void)sendShippingTo:(NSString *)shippingAddress
@@ -578,23 +406,24 @@
     NSMutableData *data = [NSMutableData data];
     
     [data appendData:[shippingAddress dataUsingEncoding:NSUTF8StringEncoding]];
-    
-    _dataShipping = [[NSData alloc] initWithData:data];
-    
-    _uploadShipping = [[BRRequestUpload alloc] initWithDelegate:self];
+
+    //TODO: upload shipping info
+//    _dataShipping = [[NSData alloc] initWithData:data];
+//    
+//    _uploadShipping = [[BRRequestUpload alloc] initWithDelegate:self];
     
     NSString *path = [NSString stringWithFormat:@"/%@/%@", _orderNumber, @"shippingAddress.txt"];
     
     //----- for anonymous login just leave the username and password nil
-    _uploadShipping.path = path;
-    _uploadShipping.hostname = myHostname;
-    _uploadShipping.username = myUsername;
-    _uploadShipping.password = myPassword;
-    
-//    NSLog(@"Data: %@", _dataShipping);
-    
-    //----- we start the request
-    [_uploadShipping start];
+//    _uploadShipping.path = path;
+//    _uploadShipping.hostname = myHostname;
+//    _uploadShipping.username = myUsername;
+//    _uploadShipping.password = myPassword;
+//    
+////    NSLog(@"Data: %@", _dataShipping);
+//    
+//    //----- we start the request
+//    [_uploadShipping start];
     
 }
 
@@ -606,23 +435,24 @@
     NSMutableData *data = [NSMutableData data];
     
     [data appendData:[shippingString dataUsingEncoding:NSUTF8StringEncoding]];
-    
-    _dataShipping = [[NSData alloc] initWithData:data];
-    
-    _uploadShipping = [[BRRequestUpload alloc] initWithDelegate:self];
+
+    //TODO: upload shipping string
+//    _dataShipping = [[NSData alloc] initWithData:data];
+//    
+//    _uploadShipping = [[BRRequestUpload alloc] initWithDelegate:self];
     
     NSString *path = [NSString stringWithFormat:@"/%@/%@", _orderNumber, @"Order Information.txt"];
     
     //----- for anonymous login just leave the username and password nil
-    _uploadShipping.path = path;
-    _uploadShipping.hostname = myHostname;
-    _uploadShipping.username = myUsername;
-    _uploadShipping.password = myPassword;
-    
-    //    NSLog(@"Data: %@", _dataShipping);
-    
-    //----- we start the request
-    [_uploadShipping start];
+//    _uploadShipping.path = path;
+//    _uploadShipping.hostname = myHostname;
+//    _uploadShipping.username = myUsername;
+//    _uploadShipping.password = myPassword;
+//    
+//    //    NSLog(@"Data: %@", _dataShipping);
+//    
+//    //----- we start the request
+//    [_uploadShipping start];
     
 }
 
@@ -1460,93 +1290,6 @@
         [basePriceButton setTitle:[NSString stringWithFormat:@"$%.2f" , self.basePrice] forState:UIControlStateNormal];
     }
     
-}
-
-
-
-
-
-/// shouldOverwriteFileWithRequest
-/// \param request The request object;
-- (BOOL)shouldOverwriteFileWithRequest:(BRRequest *)request
-{
-	return YES;
-}
-
-- (long) requestDataSendSize: (BRRequestUpload *) request
-{
-    //----- user returns the total size of data to send. Used ONLY for percentComplete
-	NSLog(@"request size");
-	
-	if (request == _uploadImage1) {
-		return [_dataImage1 length];
-		
-	} else if (request == _uploadImage2) {
-		return [_dataImage1 length];
-		
-	} else if (request == _uploadImage3) {
-		return [_dataImage1 length];
-		
-	} else if (request == _uploadShirt1) {
-		return [_dataShirt1 length];
-		
-	} else if (request == _uploadShirt2) {
-		return [_dataShirt1 length];
-		
-	} else if (request == _uploadShirt3) {
-		return [_dataShirt1 length];
-		
-	} else if (request == _uploadText) {
-		return [_dataText length];
-        
-    } else if (request == _uploadShipping) {
-        return [_dataShipping length];
-    }
-	
-	return 0;
-}
-
-- (NSData *)requestDataToSend:(BRRequestUpload *)request
-{
-    //----- returns data object or nil when complete
-    //----- basically, first time we return the pointer to the NSData.
-    //----- and BR will upload the data.
-    //----- Second time we return nil which means no more data to send
-	NSData *temp;
-	if (request == _uploadImage1) {
-		temp = _dataImage1;
-		_dataImage1 = nil;
-		
-	} else if (request == _uploadImage2) {
-		temp = _dataImage2;
-		_dataImage2 = nil;
-		
-	} else if (request == _uploadImage3) {
-		temp = _dataImage3;
-		_dataImage3 = nil;
-		
-	} else if (request == _uploadShirt1) {
-		temp = _dataShirt1;
-		_dataShirt1 = nil;
-		
-	} else if (request == _uploadShirt2) {
-		temp = _dataShirt2;
-		_dataShirt2 = nil;
-		
-	} else if (request == _uploadShirt3) {
-		temp = _dataShirt3;
-		_dataShirt3 = nil;
-		
-	} else if (request == _uploadText) {
-		temp = _dataText;
-		_dataText = nil;
-        
-    } else if (request == _uploadShipping) {
-        temp = _dataShipping;
-        _dataShipping = nil;
-    }
-	
-	return temp;
 }
 
 

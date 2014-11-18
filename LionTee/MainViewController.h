@@ -20,12 +20,12 @@
 
 #import <FTPKit/FTPKit.h>
 
-#import "BRRequestListDirectory.h"
-#import "BRRequestCreateDirectory.h"
-#import "BRRequestUpload.h"
-#import "BRRequestDownload.h"
-#import "BRRequestDelete.h"
-#import "BRRequest+_UserData.h"
+//#import "BRRequestListDirectory.h"
+//#import "BRRequestCreateDirectory.h"
+//#import "BRRequestUpload.h"
+//#import "BRRequestDownload.h"
+//#import "BRRequestDelete.h"
+//#import "BRRequest+_UserData.h"
 
 
 #import "SelectShapeViewController.h"
@@ -37,7 +37,7 @@
 UIImagePickerControllerDelegate,
 UINavigationControllerDelegate,
 InfColorPickerControllerDelegate,
-BRRequestDelegate,
+//BRRequestDelegate,
 UITextFieldDelegate,
 MovableLabelDelegate,
 MovableImageViewDelegate,
@@ -84,31 +84,31 @@ SelectShapeDelegate
 	NSString									*_orderNumber;
 	
 	// uploading to FTP
-	BRRequestCreateDirectory					*_createDirectory;
-	
-	NSData										*_dataShirt1;
-	BRRequestUpload								*_uploadShirt1;
-	
-	NSData										*_dataShirt2;
-	BRRequestUpload								*_uploadShirt2;
-	
-	NSData										*_dataShirt3;
-	BRRequestUpload								*_uploadShirt3;
-	
-	NSData										*_dataImage1;
-	BRRequestUpload								*_uploadImage1;
-	
-	NSData										*_dataImage2;
-	BRRequestUpload								*_uploadImage2;
-	
-	NSData										*_dataImage3;
-	BRRequestUpload								*_uploadImage3;
-	
-	NSData										*_dataText;
-    BRRequestUpload								*_uploadText;
-
-   	NSData										*_dataShipping;
-    BRRequestUpload								*_uploadShipping;
+//	BRRequestCreateDirectory					*_createDirectory;
+//	
+//	NSData										*_dataShirt1;
+//	BRRequestUpload								*_uploadShirt1;
+//	
+//	NSData										*_dataShirt2;
+//	BRRequestUpload								*_uploadShirt2;
+//	
+//	NSData										*_dataShirt3;
+//	BRRequestUpload								*_uploadShirt3;
+//	
+//	NSData										*_dataImage1;
+//	BRRequestUpload								*_uploadImage1;
+//	
+//	NSData										*_dataImage2;
+//	BRRequestUpload								*_uploadImage2;
+//	
+//	NSData										*_dataImage3;
+//	BRRequestUpload								*_uploadImage3;
+//	
+//	NSData										*_dataText;
+//    BRRequestUpload								*_uploadText;
+//
+//   	NSData										*_dataShipping;
+//    BRRequestUpload								*_uploadShipping;
     
     
     NSString                                    *fullAddress;
