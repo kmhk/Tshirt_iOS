@@ -315,7 +315,7 @@
     [client uploadFile:localFilePath to:path progress:NULL success:^(void) {
         NSLog(@"Uploaded the %@ sucesfully", path);
     } failure:^(NSError *error) {
-        NSLog(@"Error @% for the path: %@",error,path);
+        NSLog(@"Error %@ for the path: %@",error,path);
     }];
 }
 
@@ -386,7 +386,7 @@
         NSLog(@"sendStringToFTP: save failed %@",localFilePath);
     }
 	
-	NSString *path = [NSString stringWithFormat:@"/%@/%@", _orderNumber, @"text.txt"];
+	NSString *path = [NSString stringWithFormat:@"./%@/%@", _orderNumber, @"text.txt"];
     
     [client uploadFile:localFilePath to:path progress:NULL success:^(void) {
         NSLog(@"Uploaded the %@ sucesfully", path);
@@ -411,7 +411,7 @@
     else {
         NSLog(@"sendStringToFTP: save failed %@",localFilePath);
     }
-    NSString *path = [NSString stringWithFormat:@"/%@/%@", _orderNumber, @"shippingAddress.txt"];
+    NSString *path = [NSString stringWithFormat:@"./%@/%@", _orderNumber, @"shippingAddress.txt"];
     [client uploadFile:localFilePath to:path progress:NULL success:^(void) {
         NSLog(@"Uploaded the %@ sucesfully", path);
     } failure:^(NSError *error) {
@@ -435,7 +435,7 @@
         NSLog(@"sendStringToFTP: save failed %@",localFilePath);
     }
     
-    NSString *path = [NSString stringWithFormat:@"/%@/%@", _orderNumber, @"Order Information.txt"];
+    NSString *path = [NSString stringWithFormat:@"./%@/%@", _orderNumber, @"Order Information.txt"];
     [client uploadFile:localFilePath to:path progress:NULL success:^(void) {
         NSLog(@"Uploaded the %@ sucesfully", path);
     } failure:^(NSError *error) {
