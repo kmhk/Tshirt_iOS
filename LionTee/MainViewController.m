@@ -70,7 +70,7 @@
             
             //### background task starts
             NSLog(@"Running in the background\n");
-            
+            BOOL didCreateDirectoryToFtp = NO;
             client = [FTPClient clientWithHost:myHostname port:21 username:myUsername password:myPassword];
             
             while(TRUE)
@@ -78,6 +78,10 @@
                 NSTimeInterval seconds = [[UIApplication sharedApplication] backgroundTimeRemaining];
                 if (seconds < 1000) {
                     NSLog(@"Background time Remaining: %f\n",seconds);
+                    if (didCreateDirectoryToFtp != YES) {
+                        didCreateDirectoryToFtp = YES;
+                        [weakSelf createDirectoryToFtp];
+                    }
                 }
                 
                 [NSThread sleepForTimeInterval:1]; //wait for 1 sec
