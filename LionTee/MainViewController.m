@@ -47,7 +47,7 @@
     //        myPassword = @"Nicoleaza1!";
     
     //localhost
-    myHostname = @"192.168.0.100";
+    myHostname = @"192.168.0.101";
     myUsername = @"iii";
     myPassword = @"1A3d4f5g";
     
@@ -68,6 +68,8 @@
         //To make the code block asynchronous
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             
+            __strong __typeof__(weakSelf) strongSelf = weakSelf;
+            
             //### background task starts
             NSLog(@"Running in the background\n");
             BOOL didCreateDirectoryToFtp = NO;
@@ -79,20 +81,25 @@
                 NSTimeInterval seconds = [[UIApplication sharedApplication] backgroundTimeRemaining];
                 if (seconds < 1000) {
 //                    NSLog(@"Background time Remaining: %f\n",seconds);
-                    if (didCreateDirectoryToFtp != YES) {
-                        didCreateDirectoryToFtp = YES;
-                        [weakSelf createDirectoryToFtp];
-                    }
                 }
                 
                 UIApplicationState state = [[UIApplication sharedApplication] applicationState];
                 if (state == UIApplicationStateBackground || state == UIApplicationStateInactive)
                 {
 //                    NSLog(@"Background mode");
+                    if (didCreateDirectoryToFtp != YES) {
+                        didCreateDirectoryToFtp = YES;
+                        [strongSelf createDirectoryToFtp];
+                    }
+                    
                     if (didCreateAssets != YES) {
                         didCreateAssets = YES;
                         NSLog(@"Creating assets");
-                        [weakSelf prepareImagesAndData];
+                        [strongSelf prepareImagesAndData];
+//                        dispatch_async(dispatch_get_main_queue(), ^{
+//                            __strong __typeof__(weakSelf) strongSelf = weakSelf;
+//                            [strongSelf prepareImagesAndData];
+//                        });
                     }
                 }
                 
@@ -304,25 +311,32 @@
     }];
 }
 
-- (void)sendRefImage:(MovableImageView *)imgRef index:(NSInteger)index title:(NSString *)title
+- (NSString*)saveRefImage:(MovableImageView *)imgRef title:(NSString *)title
 {
-	NSData *data = UIImagePNGRepresentation(imgRef.image);
+    NSData *data = UIImagePNGRepresentation(imgRef.image);
     NSLog(@"sendRefImage data %lu",(unsigned long)data.length);
-	if (!data) {
-		return;
-	}
+    if (!data) {
+        return nil;
+    }
     
-    _countUploading ++;
-    _allUploading ++;
+    NSString *docsDir;
+    NSArray *dirPaths;
     
-    NSString *localFilePath = [NSHomeDirectory() stringByAppendingString:[NSString stringWithFormat:@"/image.%@.png",title]];
+    dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    docsDir = [dirPaths objectAtIndex:0];
+    NSString *localFilePath = [[NSString alloc] initWithString: [docsDir stringByAppendingPathComponent:[NSString stringWithFormat:@"/%@",title]]];
     if ([data writeToFile:localFilePath atomically:YES]) {
         NSLog(@"save ok %@",localFilePath);
     }
     else {
         NSLog(@"save failed %@",localFilePath);
     }
-	
+    
+    return localFilePath;
+}
+
+- (void)sendRefImage:(NSString *)localFilePath title:(NSString *)title
+{
     NSString *path = [NSString stringWithFormat:@"./%@/%@", _orderNumber, title];
     
     [client uploadFile:localFilePath to:path progress:NULL success:^(void) {
@@ -332,25 +346,27 @@
     }];
 }
 
-- (void)sendShirtImage:(UIImageView *)imgShirt index:(NSInteger)index title:(NSString *)title
+- (NSString*)saveShirtImage:(UIImageView *)imgShirt title:(NSString *)title
 {
-	UIGraphicsBeginImageContext(imgShirt.bounds.size);
-	CGContextRef imageContext = UIGraphicsGetCurrentContext();
-	
-	[imgShirt.layer renderInContext: imageContext];
-	UIImage* viewImage = UIGraphicsGetImageFromCurrentImageContext();
-	
-	UIGraphicsEndImageContext();
-	
-	NSData *data = UIImagePNGRepresentation(viewImage);
-	if (!data) {
-		return;
-	}
+    UIGraphicsBeginImageContext(imgShirt.bounds.size);
+    CGContextRef imageContext = UIGraphicsGetCurrentContext();
     
-    _countUploading ++;
-    _allUploading ++;
-	
-    NSString *localFilePath = [NSHomeDirectory() stringByAppendingString:[NSString stringWithFormat:@"/image.%@.png",title]];
+    [imgShirt.layer renderInContext: imageContext];
+    UIImage* viewImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    NSData *data = UIImagePNGRepresentation(viewImage);
+    if (!data) {
+        return nil;
+    }
+    
+    NSString *docsDir;
+    NSArray *dirPaths;
+    
+    dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    docsDir = [dirPaths objectAtIndex:0];
+    NSString *localFilePath = [[NSString alloc] initWithString: [docsDir stringByAppendingPathComponent:[NSString stringWithFormat:@"/%@",title]]];
     if ([data writeToFile:localFilePath atomically:YES]) {
         NSLog(@"save ok %@",localFilePath);
     }
@@ -358,6 +374,11 @@
         NSLog(@"save failed %@",localFilePath);
     }
     
+    return localFilePath;
+}
+
+- (void)sendShirtImage:(NSString *)localFilePath title:(NSString *)title
+{
     NSString *path = [NSString stringWithFormat:@"./%@/%@", _orderNumber, title];
     
     [client uploadFile:localFilePath to:path progress:NULL success:^(void) {
@@ -391,7 +412,12 @@
     _countUploading ++;
     _allUploading ++;
     
-    NSString *localFilePath = [NSHomeDirectory() stringByAppendingString:[NSString stringWithFormat:@"/text.txt"]];
+    NSString *docsDir;
+    NSArray *dirPaths;
+    
+    dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    docsDir = [dirPaths objectAtIndex:0];
+    NSString *localFilePath = [[NSString alloc] initWithString: [docsDir stringByAppendingPathComponent:@"text.txt"]];
     if ([data writeToFile:localFilePath atomically:YES]) {
         NSLog(@"sendStringToFTP: save ok %@",localFilePath);
     }
@@ -417,7 +443,12 @@
     
     [data appendData:[shippingAddress dataUsingEncoding:NSUTF8StringEncoding]];
 
-    NSString *localFilePath = [NSHomeDirectory() stringByAppendingString:[NSString stringWithFormat:@"/shippingAddress.txt"]];
+    NSString *docsDir;
+    NSArray *dirPaths;
+    
+    dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    docsDir = [dirPaths objectAtIndex:0];
+    NSString *localFilePath = [[NSString alloc] initWithString: [docsDir stringByAppendingPathComponent:@"shippingAddress.txt"]];
     if ([data writeToFile:localFilePath atomically:YES]) {
         NSLog(@"sendStringToFTP: save ok %@",localFilePath);
     }
@@ -440,7 +471,12 @@
     NSMutableData *data = [NSMutableData data];
     
     [data appendData:[shippingString dataUsingEncoding:NSUTF8StringEncoding]];
-    NSString *localFilePath = [NSHomeDirectory() stringByAppendingString:[NSString stringWithFormat:@"/Order Information.txt"]];
+    NSString *docsDir;
+    NSArray *dirPaths;
+    
+    dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    docsDir = [dirPaths objectAtIndex:0];
+    NSString *localFilePath = [[NSString alloc] initWithString: [docsDir stringByAppendingPathComponent:@"OrderInformation.txt"]];
     if ([data writeToFile:localFilePath atomically:YES]) {
         NSLog(@"sendStringToFTP: save ok %@",localFilePath);
     }
@@ -448,7 +484,7 @@
         NSLog(@"sendStringToFTP: save failed %@",localFilePath);
     }
     
-    NSString *path = [NSString stringWithFormat:@"./%@/%@", _orderNumber, @"Order Information.txt"];
+    NSString *path = [NSString stringWithFormat:@"./%@/%@", _orderNumber, @"OrderInformation.txt"];
     [client uploadFile:localFilePath to:path progress:NULL success:^(void) {
         NSLog(@"Uploaded the %@ sucesfully", path);
     } failure:^(NSError *error) {
@@ -457,26 +493,36 @@
     
 }
 
+-(void) prepareFrontImages
+{
+    UIImageView *imgView = _imgViewShirts[0];
+    UIScrollView *container = (UIScrollView *)[imgView viewWithTag:100];
+    MovableImageView *imgRef = (MovableImageView *)[container viewWithTag:200];
+    
+    NSString *localPathShirtImage = [self saveShirtImage:imgView title:@"shirt_front.png"];
+    NSString *localPathRefImage = [self saveRefImage:imgRef title:@"front_ref.png"];
+    
+    [self sendShirtImage:localPathShirtImage title:@"shirt_front.png"];
+    [self sendRefImage:localPathRefImage title:@"front_ref.png"];
+}
+
+-(void) prepareBackImages
+{
+    UIImageView *imgView = _imgViewShirts[0];
+    UIScrollView *container = (UIScrollView *)[imgView viewWithTag:100];
+    MovableImageView *imgRef = (MovableImageView *)[container viewWithTag:200];
+    
+    NSString *localPathShirtImage = [self saveShirtImage:imgView title:@"shirt_back.png"];
+    NSString *localPathRefImage = [self saveRefImage:imgRef title:@"back_ref.png"];
+    
+    [self sendShirtImage:localPathShirtImage title:@"shirt_back.png"];
+    [self sendRefImage:localPathRefImage title:@"back_ref.png"];
+}
+
 - (void) prepareImagesAndData
 {
-    for (NSInteger i = 0; i < 2; i ++) {
-         UIImageView *imgView = _imgViewShirts[i];
-         UIScrollView *container = (UIScrollView *)[imgView viewWithTag:100];
-         MovableImageView *imgRef = (MovableImageView *)[container viewWithTag:200];
-         
-         if (i == 0) {
-             [self sendShirtImage:imgView index:0 title:@"shirt_front.png"];
-             [self sendRefImage:imgRef index:1 title:@"front_ref.png"];
-             
-         } else if (i == 1) {
-             [self sendShirtImage:imgView index:2 title:@"shirt_back.png"];
-             [self sendRefImage:imgRef index:3 title:@"back_ref.png"];
-             
-         } else {
-             [self sendShirtImage:imgView index:4 title:@"shirt_side.png"];
-             [self sendRefImage:imgRef index:5 title:@"side_ref.png"];
-         }
-    }
+    [self prepareFrontImages];
+    [self prepareBackImages];
     
     [self sendStringToFTP];
     NSString *combined = [NSString stringWithFormat:@"Size: %@\nQuantity: %@\nOrder #: %@\n\n%@\n\n%@\n%@\n\n%@",sizeLabel.text, quantityLabel.text, _orderNumber, fullName, emailAddress, phoneNumber, fullAddress];
