@@ -508,7 +508,7 @@
 
 -(void) prepareBackImages
 {
-    UIImageView *imgView = _imgViewShirts[0];
+    UIImageView *imgView = _imgViewShirts[1];
     UIScrollView *container = (UIScrollView *)[imgView viewWithTag:100];
     MovableImageView *imgRef = (MovableImageView *)[container viewWithTag:200];
     
