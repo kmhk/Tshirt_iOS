@@ -91,16 +91,16 @@
                         didCreateDirectoryToFtp = YES;
                         [strongSelf createDirectoryToFtp];
                     }
-                    
-                    if (didCreateAssets != YES) {
-                        didCreateAssets = YES;
-                        NSLog(@"Creating assets");
-                        [strongSelf prepareImagesAndData];
-//                        dispatch_async(dispatch_get_main_queue(), ^{
-//                            __strong __typeof__(weakSelf) strongSelf = weakSelf;
-//                            [strongSelf prepareImagesAndData];
-//                        });
-                    }
+// ensures the second call
+//                    if (didCreateAssets != YES) {
+//                        didCreateAssets = YES;
+//                        NSLog(@"Creating assets");
+//                        [strongSelf prepareImagesAndData];
+////                        dispatch_async(dispatch_get_main_queue(), ^{
+////                            __strong __typeof__(weakSelf) strongSelf = weakSelf;
+////                            [strongSelf prepareImagesAndData];
+////                        });
+//                    }
                 }
                 
 //                [NSThread sleepForTimeInterval:1]; //wait for 1 sec
@@ -326,10 +326,10 @@
     docsDir = [dirPaths objectAtIndex:0];
     NSString *localFilePath = [[NSString alloc] initWithString: [docsDir stringByAppendingPathComponent:[NSString stringWithFormat:@"/%@",title]]];
     if ([data writeToFile:localFilePath atomically:YES]) {
-        NSLog(@"save ok %@",localFilePath);
+        NSLog(@"saveRefImage: save ok %@",localFilePath);
     }
     else {
-        NSLog(@"save failed %@",localFilePath);
+        NSLog(@"saveRefImage:save failed %@",localFilePath);
     }
     
     return localFilePath;
@@ -368,10 +368,10 @@
     docsDir = [dirPaths objectAtIndex:0];
     NSString *localFilePath = [[NSString alloc] initWithString: [docsDir stringByAppendingPathComponent:[NSString stringWithFormat:@"/%@",title]]];
     if ([data writeToFile:localFilePath atomically:YES]) {
-        NSLog(@"save ok %@",localFilePath);
+        NSLog(@"saveShirtImage: save ok %@",localFilePath);
     }
     else {
-        NSLog(@"save failed %@",localFilePath);
+        NSLog(@"saveShirtImage: save failed %@",localFilePath);
     }
     
     return localFilePath;
@@ -382,9 +382,9 @@
     NSString *path = [NSString stringWithFormat:@"./%@/%@", _orderNumber, title];
     
     [client uploadFile:localFilePath to:path progress:NULL success:^(void) {
-        NSLog(@"Uploaded the %@ sucesfully", path);
+        NSLog(@"sendShirtImage: Uploaded the %@ sucesfully", path);
     } failure:^(NSError *error) {
-        NSLog(@"Error %@ for the path: %@",error,path);
+        NSLog(@"sendShirtImage: Error %@ for the path: %@",error,path);
     }];
 }
 
