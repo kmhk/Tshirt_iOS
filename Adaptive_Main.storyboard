@@ -112,6 +112,9 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onPrintCheckboxClicked:" destination="Srk-eo-kFt" eventType="touchUpInside" id="Bj7-QD-K6C"/>
+                                </connections>
                             </view>
                             <view tag="2" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TIH-Eg-qu0" userLabel="All Over T-Shirt" customClass="UIButton">
                                 <rect key="frame" x="169" y="53" width="140" height="205"/>
@@ -181,6 +184,9 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onPrintCheckboxClicked:" destination="Srk-eo-kFt" eventType="touchUpInside" id="qfI-3e-uzc"/>
+                                </connections>
                             </view>
                             <view tag="14" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PH6-Ff-Aj3" userLabel="Hoodie Pullover" customClass="UIButton">
                                 <rect key="frame" x="117" y="418" width="90" height="130"/>
@@ -209,6 +215,9 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onCheckboxClicked:" destination="Srk-eo-kFt" eventType="touchUpInside" id="7JT-aL-y34"/>
+                                </connections>
                             </view>
                             <view tag="13" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e5w-FE-ueq" userLabel="Men's Tanktop" customClass="UIButton">
                                 <rect key="frame" x="16" y="418" width="90" height="130"/>
@@ -237,6 +246,9 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onCheckboxClicked:" destination="Srk-eo-kFt" eventType="touchUpInside" id="rVd-dg-Kjw"/>
+                                </connections>
                             </view>
                             <view tag="15" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d6f-GW-oPi" userLabel="Ladie's Crewneck" customClass="UIButton">
                                 <rect key="frame" x="219" y="418" width="90" height="130"/>
@@ -265,6 +277,9 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onCheckboxClicked:" destination="Srk-eo-kFt" eventType="touchUpInside" id="bJd-gL-2qY"/>
+                                </connections>
                             </view>
                             <view tag="10" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9EY-PT-8aD" userLabel="Kid's Crewneck" customClass="UIButton">
                                 <rect key="frame" x="16" y="271" width="90" height="130"/>
@@ -293,6 +308,9 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onCheckboxClicked:" destination="Srk-eo-kFt" eventType="touchUpInside" id="ugM-Um-yDQ"/>
+                                </connections>
                             </view>
                             <view tag="12" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lvw-Y9-NFj" userLabel="Tri Blend V-Neck" customClass="UIButton">
                                 <rect key="frame" x="219" y="271" width="90" height="130"/>
@@ -321,6 +339,9 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onCheckboxClicked:" destination="Srk-eo-kFt" eventType="touchUpInside" id="eru-N2-Mep"/>
+                                </connections>
                             </view>
                             <view tag="11" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MzR-oW-Xlk" userLabel="Men's Crewneck" customClass="UIButton">
                                 <rect key="frame" x="117" y="271" width="90" height="130"/>
@@ -349,6 +370,9 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onCheckboxClicked:" destination="Srk-eo-kFt" eventType="touchUpInside" id="a4R-Xq-ghP"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Peo-Yd-fhL" userLabel="Next Button View" customClass="UIButton">
                                 <rect key="frame" x="255" y="16" width="65" height="30"/>
@@ -417,6 +441,24 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="alloverTshirt" destination="ghm-fi-Tkj" id="kn3-qT-hkR"/>
+                        <outlet property="alloverTshirtButton" destination="QuB-ir-ugb" id="CXC-dH-GaW"/>
+                        <outlet property="basicTshirt" destination="78u-t4-3DW" id="2AC-Iw-nyI"/>
+                        <outlet property="basicTshirtButton" destination="dMu-jn-VSc" id="H87-Yh-Don"/>
+                        <outlet property="hoodiePullover" destination="Bes-rZ-vPJ" id="Qrt-pP-4Kr"/>
+                        <outlet property="hoodiePulloverButton" destination="Yzv-TA-QHM" id="VRc-YZ-bbb"/>
+                        <outlet property="kidsCrewneckTshirt" destination="fH0-Dk-hae" id="aIG-WL-rKv"/>
+                        <outlet property="kidsCrewneckTshirtButton" destination="eeP-p1-kTN" id="pZv-5Q-d8t"/>
+                        <outlet property="ladiesCrewneckTshirt" destination="UFq-5M-Nwz" id="E2w-aj-UdT"/>
+                        <outlet property="ladiesCrewneckTshirtButton" destination="lha-fM-10B" id="pUL-6Y-dGf"/>
+                        <outlet property="mensCrewneckTshirt" destination="UJX-tE-uMb" id="lDY-B0-wId"/>
+                        <outlet property="mensCrewneckTshirtButton" destination="k2t-NS-qiY" id="2Oe-c6-2ua"/>
+                        <outlet property="mensTanktop" destination="GaR-gO-Xgg" id="ZX5-07-Qea"/>
+                        <outlet property="mensTanktopButton" destination="M2P-XB-OQS" id="mD0-km-xMI"/>
+                        <outlet property="triBlendVNeckTshirt" destination="Rbo-ct-RVh" id="uM7-kc-wtP"/>
+                        <outlet property="triBlendVNeckTshirtButton" destination="pAu-GM-QPY" id="lvu-C5-iBk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h0S-40-3hx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
