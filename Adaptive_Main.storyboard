@@ -191,18 +191,26 @@
                             <view tag="14" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PH6-Ff-Aj3" userLabel="Hoodie Pullover" customClass="UIButton">
                                 <rect key="frame" x="117" y="418" width="90" height="130"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Hoodie Pullover front.png" translatesAutoresizingMaskIntoConstraints="NO" id="Bes-rZ-vPJ">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Hoodie Pullover front.png" translatesAutoresizingMaskIntoConstraints="NO" id="Bes-rZ-vPJ">
                                         <rect key="frame" x="0.0" y="0.0" width="90" height="130"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="90" id="H6z-YU-asY"/>
+                                            <constraint firstAttribute="height" constant="130" id="mJe-nP-JsL"/>
+                                        </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yzv-TA-QHM" userLabel="Checkbox">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yzv-TA-QHM" userLabel="Checkbox">
                                         <rect key="frame" x="70" y="0.0" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="Ip7-MK-TFZ"/>
+                                            <constraint firstAttribute="width" constant="20" id="a0c-8O-VKM"/>
+                                        </constraints>
                                         <state key="normal" image="not-selected.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <state key="selected" image="selected.png"/>
                                         <state key="highlighted" image="selected.png"/>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hoodie Pullover" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x8J-hO-Eye">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Hoodie Pullover" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x8J-hO-Eye">
                                         <rect key="frame" x="5" y="109" width="80" height="21"/>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="11"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -210,6 +218,14 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Yzv-TA-QHM" firstAttribute="top" secondItem="PH6-Ff-Aj3" secondAttribute="top" id="5Yq-QK-wLK"/>
+                                    <constraint firstAttribute="bottom" secondItem="x8J-hO-Eye" secondAttribute="bottom" id="7vX-bw-AYv"/>
+                                    <constraint firstAttribute="centerX" secondItem="x8J-hO-Eye" secondAttribute="centerX" id="O4a-Pv-JZN"/>
+                                    <constraint firstAttribute="centerY" secondItem="Bes-rZ-vPJ" secondAttribute="centerY" id="Zqh-K9-4ou"/>
+                                    <constraint firstAttribute="centerX" secondItem="Bes-rZ-vPJ" secondAttribute="centerX" id="qKA-id-H7I"/>
+                                    <constraint firstAttribute="trailing" secondItem="Yzv-TA-QHM" secondAttribute="trailing" id="vrB-qs-rCh"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="5"/>
@@ -222,18 +238,26 @@
                             <view tag="13" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e5w-FE-ueq" userLabel="Men's Tanktop" customClass="UIButton">
                                 <rect key="frame" x="16" y="418" width="90" height="130"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Men's Tank Top front.png" translatesAutoresizingMaskIntoConstraints="NO" id="GaR-gO-Xgg">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Men's Tank Top front.png" translatesAutoresizingMaskIntoConstraints="NO" id="GaR-gO-Xgg">
                                         <rect key="frame" x="0.0" y="0.0" width="90" height="130"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="90" id="LYL-Pa-qiH"/>
+                                            <constraint firstAttribute="height" constant="130" id="b9b-rX-dnM"/>
+                                        </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M2P-XB-OQS" userLabel="Checkbox">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M2P-XB-OQS" userLabel="Checkbox">
                                         <rect key="frame" x="70" y="0.0" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="FX0-Sn-Cdl"/>
+                                            <constraint firstAttribute="width" constant="20" id="xFN-SB-gGp"/>
+                                        </constraints>
                                         <state key="normal" image="not-selected.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <state key="selected" image="selected.png"/>
                                         <state key="highlighted" image="selected.png"/>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Men's Tanktop" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eSs-pI-UHD">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Men's Tanktop" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eSs-pI-UHD">
                                         <rect key="frame" x="6" y="109" width="78" height="21"/>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="11"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -241,6 +265,14 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="M2P-XB-OQS" firstAttribute="top" secondItem="e5w-FE-ueq" secondAttribute="top" id="LWa-OD-h5a"/>
+                                    <constraint firstAttribute="bottom" secondItem="eSs-pI-UHD" secondAttribute="bottom" id="MO9-Oh-0C3"/>
+                                    <constraint firstAttribute="trailing" secondItem="M2P-XB-OQS" secondAttribute="trailing" id="XfE-oD-t9G"/>
+                                    <constraint firstAttribute="centerX" secondItem="GaR-gO-Xgg" secondAttribute="centerX" id="YEI-R8-Q5q"/>
+                                    <constraint firstAttribute="centerY" secondItem="GaR-gO-Xgg" secondAttribute="centerY" id="cbI-95-64r"/>
+                                    <constraint firstAttribute="centerX" secondItem="eSs-pI-UHD" secondAttribute="centerX" id="fsF-fh-smP"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="5"/>
@@ -253,18 +285,26 @@
                             <view tag="15" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d6f-GW-oPi" userLabel="Ladie's Crewneck" customClass="UIButton">
                                 <rect key="frame" x="219" y="418" width="90" height="130"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Women's Crewneck front.png" translatesAutoresizingMaskIntoConstraints="NO" id="UFq-5M-Nwz">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Women's Crewneck front.png" translatesAutoresizingMaskIntoConstraints="NO" id="UFq-5M-Nwz">
                                         <rect key="frame" x="0.0" y="0.0" width="90" height="130"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="90" id="ZGu-A0-u4h"/>
+                                            <constraint firstAttribute="height" constant="130" id="eDB-TU-mUf"/>
+                                        </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lha-fM-10B" userLabel="Checkbox">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lha-fM-10B" userLabel="Checkbox">
                                         <rect key="frame" x="70" y="0.0" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="95d-l3-9ld"/>
+                                            <constraint firstAttribute="height" constant="20" id="w16-52-ocJ"/>
+                                        </constraints>
                                         <state key="normal" image="not-selected.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <state key="selected" image="selected.png"/>
                                         <state key="highlighted" image="selected.png"/>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ladie's Crewneck" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nqM-ns-PBm">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Ladie's Crewneck" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nqM-ns-PBm">
                                         <rect key="frame" x="1" y="109" width="88" height="21"/>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="11"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -272,6 +312,14 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="lha-fM-10B" firstAttribute="top" secondItem="d6f-GW-oPi" secondAttribute="top" id="6BP-7Y-XuS"/>
+                                    <constraint firstAttribute="centerX" secondItem="nqM-ns-PBm" secondAttribute="centerX" id="EBo-M6-9Tw"/>
+                                    <constraint firstAttribute="bottom" secondItem="nqM-ns-PBm" secondAttribute="bottom" id="Lv1-1c-o9v"/>
+                                    <constraint firstAttribute="centerX" secondItem="UFq-5M-Nwz" secondAttribute="centerX" id="OWD-h0-v9z"/>
+                                    <constraint firstAttribute="centerY" secondItem="UFq-5M-Nwz" secondAttribute="centerY" id="cTH-QW-Vjw"/>
+                                    <constraint firstAttribute="trailing" secondItem="lha-fM-10B" secondAttribute="trailing" id="h8W-nD-bb5"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="5"/>
@@ -284,18 +332,26 @@
                             <view tag="10" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9EY-PT-8aD" userLabel="Kid's Crewneck" customClass="UIButton">
                                 <rect key="frame" x="16" y="271" width="90" height="130"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Kids Crewneck front.png" translatesAutoresizingMaskIntoConstraints="NO" id="fH0-Dk-hae">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Kids Crewneck front.png" translatesAutoresizingMaskIntoConstraints="NO" id="fH0-Dk-hae">
                                         <rect key="frame" x="0.0" y="0.0" width="90" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="NNt-NX-cUR"/>
+                                            <constraint firstAttribute="width" constant="90" id="mZ4-5W-rqS"/>
+                                        </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eeP-p1-kTN" userLabel="Checkbox">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eeP-p1-kTN" userLabel="Checkbox">
                                         <rect key="frame" x="70" y="0.0" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="4ha-Af-OoM"/>
+                                            <constraint firstAttribute="height" constant="20" id="aRf-v8-KYt"/>
+                                        </constraints>
                                         <state key="normal" image="not-selected.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <state key="selected" image="selected.png"/>
                                         <state key="highlighted" image="selected.png"/>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kid's Crewneck" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aUH-vv-gPE">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Kid's Crewneck" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aUH-vv-gPE">
                                         <rect key="frame" x="6" y="109" width="78" height="21"/>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="11"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -303,6 +359,14 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="fH0-Dk-hae" secondAttribute="centerX" id="0Lm-10-6oP"/>
+                                    <constraint firstAttribute="centerX" secondItem="aUH-vv-gPE" secondAttribute="centerX" id="3bD-bM-W8E"/>
+                                    <constraint firstAttribute="trailing" secondItem="eeP-p1-kTN" secondAttribute="trailing" id="dzt-vY-Vdb"/>
+                                    <constraint firstAttribute="centerY" secondItem="fH0-Dk-hae" secondAttribute="centerY" id="eFd-gw-cdE"/>
+                                    <constraint firstAttribute="bottom" secondItem="aUH-vv-gPE" secondAttribute="bottom" id="lgR-l5-Bj4"/>
+                                    <constraint firstItem="eeP-p1-kTN" firstAttribute="top" secondItem="9EY-PT-8aD" secondAttribute="top" id="sVt-kX-m2M"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="5"/>
@@ -315,18 +379,26 @@
                             <view tag="12" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lvw-Y9-NFj" userLabel="Tri Blend V-Neck" customClass="UIButton">
                                 <rect key="frame" x="219" y="271" width="90" height="130"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="V-Neck Tri-Blend front.png" translatesAutoresizingMaskIntoConstraints="NO" id="Rbo-ct-RVh">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="V-Neck Tri-Blend front.png" translatesAutoresizingMaskIntoConstraints="NO" id="Rbo-ct-RVh">
                                         <rect key="frame" x="0.0" y="0.0" width="90" height="130"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="130" id="2t1-RR-oIO"/>
+                                            <constraint firstAttribute="width" constant="90" id="xiW-iG-EG3"/>
+                                        </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pAu-GM-QPY" userLabel="Checkbox">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pAu-GM-QPY" userLabel="Checkbox">
                                         <rect key="frame" x="70" y="0.0" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="Bgd-aj-lre"/>
+                                            <constraint firstAttribute="width" constant="20" id="Sz5-u3-H82"/>
+                                        </constraints>
                                         <state key="normal" image="not-selected.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <state key="selected" image="selected.png"/>
                                         <state key="highlighted" image="selected.png"/>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tri Blend V-Neck" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OmH-Ov-0eU">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Tri Blend V-Neck" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OmH-Ov-0eU">
                                         <rect key="frame" x="4" y="109" width="83" height="21"/>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="11"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -334,6 +406,14 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerY" secondItem="Rbo-ct-RVh" secondAttribute="centerY" id="Cv3-1b-nGt"/>
+                                    <constraint firstAttribute="trailing" secondItem="pAu-GM-QPY" secondAttribute="trailing" id="IVJ-G2-Cq6"/>
+                                    <constraint firstAttribute="centerX" secondItem="Rbo-ct-RVh" secondAttribute="centerX" id="NCa-C4-t5G"/>
+                                    <constraint firstItem="pAu-GM-QPY" firstAttribute="top" secondItem="Lvw-Y9-NFj" secondAttribute="top" id="Qny-EJ-gMd"/>
+                                    <constraint firstAttribute="centerX" secondItem="OmH-Ov-0eU" secondAttribute="centerX" id="fQE-42-2yX"/>
+                                    <constraint firstAttribute="bottom" secondItem="OmH-Ov-0eU" secondAttribute="bottom" id="kHn-m4-fxl"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="5"/>
@@ -346,18 +426,26 @@
                             <view tag="11" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MzR-oW-Xlk" userLabel="Men's Crewneck" customClass="UIButton">
                                 <rect key="frame" x="117" y="271" width="90" height="130"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Men's Crewneck front.png" translatesAutoresizingMaskIntoConstraints="NO" id="UJX-tE-uMb">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Men's Crewneck front.png" translatesAutoresizingMaskIntoConstraints="NO" id="UJX-tE-uMb">
                                         <rect key="frame" x="0.0" y="0.0" width="90" height="130"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="130" id="V6x-ye-e3y"/>
+                                            <constraint firstAttribute="width" constant="90" id="YlZ-mh-guJ"/>
+                                        </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k2t-NS-qiY" userLabel="Checkbox">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k2t-NS-qiY" userLabel="Checkbox">
                                         <rect key="frame" x="70" y="0.0" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="3T1-pd-Wk3"/>
+                                            <constraint firstAttribute="height" constant="20" id="wDz-DV-ffN"/>
+                                        </constraints>
                                         <state key="normal" image="not-selected.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <state key="selected" image="selected.png"/>
                                         <state key="highlighted" image="selected.png"/>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Men's Crewneck" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oI1-eo-yhD">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Men's Crewneck" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oI1-eo-yhD">
                                         <rect key="frame" x="4" y="109" width="83" height="21"/>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="11"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -365,6 +453,14 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="UJX-tE-uMb" secondAttribute="centerX" id="0G0-Am-1nV"/>
+                                    <constraint firstAttribute="centerX" secondItem="oI1-eo-yhD" secondAttribute="centerX" id="8Dz-fW-de0"/>
+                                    <constraint firstAttribute="trailing" secondItem="k2t-NS-qiY" secondAttribute="trailing" id="DpZ-O2-pOI"/>
+                                    <constraint firstItem="k2t-NS-qiY" firstAttribute="top" secondItem="MzR-oW-Xlk" secondAttribute="top" id="QSn-SS-dd6"/>
+                                    <constraint firstAttribute="centerY" secondItem="UJX-tE-uMb" secondAttribute="centerY" id="T1B-7U-uYe"/>
+                                    <constraint firstAttribute="bottom" secondItem="oI1-eo-yhD" secondAttribute="bottom" id="c2x-9Z-Ect"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="5"/>
@@ -408,6 +504,7 @@
                             <constraint firstItem="d6f-GW-oPi" firstAttribute="top" secondItem="Lvw-Y9-NFj" secondAttribute="bottom" constant="17" id="OMN-O5-hl4"/>
                             <constraint firstItem="e5w-FE-ueq" firstAttribute="leading" secondItem="RZn-lf-qOZ" secondAttribute="leading" constant="16" id="P3Z-1r-6se"/>
                             <constraint firstItem="Lvw-Y9-NFj" firstAttribute="height" secondItem="9EY-PT-8aD" secondAttribute="height" id="S4J-IH-w12"/>
+                            <constraint firstItem="edR-8u-shp" firstAttribute="leading" secondItem="RZn-lf-qOZ" secondAttribute="leading" id="Say-Za-AKo"/>
                             <constraint firstItem="Lvw-Y9-NFj" firstAttribute="height" secondItem="e5w-FE-ueq" secondAttribute="height" id="Skh-Ve-0mv"/>
                             <constraint firstAttribute="centerX" secondItem="1Xc-aL-muR" secondAttribute="centerX" constant="-2" id="T5S-KB-uKi"/>
                             <constraint firstItem="PH6-Ff-Aj3" firstAttribute="top" secondItem="MzR-oW-Xlk" secondAttribute="bottom" constant="17" id="UAA-49-1bO"/>
