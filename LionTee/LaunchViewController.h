@@ -12,17 +12,37 @@
 
 {
     
-    IBOutlet UIScrollView * scrollView;
-    IBOutlet UIButton * basicButton;
-    IBOutlet UIButton * allOverButton;
+    IBOutlet UIView * basicTshirt;
+    IBOutlet UIButton * basicTshirtButton;
     
-    IBOutlet UIPageControl * pageController;
+    IBOutlet UIView * alloverTshirt;
+    IBOutlet UIButton * alloverTshirtButton;
     
-    NSUInteger currentPage;
+    IBOutlet UIView * kidsCrewneckTshirt;
+    IBOutlet UIButton * kidsCrewneckTshirtButton;
     
+    IBOutlet UIView * mensCrewneckTshirt;
+    IBOutlet UIButton * mensCrewneckTshirtButton;
     
+    IBOutlet UIView * triBlendVNeckTshirt;
+    IBOutlet UIButton * triBlendVNeckTshirtButton;
+    
+    IBOutlet UIView * hoodiePullover;
+    IBOutlet UIButton * hoodiePulloverButton;
+    
+    IBOutlet UIView * mensTanktop;
+    IBOutlet UIButton * mensTanktopButton;
+    
+    IBOutlet UIView * ladiesCrewneckTshirt;
+    IBOutlet UIButton * ladiesCrewneckTshirtButton;
+    
+    NSString *printType;
+    NSString *tshirtType;
+    
+    NSArray *printCheckboxes;
+    NSArray *tshirtCheckboxes;
 }
 
--(IBAction)onBasic:(id)sender;
--(IBAction)onAllOver:(id)sender;
+-(IBAction)onPrintCheckboxClicked:(id)sender;
+-(IBAction)onCheckboxClicked:(id)sender;
 @end

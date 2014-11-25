@@ -458,6 +458,7 @@
     NSString *path = [NSString stringWithFormat:@"./%@/%@", _orderNumber, @"shippingAddress.txt"];
     [client uploadFile:localFilePath to:path progress:NULL success:^(void) {
         NSLog(@"Uploaded the %@ sucesfully", path);
+        
     } failure:^(NSError *error) {
         NSLog(@"Error %@ or the path: %@",error,path);
     }];

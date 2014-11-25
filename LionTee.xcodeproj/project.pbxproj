@@ -97,6 +97,24 @@
 		2282B12A1A156D7F0004FF8C /* Order-Confirmation-5.png in Resources */ = {isa = PBXBuildFile; fileRef = 2282B1291A156D7F0004FF8C /* Order-Confirmation-5.png */; };
 		22BD4F4A1A09DA190079E899 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22BD4F491A09DA190079E899 /* AddressBook.framework */; };
 		22E621131A13306800A1778B /* iPhone6_Plus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22E621121A13306800A1778B /* iPhone6_Plus.storyboard */; };
+		29399E951A2472AD004DC983 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 29399E941A2472AD004DC983 /* background.png */; };
+		29399E971A24788F004DC983 /* right-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 29399E961A24788F004DC983 /* right-arrow.png */; };
+		29399E9C1A2480C8004DC983 /* allover-tshirt.png in Resources */ = {isa = PBXBuildFile; fileRef = 29399E981A2480C8004DC983 /* allover-tshirt.png */; };
+		29399E9D1A2480C8004DC983 /* basic-tshirt.png in Resources */ = {isa = PBXBuildFile; fileRef = 29399E991A2480C8004DC983 /* basic-tshirt.png */; };
+		29399E9E1A2480C8004DC983 /* not-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 29399E9A1A2480C8004DC983 /* not-selected.png */; };
+		29399E9F1A2480C8004DC983 /* selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 29399E9B1A2480C8004DC983 /* selected.png */; };
+		29399EAD1A24889D004DC983 /* Hoodie Pullover back.png in Resources */ = {isa = PBXBuildFile; fileRef = 29399EA11A24889D004DC983 /* Hoodie Pullover back.png */; };
+		29399EAE1A24889D004DC983 /* Hoodie Pullover front.png in Resources */ = {isa = PBXBuildFile; fileRef = 29399EA21A24889D004DC983 /* Hoodie Pullover front.png */; };
+		29399EAF1A24889D004DC983 /* Kids Crewneck back.png in Resources */ = {isa = PBXBuildFile; fileRef = 29399EA31A24889D004DC983 /* Kids Crewneck back.png */; };
+		29399EB01A24889D004DC983 /* Kids Crewneck front.png in Resources */ = {isa = PBXBuildFile; fileRef = 29399EA41A24889D004DC983 /* Kids Crewneck front.png */; };
+		29399EB11A24889D004DC983 /* Men's Crewneck back.png in Resources */ = {isa = PBXBuildFile; fileRef = 29399EA51A24889D004DC983 /* Men's Crewneck back.png */; };
+		29399EB21A24889D004DC983 /* Men's Crewneck front.png in Resources */ = {isa = PBXBuildFile; fileRef = 29399EA61A24889D004DC983 /* Men's Crewneck front.png */; };
+		29399EB31A24889D004DC983 /* Men's Tank Top back.png in Resources */ = {isa = PBXBuildFile; fileRef = 29399EA71A24889D004DC983 /* Men's Tank Top back.png */; };
+		29399EB41A24889D004DC983 /* Men's Tank Top front.png in Resources */ = {isa = PBXBuildFile; fileRef = 29399EA81A24889D004DC983 /* Men's Tank Top front.png */; };
+		29399EB51A24889D004DC983 /* V-Neck Tri-Blend back.png in Resources */ = {isa = PBXBuildFile; fileRef = 29399EA91A24889D004DC983 /* V-Neck Tri-Blend back.png */; };
+		29399EB61A24889D004DC983 /* V-Neck Tri-Blend front.png in Resources */ = {isa = PBXBuildFile; fileRef = 29399EAA1A24889D004DC983 /* V-Neck Tri-Blend front.png */; };
+		29399EB71A24889D004DC983 /* Women's Crewneck back.png in Resources */ = {isa = PBXBuildFile; fileRef = 29399EAB1A24889D004DC983 /* Women's Crewneck back.png */; };
+		29399EB81A24889D004DC983 /* Women's Crewneck front.png in Resources */ = {isa = PBXBuildFile; fileRef = 29399EAC1A24889D004DC983 /* Women's Crewneck front.png */; };
 		29FA0D091A1AC23500ECA9E9 /* libFTPKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29FA0D041A1AC20200ECA9E9 /* libFTPKit.a */; };
 		3F064B0219F11C050018C248 /* MovableLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F064B0119F11C050018C248 /* MovableLabel.m */; };
 		3F064B0619F11E3A0018C248 /* MovableImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F064B0519F11E3A0018C248 /* MovableImageView.m */; };
@@ -347,6 +365,24 @@
 		22BD4F491A09DA190079E899 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		22E621121A13306800A1778B /* iPhone6_Plus.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone6_Plus.storyboard; sourceTree = "<group>"; };
 		22E621141A13ECB900A1778B /* LionTee.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = LionTee.entitlements; sourceTree = "<group>"; };
+		29399E941A2472AD004DC983 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		29399E961A24788F004DC983 /* right-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right-arrow.png"; sourceTree = "<group>"; };
+		29399E981A2480C8004DC983 /* allover-tshirt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "allover-tshirt.png"; sourceTree = "<group>"; };
+		29399E991A2480C8004DC983 /* basic-tshirt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "basic-tshirt.png"; sourceTree = "<group>"; };
+		29399E9A1A2480C8004DC983 /* not-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "not-selected.png"; sourceTree = "<group>"; };
+		29399E9B1A2480C8004DC983 /* selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selected.png; sourceTree = "<group>"; };
+		29399EA11A24889D004DC983 /* Hoodie Pullover back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hoodie Pullover back.png"; sourceTree = "<group>"; };
+		29399EA21A24889D004DC983 /* Hoodie Pullover front.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hoodie Pullover front.png"; sourceTree = "<group>"; };
+		29399EA31A24889D004DC983 /* Kids Crewneck back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Kids Crewneck back.png"; sourceTree = "<group>"; };
+		29399EA41A24889D004DC983 /* Kids Crewneck front.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Kids Crewneck front.png"; sourceTree = "<group>"; };
+		29399EA51A24889D004DC983 /* Men's Crewneck back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Men's Crewneck back.png"; sourceTree = "<group>"; };
+		29399EA61A24889D004DC983 /* Men's Crewneck front.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Men's Crewneck front.png"; sourceTree = "<group>"; };
+		29399EA71A24889D004DC983 /* Men's Tank Top back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Men's Tank Top back.png"; sourceTree = "<group>"; };
+		29399EA81A24889D004DC983 /* Men's Tank Top front.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Men's Tank Top front.png"; sourceTree = "<group>"; };
+		29399EA91A24889D004DC983 /* V-Neck Tri-Blend back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "V-Neck Tri-Blend back.png"; sourceTree = "<group>"; };
+		29399EAA1A24889D004DC983 /* V-Neck Tri-Blend front.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "V-Neck Tri-Blend front.png"; sourceTree = "<group>"; };
+		29399EAB1A24889D004DC983 /* Women's Crewneck back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Women's Crewneck back.png"; sourceTree = "<group>"; };
+		29399EAC1A24889D004DC983 /* Women's Crewneck front.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Women's Crewneck front.png"; sourceTree = "<group>"; };
 		29FA0CFE1A1AC20100ECA9E9 /* FTPKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FTPKit.xcodeproj; path = "FTPKit-master/FTPKit.xcodeproj"; sourceTree = "<group>"; };
 		3F064B0019F11C050018C248 /* MovableLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovableLabel.h; sourceTree = "<group>"; };
 		3F064B0119F11C050018C248 /* MovableLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovableLabel.m; sourceTree = "<group>"; };
@@ -633,6 +669,39 @@
 			path = shape;
 			sourceTree = "<group>";
 		};
+		29399E931A2472AD004DC983 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				29399EA01A24889D004DC983 /* white */,
+				29399E981A2480C8004DC983 /* allover-tshirt.png */,
+				29399E991A2480C8004DC983 /* basic-tshirt.png */,
+				29399E9A1A2480C8004DC983 /* not-selected.png */,
+				29399E9B1A2480C8004DC983 /* selected.png */,
+				29399E961A24788F004DC983 /* right-arrow.png */,
+				29399E941A2472AD004DC983 /* background.png */,
+			);
+			path = assets;
+			sourceTree = "<group>";
+		};
+		29399EA01A24889D004DC983 /* white */ = {
+			isa = PBXGroup;
+			children = (
+				29399EA11A24889D004DC983 /* Hoodie Pullover back.png */,
+				29399EA21A24889D004DC983 /* Hoodie Pullover front.png */,
+				29399EA31A24889D004DC983 /* Kids Crewneck back.png */,
+				29399EA41A24889D004DC983 /* Kids Crewneck front.png */,
+				29399EA51A24889D004DC983 /* Men's Crewneck back.png */,
+				29399EA61A24889D004DC983 /* Men's Crewneck front.png */,
+				29399EA71A24889D004DC983 /* Men's Tank Top back.png */,
+				29399EA81A24889D004DC983 /* Men's Tank Top front.png */,
+				29399EA91A24889D004DC983 /* V-Neck Tri-Blend back.png */,
+				29399EAA1A24889D004DC983 /* V-Neck Tri-Blend front.png */,
+				29399EAB1A24889D004DC983 /* Women's Crewneck back.png */,
+				29399EAC1A24889D004DC983 /* Women's Crewneck front.png */,
+			);
+			path = white;
+			sourceTree = "<group>";
+		};
 		29FA0CFF1A1AC20100ECA9E9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -917,6 +986,7 @@
 		3FFCDCD319EFBFB600A7C43B = {
 			isa = PBXGroup;
 			children = (
+				29399E931A2472AD004DC983 /* assets */,
 				29FA0CFE1A1AC20100ECA9E9 /* FTPKit.xcodeproj */,
 				2282B0F01A15045E0004FF8C /* MyriadPro-Light.otf */,
 				3FFCDCE519EFBFB600A7C43B /* LionTee */,
@@ -1180,12 +1250,15 @@
 				219A76941A0B821E0050A70F /* amex.png in Resources */,
 				21BA0C9B1A14A9120000B172 /* mask_v7.png in Resources */,
 				2282B0F11A15045E0004FF8C /* MyriadPro-Light.otf in Resources */,
+				29399E9C1A2480C8004DC983 /* allover-tshirt.png in Resources */,
 				219A76961A0B821E0050A70F /* cvc-amex.png in Resources */,
 				3F7695691A0334CA000B517D /* brown_shirt1.png in Resources */,
 				2282B1251A155EC80004FF8C /* Order-Confirmation.png in Resources */,
+				29399EAD1A24889D004DC983 /* Hoodie Pullover back.png in Resources */,
 				3F064B1C19F123440018C248 /* InfColorPickerView.xib in Resources */,
 				3F76958A1A0334CA000B517D /* turq_shirt1.png in Resources */,
 				223675221A15F87E006D6372 /* round-price.png in Resources */,
+				29399E9D1A2480C8004DC983 /* basic-tshirt.png in Resources */,
 				3FF08D6619F5A125005D798E /* apple_red_shirt.png in Resources */,
 				219A76A41A0B821E0050A70F /* visa.png in Resources */,
 				21F04A3E1A0D38CE001194AF /* mask_8.png in Resources */,
@@ -1205,9 +1278,13 @@
 				3F7695751A0334CA000B517D /* midnight_shirt1.png in Resources */,
 				219A76A21A0B821E0050A70F /* placeholder.png in Resources */,
 				3FF08D6E19F5A125005D798E /* navy_shirt.png in Resources */,
+				29399E9E1A2480C8004DC983 /* not-selected.png in Resources */,
 				21BC88061A123F4300071CBA /* buy_applepay.png in Resources */,
 				219A76A61A0B821E0050A70F /* gradient@2x.png in Resources */,
 				21BC880A1A124B8F00071CBA /* shirt_size.png in Resources */,
+				29399EB41A24889D004DC983 /* Men's Tank Top front.png in Resources */,
+				29399EB81A24889D004DC983 /* Women's Crewneck front.png in Resources */,
+				29399E951A2472AD004DC983 /* background.png in Resources */,
 				21BC88001A121B5000071CBA /* lauch_image_background.png in Resources */,
 				219A769B1A0B821E0050A70F /* diners@2x.png in Resources */,
 				3FF08D7219F5A125005D798E /* royal_shirt.png in Resources */,
@@ -1216,25 +1293,31 @@
 				3FF08D7019F5A125005D798E /* powder_blue_shirt.png in Resources */,
 				21BA0C9A1A14A9120000B172 /* mask_v6.png in Resources */,
 				3FF08D6719F5A125005D798E /* asphalt_shirt.png in Resources */,
+				29399E971A24788F004DC983 /* right-arrow.png in Resources */,
 				3F76956C1A0334CA000B517D /* cream_shirt1.png in Resources */,
 				3F76958C1A0334CA000B517D /* turq_shirt3.png in Resources */,
 				3F76957C1A0334CA000B517D /* orange_shirt2.png in Resources */,
 				3FF08D6D19F5A125005D798E /* midnight_shirt.png in Resources */,
 				3F76956E1A0334CA000B517D /* cream_shirt3.png in Resources */,
 				219A769C1A0B821E0050A70F /* discover.png in Resources */,
+				29399EB21A24889D004DC983 /* Men's Crewneck front.png in Resources */,
 				21BA0C951A14A9120000B172 /* mask_v1.png in Resources */,
 				219A76981A0B821E0050A70F /* cvc.png in Resources */,
 				219A769A1A0B821E0050A70F /* diners.png in Resources */,
 				3F76956F1A0334CA000B517D /* heather_grey_shirt1.png in Resources */,
 				21F04A381A0D38CE001194AF /* mask_2.png in Resources */,
 				3FF08D6B19F5A125005D798E /* heather_grey_shirt.png in Resources */,
+				29399E9F1A2480C8004DC983 /* selected.png in Resources */,
 				3FFCDD2219EFC30D00A7C43B /* btn_library.png in Resources */,
+				29399EAF1A24889D004DC983 /* Kids Crewneck back.png in Resources */,
 				21BC88021A121ECF00071CBA /* Images-2.xcassets in Resources */,
+				29399EB11A24889D004DC983 /* Men's Crewneck back.png in Resources */,
 				21BC88071A123F4300071CBA /* edit_background.png in Resources */,
 				21BC87FA1A121B5000071CBA /* allover_button_active.png in Resources */,
 				2282B0EE1A1440220004FF8C /* pay_stripe_button.png in Resources */,
 				3F76958B1A0334CA000B517D /* turq_shirt2.png in Resources */,
 				3F7695791A0334CA000B517D /* navy_shirt2.png in Resources */,
+				29399EB01A24889D004DC983 /* Kids Crewneck front.png in Resources */,
 				3FF08D6919F5A125005D798E /* brown_shirt.png in Resources */,
 				3F7695841A0334CA000B517D /* royal_shirt1.png in Resources */,
 				3FFCDCEA19EFBFB600A7C43B /* InfoPlist.strings in Resources */,
@@ -1276,6 +1359,7 @@
 				3FF08D6819F5A125005D798E /* black_shirt.png in Resources */,
 				21F04A3A1A0D38CE001194AF /* mask_4.png in Resources */,
 				3F7695741A0334CA000B517D /* hunter_green3.png in Resources */,
+				29399EB31A24889D004DC983 /* Men's Tank Top back.png in Resources */,
 				3FF08D6F19F5A125005D798E /* orange_shirt.png in Resources */,
 				219A76A01A0B821E0050A70F /* mastercard.png in Resources */,
 				3F7695771A0334CA000B517D /* midnight_shirt3.png in Resources */,
@@ -1284,20 +1368,24 @@
 				21BC87FC1A121B5000071CBA /* allover.png in Resources */,
 				3FFCDD1A19EFC24700A7C43B /* background_1.png in Resources */,
 				21F04A3B1A0D38CE001194AF /* mask_5.png in Resources */,
+				29399EB61A24889D004DC983 /* V-Neck Tri-Blend front.png in Resources */,
 				3F76956D1A0334CA000B517D /* cream_shirt2.png in Resources */,
 				21BA0C991A14A9120000B172 /* mask_v5.png in Resources */,
 				3FF08D7319F5A125005D798E /* silver_shirt.png in Resources */,
 				3F7695781A0334CA000B517D /* navy_shirt1.png in Resources */,
+				29399EB51A24889D004DC983 /* V-Neck Tri-Blend back.png in Resources */,
 				219A769D1A0B821E0050A70F /* discover@2x.png in Resources */,
 				3F76957A1A0334CA000B517D /* navy_shirt3.png in Resources */,
 				219E56FE1A126B790095BF0D /* main_back.png in Resources */,
 				3FFCDD2019EFC30D00A7C43B /* btn_camera.png in Resources */,
 				3F7695681A0334CA000B517D /* asphalt_shirt3.png in Resources */,
+				29399EAE1A24889D004DC983 /* Hoodie Pullover front.png in Resources */,
 				219A769F1A0B821E0050A70F /* jcb@2x.png in Resources */,
 				21F04A3C1A0D38CE001194AF /* mask_6.png in Resources */,
 				22E621131A13306800A1778B /* iPhone6_Plus.storyboard in Resources */,
 				3FF08D6A19F5A125005D798E /* cream_shirt.png in Resources */,
 				226445081A12CAE8002AA717 /* ApplePayBTN_64pt__white_textLogo_@2x.png in Resources */,
+				29399EB71A24889D004DC983 /* Women's Crewneck back.png in Resources */,
 				21F04A3D1A0D38CE001194AF /* mask_7.png in Resources */,
 				226445091A12CAE8002AA717 /* ApplePayBTN_64pt__white_textLogo_@3x.png in Resources */,
 			);
