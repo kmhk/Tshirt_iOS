@@ -33,17 +33,6 @@
     return self;
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    
-    [super viewWillAppear:animated];
-    
-    self.navigationItem.title = @"Back";
-    
-    [self.navigationItem setHidesBackButton:YES animated:NO];
-    
-    [self.navigationController.navigationBar setNeedsDisplay];
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];

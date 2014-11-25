@@ -17,45 +17,54 @@ NSString * const StripePublishableKey = @"pk_test_faqlcakROako6GtlwIbOehIN";
 {
     // Override point for customization after application launch.
 	[Stripe setDefaultPublishableKey:StripePublishableKey];
+    UIStoryboard *iPhoneStoryBoard = [UIStoryboard storyboardWithName:@"Adaptive_Main" bundle:nil];
+
+    UIViewController *initialViewController = [iPhoneStoryBoard instantiateInitialViewController];
+
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+
+    self.window.rootViewController = initialViewController;
+
+    [self.window makeKeyAndVisible];
 	
-    CGSize iOSScreenSize = [[UIScreen mainScreen] bounds].size;
-    
-    if (iOSScreenSize.height <= 568) {
-        UIStoryboard *iPhoneStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        
-        UIViewController *initialViewController = [iPhoneStoryBoard instantiateInitialViewController];
-        
-        self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-        
-        self.window.rootViewController = initialViewController;
-        
-        [self.window makeKeyAndVisible];
-    }
-    
-    if (iOSScreenSize.height == 667) {
-        UIStoryboard *iPhone6StoryBoard = [UIStoryboard storyboardWithName:@"iPhone6" bundle:nil];
-        
-        UIViewController *initialViewController = [iPhone6StoryBoard instantiateInitialViewController];
-        
-        self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-        
-        self.window.rootViewController = initialViewController;
-        
-        [self.window makeKeyAndVisible];
-    }
-    
-    if (iOSScreenSize.height == 736) {
-        
-        UIStoryboard *iPhone6StoryBoard = [UIStoryboard storyboardWithName:@"iPhone6_Plus" bundle:nil];
-        
-        UIViewController *initialViewController = [iPhone6StoryBoard instantiateInitialViewController];
-        
-        self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-        
-        self.window.rootViewController = initialViewController;
-        
-        [self.window makeKeyAndVisible];
-    }
+//    CGSize iOSScreenSize = [[UIScreen mainScreen] bounds].size;
+//    
+//    if (iOSScreenSize.height <= 568) {
+//        UIStoryboard *iPhoneStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+//        
+//        UIViewController *initialViewController = [iPhoneStoryBoard instantiateInitialViewController];
+//        
+//        self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+//        
+//        self.window.rootViewController = initialViewController;
+//        
+//        [self.window makeKeyAndVisible];
+//    }
+//    
+//    if (iOSScreenSize.height == 667) {
+//        UIStoryboard *iPhone6StoryBoard = [UIStoryboard storyboardWithName:@"iPhone6" bundle:nil];
+//        
+//        UIViewController *initialViewController = [iPhone6StoryBoard instantiateInitialViewController];
+//        
+//        self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+//        
+//        self.window.rootViewController = initialViewController;
+//        
+//        [self.window makeKeyAndVisible];
+//    }
+//    
+//    if (iOSScreenSize.height == 736) {
+//        
+//        UIStoryboard *iPhone6StoryBoard = [UIStoryboard storyboardWithName:@"iPhone6_Plus" bundle:nil];
+//        
+//        UIViewController *initialViewController = [iPhone6StoryBoard instantiateInitialViewController];
+//        
+//        self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+//        
+//        self.window.rootViewController = initialViewController;
+//        
+//        [self.window makeKeyAndVisible];
+//    }
     
     return YES;
 }

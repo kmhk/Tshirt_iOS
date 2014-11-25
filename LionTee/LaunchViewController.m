@@ -17,6 +17,8 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
+    
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
    
     AppDelegate* MyAppDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
     

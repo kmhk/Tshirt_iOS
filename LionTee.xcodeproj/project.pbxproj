@@ -84,7 +84,6 @@
 		21F04A3C1A0D38CE001194AF /* mask_6.png in Resources */ = {isa = PBXBuildFile; fileRef = 21F04A2D1A0D38CE001194AF /* mask_6.png */; };
 		21F04A3D1A0D38CE001194AF /* mask_7.png in Resources */ = {isa = PBXBuildFile; fileRef = 21F04A2E1A0D38CE001194AF /* mask_7.png */; };
 		21F04A3E1A0D38CE001194AF /* mask_8.png in Resources */ = {isa = PBXBuildFile; fileRef = 21F04A2F1A0D38CE001194AF /* mask_8.png */; };
-		222DD1781A1157A900A0FD46 /* iPhone6.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 222DD1771A1157A900A0FD46 /* iPhone6.storyboard */; };
 		223136A41A128C5600104346 /* bracket.png in Resources */ = {isa = PBXBuildFile; fileRef = 223136A31A128C5600104346 /* bracket.png */; };
 		223136A61A1291D200104346 /* basic_unselected.png in Resources */ = {isa = PBXBuildFile; fileRef = 223136A51A1291D200104346 /* basic_unselected.png */; };
 		223675221A15F87E006D6372 /* round-price.png in Resources */ = {isa = PBXBuildFile; fileRef = 223675211A15F87E006D6372 /* round-price.png */; };
@@ -96,7 +95,6 @@
 		2282B1281A155F4B0004FF8C /* OrderConfirmationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2282B1271A155F4B0004FF8C /* OrderConfirmationViewController.m */; };
 		2282B12A1A156D7F0004FF8C /* Order-Confirmation-5.png in Resources */ = {isa = PBXBuildFile; fileRef = 2282B1291A156D7F0004FF8C /* Order-Confirmation-5.png */; };
 		22BD4F4A1A09DA190079E899 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22BD4F491A09DA190079E899 /* AddressBook.framework */; };
-		22E621131A13306800A1778B /* iPhone6_Plus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22E621121A13306800A1778B /* iPhone6_Plus.storyboard */; };
 		29399E951A2472AD004DC983 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 29399E941A2472AD004DC983 /* background.png */; };
 		29399E971A24788F004DC983 /* right-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 29399E961A24788F004DC983 /* right-arrow.png */; };
 		29399E9C1A2480C8004DC983 /* allover-tshirt.png in Resources */ = {isa = PBXBuildFile; fileRef = 29399E981A2480C8004DC983 /* allover-tshirt.png */; };
@@ -115,11 +113,11 @@
 		29399EB61A24889D004DC983 /* V-Neck Tri-Blend front.png in Resources */ = {isa = PBXBuildFile; fileRef = 29399EAA1A24889D004DC983 /* V-Neck Tri-Blend front.png */; };
 		29399EB71A24889D004DC983 /* Women's Crewneck back.png in Resources */ = {isa = PBXBuildFile; fileRef = 29399EAB1A24889D004DC983 /* Women's Crewneck back.png */; };
 		29399EB81A24889D004DC983 /* Women's Crewneck front.png in Resources */ = {isa = PBXBuildFile; fileRef = 29399EAC1A24889D004DC983 /* Women's Crewneck front.png */; };
-		29399EBB1A249CFD004DC983 /* New-Design.png in Resources */ = {isa = PBXBuildFile; fileRef = 29399EBA1A249CFD004DC983 /* New-Design.png */; };
 		29399EC01A24ACCA004DC983 /* aa-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 29399EBC1A24ACCA004DC983 /* aa-icon.png */; };
 		29399EC11A24ACCA004DC983 /* photo-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 29399EBD1A24ACCA004DC983 /* photo-icon.png */; };
 		29399EC21A24ACCA004DC983 /* star-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 29399EBE1A24ACCA004DC983 /* star-icon.png */; };
 		29399EC31A24ACCA004DC983 /* color-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 29399EBF1A24ACCA004DC983 /* color-icon.png */; };
+		29399EC51A24DA10004DC983 /* Adaptive_Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29399EC41A24DA10004DC983 /* Adaptive_Main.storyboard */; };
 		29FA0D091A1AC23500ECA9E9 /* libFTPKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29FA0D041A1AC20200ECA9E9 /* libFTPKit.a */; };
 		3F064B0219F11C050018C248 /* MovableLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F064B0119F11C050018C248 /* MovableLabel.m */; };
 		3F064B0619F11E3A0018C248 /* MovableImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F064B0519F11E3A0018C248 /* MovableImageView.m */; };
@@ -353,7 +351,6 @@
 		21F04A2D1A0D38CE001194AF /* mask_6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mask_6.png; sourceTree = "<group>"; };
 		21F04A2E1A0D38CE001194AF /* mask_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mask_7.png; sourceTree = "<group>"; };
 		21F04A2F1A0D38CE001194AF /* mask_8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mask_8.png; sourceTree = "<group>"; };
-		222DD1771A1157A900A0FD46 /* iPhone6.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone6.storyboard; sourceTree = "<group>"; };
 		223136A31A128C5600104346 /* bracket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bracket.png; sourceTree = "<group>"; };
 		223136A51A1291D200104346 /* basic_unselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = basic_unselected.png; path = Resource/basic_unselected.png; sourceTree = "<group>"; };
 		223675211A15F87E006D6372 /* round-price.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "round-price.png"; sourceTree = "<group>"; };
@@ -368,7 +365,6 @@
 		2282B1271A155F4B0004FF8C /* OrderConfirmationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderConfirmationViewController.m; sourceTree = "<group>"; };
 		2282B1291A156D7F0004FF8C /* Order-Confirmation-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Order-Confirmation-5.png"; sourceTree = "<group>"; };
 		22BD4F491A09DA190079E899 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
-		22E621121A13306800A1778B /* iPhone6_Plus.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone6_Plus.storyboard; sourceTree = "<group>"; };
 		22E621141A13ECB900A1778B /* LionTee.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = LionTee.entitlements; sourceTree = "<group>"; };
 		29399E941A2472AD004DC983 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		29399E961A24788F004DC983 /* right-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right-arrow.png"; sourceTree = "<group>"; };
@@ -388,11 +384,11 @@
 		29399EAA1A24889D004DC983 /* V-Neck Tri-Blend front.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "V-Neck Tri-Blend front.png"; sourceTree = "<group>"; };
 		29399EAB1A24889D004DC983 /* Women's Crewneck back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Women's Crewneck back.png"; sourceTree = "<group>"; };
 		29399EAC1A24889D004DC983 /* Women's Crewneck front.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Women's Crewneck front.png"; sourceTree = "<group>"; };
-		29399EBA1A249CFD004DC983 /* New-Design.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "New-Design.png"; path = "../../New Design/PNGs (iPhone 5s)/New-Design.png"; sourceTree = "<group>"; };
 		29399EBC1A24ACCA004DC983 /* aa-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "aa-icon.png"; sourceTree = "<group>"; };
 		29399EBD1A24ACCA004DC983 /* photo-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo-icon.png"; sourceTree = "<group>"; };
 		29399EBE1A24ACCA004DC983 /* star-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-icon.png"; sourceTree = "<group>"; };
 		29399EBF1A24ACCA004DC983 /* color-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "color-icon.png"; sourceTree = "<group>"; };
+		29399EC41A24DA10004DC983 /* Adaptive_Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Adaptive_Main.storyboard; path = ../Adaptive_Main.storyboard; sourceTree = "<group>"; };
 		29FA0CFE1A1AC20100ECA9E9 /* FTPKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FTPKit.xcodeproj; path = "FTPKit-master/FTPKit.xcodeproj"; sourceTree = "<group>"; };
 		3F064B0019F11C050018C248 /* MovableLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovableLabel.h; sourceTree = "<group>"; };
 		3F064B0119F11C050018C248 /* MovableLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovableLabel.m; sourceTree = "<group>"; };
@@ -686,7 +682,6 @@
 				29399EBD1A24ACCA004DC983 /* photo-icon.png */,
 				29399EBE1A24ACCA004DC983 /* star-icon.png */,
 				29399EBF1A24ACCA004DC983 /* color-icon.png */,
-				29399EBA1A249CFD004DC983 /* New-Design.png */,
 				29399EA01A24889D004DC983 /* white */,
 				29399E981A2480C8004DC983 /* allover-tshirt.png */,
 				29399E991A2480C8004DC983 /* basic-tshirt.png */,
@@ -1055,9 +1050,8 @@
 				3FFCDD1719EFC24700A7C43B /* Resource */,
 				3FFCDCEE19EFBFB600A7C43B /* AppDelegate.h */,
 				3FFCDCEF19EFBFB600A7C43B /* AppDelegate.m */,
+				29399EC41A24DA10004DC983 /* Adaptive_Main.storyboard */,
 				3FFCDCF119EFBFB600A7C43B /* Main.storyboard */,
-				222DD1771A1157A900A0FD46 /* iPhone6.storyboard */,
-				22E621121A13306800A1778B /* iPhone6_Plus.storyboard */,
 				3FFCDCF719EFBFB600A7C43B /* Images.xcassets */,
 				223136A51A1291D200104346 /* basic_unselected.png */,
 				3FFCDCE619EFBFB600A7C43B /* Supporting Files */,
@@ -1271,7 +1265,6 @@
 				3F7695691A0334CA000B517D /* brown_shirt1.png in Resources */,
 				2282B1251A155EC80004FF8C /* Order-Confirmation.png in Resources */,
 				29399EAD1A24889D004DC983 /* Hoodie Pullover back.png in Resources */,
-				29399EBB1A249CFD004DC983 /* New-Design.png in Resources */,
 				3F064B1C19F123440018C248 /* InfColorPickerView.xib in Resources */,
 				3F76958A1A0334CA000B517D /* turq_shirt1.png in Resources */,
 				223675221A15F87E006D6372 /* round-price.png in Resources */,
@@ -1290,6 +1283,7 @@
 				219A76A81A0B821E0050A70F /* textfield@2x.png in Resources */,
 				3F7695851A0334CA000B517D /* royal_shirt2.png in Resources */,
 				21BC880C1A124EA600071CBA /* back_indicator.png in Resources */,
+				29399EC51A24DA10004DC983 /* Adaptive_Main.storyboard in Resources */,
 				3F7695861A0334CA000B517D /* royal_shirt3.png in Resources */,
 				21AEB9AD1A15C72F0040590A /* shape_icon_disable.png in Resources */,
 				3F7695751A0334CA000B517D /* midnight_shirt1.png in Resources */,
@@ -1356,7 +1350,6 @@
 				219A76C41A0BB1E60050A70F /* STPTestPaymentSummaryViewController.xib in Resources */,
 				219A76A71A0B821E0050A70F /* textfield.png in Resources */,
 				3F7695811A0334CA000B517D /* purple_shirt1.png in Resources */,
-				222DD1781A1157A900A0FD46 /* iPhone6.storyboard in Resources */,
 				21BA0C9C1A14A9120000B172 /* mask_v8.png in Resources */,
 				29399EC31A24ACCA004DC983 /* color-icon.png in Resources */,
 				3F7695891A0334CA000B517D /* silver_shirt3.png in Resources */,
@@ -1402,7 +1395,6 @@
 				29399EAE1A24889D004DC983 /* Hoodie Pullover front.png in Resources */,
 				219A769F1A0B821E0050A70F /* jcb@2x.png in Resources */,
 				21F04A3C1A0D38CE001194AF /* mask_6.png in Resources */,
-				22E621131A13306800A1778B /* iPhone6_Plus.storyboard in Resources */,
 				3FF08D6A19F5A125005D798E /* cream_shirt.png in Resources */,
 				226445081A12CAE8002AA717 /* ApplePayBTN_64pt__white_textLogo_@2x.png in Resources */,
 				29399EB71A24889D004DC983 /* Women's Crewneck back.png in Resources */,
