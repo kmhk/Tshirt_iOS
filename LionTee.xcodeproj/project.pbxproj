@@ -115,6 +115,11 @@
 		29399EB61A24889D004DC983 /* V-Neck Tri-Blend front.png in Resources */ = {isa = PBXBuildFile; fileRef = 29399EAA1A24889D004DC983 /* V-Neck Tri-Blend front.png */; };
 		29399EB71A24889D004DC983 /* Women's Crewneck back.png in Resources */ = {isa = PBXBuildFile; fileRef = 29399EAB1A24889D004DC983 /* Women's Crewneck back.png */; };
 		29399EB81A24889D004DC983 /* Women's Crewneck front.png in Resources */ = {isa = PBXBuildFile; fileRef = 29399EAC1A24889D004DC983 /* Women's Crewneck front.png */; };
+		29399EBB1A249CFD004DC983 /* New-Design.png in Resources */ = {isa = PBXBuildFile; fileRef = 29399EBA1A249CFD004DC983 /* New-Design.png */; };
+		29399EC01A24ACCA004DC983 /* aa-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 29399EBC1A24ACCA004DC983 /* aa-icon.png */; };
+		29399EC11A24ACCA004DC983 /* photo-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 29399EBD1A24ACCA004DC983 /* photo-icon.png */; };
+		29399EC21A24ACCA004DC983 /* star-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 29399EBE1A24ACCA004DC983 /* star-icon.png */; };
+		29399EC31A24ACCA004DC983 /* color-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 29399EBF1A24ACCA004DC983 /* color-icon.png */; };
 		29FA0D091A1AC23500ECA9E9 /* libFTPKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29FA0D041A1AC20200ECA9E9 /* libFTPKit.a */; };
 		3F064B0219F11C050018C248 /* MovableLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F064B0119F11C050018C248 /* MovableLabel.m */; };
 		3F064B0619F11E3A0018C248 /* MovableImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F064B0519F11E3A0018C248 /* MovableImageView.m */; };
@@ -383,6 +388,11 @@
 		29399EAA1A24889D004DC983 /* V-Neck Tri-Blend front.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "V-Neck Tri-Blend front.png"; sourceTree = "<group>"; };
 		29399EAB1A24889D004DC983 /* Women's Crewneck back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Women's Crewneck back.png"; sourceTree = "<group>"; };
 		29399EAC1A24889D004DC983 /* Women's Crewneck front.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Women's Crewneck front.png"; sourceTree = "<group>"; };
+		29399EBA1A249CFD004DC983 /* New-Design.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "New-Design.png"; path = "../../New Design/PNGs (iPhone 5s)/New-Design.png"; sourceTree = "<group>"; };
+		29399EBC1A24ACCA004DC983 /* aa-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "aa-icon.png"; sourceTree = "<group>"; };
+		29399EBD1A24ACCA004DC983 /* photo-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo-icon.png"; sourceTree = "<group>"; };
+		29399EBE1A24ACCA004DC983 /* star-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-icon.png"; sourceTree = "<group>"; };
+		29399EBF1A24ACCA004DC983 /* color-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "color-icon.png"; sourceTree = "<group>"; };
 		29FA0CFE1A1AC20100ECA9E9 /* FTPKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FTPKit.xcodeproj; path = "FTPKit-master/FTPKit.xcodeproj"; sourceTree = "<group>"; };
 		3F064B0019F11C050018C248 /* MovableLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovableLabel.h; sourceTree = "<group>"; };
 		3F064B0119F11C050018C248 /* MovableLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovableLabel.m; sourceTree = "<group>"; };
@@ -672,6 +682,11 @@
 		29399E931A2472AD004DC983 /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				29399EBC1A24ACCA004DC983 /* aa-icon.png */,
+				29399EBD1A24ACCA004DC983 /* photo-icon.png */,
+				29399EBE1A24ACCA004DC983 /* star-icon.png */,
+				29399EBF1A24ACCA004DC983 /* color-icon.png */,
+				29399EBA1A249CFD004DC983 /* New-Design.png */,
 				29399EA01A24889D004DC983 /* white */,
 				29399E981A2480C8004DC983 /* allover-tshirt.png */,
 				29399E991A2480C8004DC983 /* basic-tshirt.png */,
@@ -1251,10 +1266,12 @@
 				21BA0C9B1A14A9120000B172 /* mask_v7.png in Resources */,
 				2282B0F11A15045E0004FF8C /* MyriadPro-Light.otf in Resources */,
 				29399E9C1A2480C8004DC983 /* allover-tshirt.png in Resources */,
+				29399EC21A24ACCA004DC983 /* star-icon.png in Resources */,
 				219A76961A0B821E0050A70F /* cvc-amex.png in Resources */,
 				3F7695691A0334CA000B517D /* brown_shirt1.png in Resources */,
 				2282B1251A155EC80004FF8C /* Order-Confirmation.png in Resources */,
 				29399EAD1A24889D004DC983 /* Hoodie Pullover back.png in Resources */,
+				29399EBB1A249CFD004DC983 /* New-Design.png in Resources */,
 				3F064B1C19F123440018C248 /* InfColorPickerView.xib in Resources */,
 				3F76958A1A0334CA000B517D /* turq_shirt1.png in Resources */,
 				223675221A15F87E006D6372 /* round-price.png in Resources */,
@@ -1314,6 +1331,7 @@
 				29399EB11A24889D004DC983 /* Men's Crewneck back.png in Resources */,
 				21BC88071A123F4300071CBA /* edit_background.png in Resources */,
 				21BC87FA1A121B5000071CBA /* allover_button_active.png in Resources */,
+				29399EC01A24ACCA004DC983 /* aa-icon.png in Resources */,
 				2282B0EE1A1440220004FF8C /* pay_stripe_button.png in Resources */,
 				3F76958B1A0334CA000B517D /* turq_shirt2.png in Resources */,
 				3F7695791A0334CA000B517D /* navy_shirt2.png in Resources */,
@@ -1326,6 +1344,7 @@
 				223136A41A128C5600104346 /* bracket.png in Resources */,
 				21F04A391A0D38CE001194AF /* mask_3.png in Resources */,
 				219A76A51A0B821E0050A70F /* visa@2x.png in Resources */,
+				29399EC11A24ACCA004DC983 /* photo-icon.png in Resources */,
 				3FF08D7419F5A125005D798E /* turq_shirt.png in Resources */,
 				3F76957B1A0334CA000B517D /* orange_shirt1.png in Resources */,
 				3FF08D6C19F5A125005D798E /* hunter_green.png in Resources */,
@@ -1339,6 +1358,7 @@
 				3F7695811A0334CA000B517D /* purple_shirt1.png in Resources */,
 				222DD1781A1157A900A0FD46 /* iPhone6.storyboard in Resources */,
 				21BA0C9C1A14A9120000B172 /* mask_v8.png in Resources */,
+				29399EC31A24ACCA004DC983 /* color-icon.png in Resources */,
 				3F7695891A0334CA000B517D /* silver_shirt3.png in Resources */,
 				219A76991A0B821E0050A70F /* cvc@2x.png in Resources */,
 				21BC87FD1A121B5000071CBA /* basic_button_active.png in Resources */,

@@ -96,6 +96,10 @@ SelectShapeDelegate
     IBOutlet UIButton * colorButton;
     IBOutlet UIButton * shapeButton;
     
+    IBOutlet UIButton * fontPanelButton;
+    IBOutlet UIButton * colorPanelButton;
+    IBOutlet UIButton * removePanelButton;
+    
     
     // BasePriceButton
     

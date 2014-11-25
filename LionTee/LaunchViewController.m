@@ -17,9 +17,12 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
+   
+    AppDelegate* MyAppDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
     
-    printType = BASIC_TSHIRT_TYPE;
-    tshirtType = MENS_CREWNECK;
+    MyAppDelegate.printType = BASIC_TSHIRT_TYPE;
+    MyAppDelegate.price = 1799;
+    MyAppDelegate.tshirtType = MENS_CREWNECK;
     
     printCheckboxes = [NSArray arrayWithObjects:basicTshirtButton,alloverTshirtButton, nil];
     
@@ -32,46 +35,53 @@
 
 -(IBAction)onPrintCheckboxClicked:(UIButton*)sender
 {
+    AppDelegate* MyAppDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    
     for(UIButton *checkbox in printCheckboxes)
         checkbox.selected = NO;
     
     if(sender.tag == 2){
-        printType = ALLOVER_TSHIRT_TYPE;
+        MyAppDelegate.printType = ALLOVER_TSHIRT_TYPE;
         alloverTshirtButton.selected = YES;
+        MyAppDelegate.price = 2499;
     }else if(sender.tag == 1){
-        printType = BASIC_TSHIRT_TYPE;
+        MyAppDelegate.printType = BASIC_TSHIRT_TYPE;
         basicTshirtButton.selected = YES;
+        MyAppDelegate.price = 1799;
     }
     
-    NSLog(@"onPrintCheckboxClicked – %@ – %ld",printType,(long)sender.tag);
+    float price = MyAppDelegate.price/100.;
+    NSLog(@"onPrintCheckboxClicked – %@ – $%.2f – %ld",MyAppDelegate.printType,price,(long)sender.tag);
 }
 
 -(IBAction)onCheckboxClicked:(UIButton*)sender
 {
+    AppDelegate* MyAppDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    
     for(UIButton *checkbox in tshirtCheckboxes)
         checkbox.selected = NO;
     
     if(sender.tag == 10){
-        tshirtType = KIDS_CREWNECK;
+        MyAppDelegate.tshirtType = KIDS_CREWNECK;
         kidsCrewneckTshirtButton.selected = YES;
     }else if(sender.tag == 11){
-        tshirtType = MENS_CREWNECK;
+        MyAppDelegate.tshirtType = MENS_CREWNECK;
         mensCrewneckTshirtButton.selected = YES;
     }else if(sender.tag == 12){
-        tshirtType = TRI_BLEND_VNECK;
+        MyAppDelegate.tshirtType = TRI_BLEND_VNECK;
         triBlendVNeckTshirtButton.selected = YES;
     }else if(sender.tag == 13){
-        tshirtType = MENS_TANKTOP;
+        MyAppDelegate.tshirtType = MENS_TANKTOP;
         mensTanktopButton.selected = YES;
     }else if(sender.tag == 14){
-        tshirtType = HOODIE_PULLOVER;
+        MyAppDelegate.tshirtType = HOODIE_PULLOVER;
         hoodiePulloverButton.selected = YES;
     }else if(sender.tag == 15){
-        tshirtType = LADIES_CREWNECK;
+        MyAppDelegate.tshirtType = LADIES_CREWNECK;
         ladiesCrewneckTshirtButton.selected = YES;
     }
     
-    NSLog(@"onCheckboxClicked – %@ – %ld",tshirtType,(long)sender.tag);
+    NSLog(@"onCheckboxClicked – %@ – %ld",MyAppDelegate.tshirtType,(long)sender.tag);
 }
 
 - (void)didReceiveMemoryWarning {

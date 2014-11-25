@@ -16,6 +16,7 @@
     #import "Common.h"
 #endif
 
+#import "AppDelegate.h"
 
 #define BASIC_TSHIRT_TYPE @"basic tshirt type";
 #define ALLOVER_TSHIRT_TYPE @"all over tshirt type";

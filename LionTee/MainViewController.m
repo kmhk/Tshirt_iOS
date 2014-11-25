@@ -12,7 +12,7 @@
 #import "PaymentViewController.h"
 #import <AVFoundation/AVFoundation.h>
 
-
+#import <QuartzCore/QuartzCore.h>
 
 #define YOUR_APPLE_MERCHANT_ID @"merchant.samgabbay.liontee"
 
@@ -33,13 +33,28 @@
     return self;
 }
 
-
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    
+    self.navigationItem.title = @"Back";
+    
+    [self.navigationItem setHidesBackButton:YES animated:NO];
+    
+    [self.navigationController.navigationBar setNeedsDisplay];
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     UIApplication * application = [UIApplication sharedApplication];
+    
+    [fontPanelButton.layer setBorderColor:[[UIColor blueColor] CGColor]];
+    [colorPanelButton.layer setBorderColor:[[UIColor blueColor] CGColor]];
+    [removePanelButton.layer setBorderColor:[[UIColor redColor] CGColor]];
+    
+    [basePriceButton.layer setBorderColor:[[UIColor blueColor] CGColor]];
     
     //production
     //        myHostname = @"ftp.ipmapp.com";
@@ -225,8 +240,8 @@
     }else{
         [colorButton setUserInteractionEnabled:NO];
         [shapeButton setUserInteractionEnabled:NO];
-                [colorButton setBackgroundImage:[UIImage imageNamed:@"btn_color_disable"] forState:UIControlStateNormal];
-                [shapeButton setBackgroundImage:[UIImage imageNamed:@"shape_icon_disable"] forState:UIControlStateNormal];
+              //  [colorButton setBackgroundImage:[UIImage imageNamed:@"btn_color_disable"] forState:UIControlStateNormal];
+              //  [shapeButton setBackgroundImage:[UIImage imageNamed:@"shape_icon_disable"] forState:UIControlStateNormal];
     }
 }
 
@@ -248,7 +263,9 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-	[super viewDidAppear:animated];
+//    [self.navigationItem setHidesBackButton:NO animated:NO];
+    
+    [super viewDidAppear:animated];
 	
 	NSInteger i = 0;
 	for (UIButton *btn in _arrayColorBtn) {

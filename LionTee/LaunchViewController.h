@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LaunchViewController : UIViewController<UIScrollViewDelegate>
-
+@interface LaunchViewController : UIViewController
 {
     
     IBOutlet UIView * basicTshirt;
@@ -35,9 +34,6 @@
     
     IBOutlet UIView * ladiesCrewneckTshirt;
     IBOutlet UIButton * ladiesCrewneckTshirtButton;
-    
-    NSString *printType;
-    NSString *tshirtType;
     
     NSArray *printCheckboxes;
     NSArray *tshirtCheckboxes;
