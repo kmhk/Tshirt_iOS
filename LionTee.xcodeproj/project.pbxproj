@@ -118,6 +118,7 @@
 		29399EC21A24ACCA004DC983 /* star-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 29399EBE1A24ACCA004DC983 /* star-icon.png */; };
 		29399EC31A24ACCA004DC983 /* color-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 29399EBF1A24ACCA004DC983 /* color-icon.png */; };
 		29399EC51A24DA10004DC983 /* Adaptive_Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29399EC41A24DA10004DC983 /* Adaptive_Main.storyboard */; };
+		2952E3A91A2720FE00E0821A /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2952E3A81A2720FE00E0821A /* SecondViewController.m */; };
 		29FA0D091A1AC23500ECA9E9 /* libFTPKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29FA0D041A1AC20200ECA9E9 /* libFTPKit.a */; };
 		3F064B0219F11C050018C248 /* MovableLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F064B0119F11C050018C248 /* MovableLabel.m */; };
 		3F064B0619F11E3A0018C248 /* MovableImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F064B0519F11E3A0018C248 /* MovableImageView.m */; };
@@ -389,6 +390,8 @@
 		29399EBE1A24ACCA004DC983 /* star-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-icon.png"; sourceTree = "<group>"; };
 		29399EBF1A24ACCA004DC983 /* color-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "color-icon.png"; sourceTree = "<group>"; };
 		29399EC41A24DA10004DC983 /* Adaptive_Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Adaptive_Main.storyboard; path = ../Adaptive_Main.storyboard; sourceTree = "<group>"; };
+		2952E3A71A2720FE00E0821A /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		2952E3A81A2720FE00E0821A /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		29FA0CFE1A1AC20100ECA9E9 /* FTPKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FTPKit.xcodeproj; path = "FTPKit-master/FTPKit.xcodeproj"; sourceTree = "<group>"; };
 		3F064B0019F11C050018C248 /* MovableLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovableLabel.h; sourceTree = "<group>"; };
 		3F064B0119F11C050018C248 /* MovableLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovableLabel.m; sourceTree = "<group>"; };
@@ -1063,6 +1066,8 @@
 				3F0DD60319F55041003773FB /* UIImage+tintImage.m */,
 				224D8B781A0F65A40059F456 /* Common.h */,
 				21BC88011A121ECF00071CBA /* Images-2.xcassets */,
+				2952E3A71A2720FE00E0821A /* SecondViewController.h */,
+				2952E3A81A2720FE00E0821A /* SecondViewController.m */,
 			);
 			path = LionTee;
 			sourceTree = "<group>";
@@ -1426,6 +1431,7 @@
 				21BA0C8C1A14975D0000B172 /* SelectShapeViewController.m in Sources */,
 				3F064B1D19F123440018C248 /* InfColorSquarePicker.m in Sources */,
 				219A76C11A0BB1E60050A70F /* STPTestCardStore.m in Sources */,
+				2952E3A91A2720FE00E0821A /* SecondViewController.m in Sources */,
 				3FFCDCF019EFBFB600A7C43B /* AppDelegate.m in Sources */,
 				219A768E1A0B821E0050A70F /* PTKCardExpiry.m in Sources */,
 				219A76C01A0BB1E60050A70F /* STPTestAddressStore.m in Sources */,

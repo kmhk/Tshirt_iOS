@@ -35,6 +35,8 @@
     IBOutlet UIView * ladiesCrewneckTshirt;
     IBOutlet UIButton * ladiesCrewneckTshirtButton;
     
+    IBOutlet UINavigationItem *navigationItem;
+    
     NSArray *printCheckboxes;
     NSArray *tshirtCheckboxes;
 }

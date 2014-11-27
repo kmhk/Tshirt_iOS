@@ -18,7 +18,11 @@
     
     [super viewDidLoad];
     
-    [self.navigationController setNavigationBarHidden:YES animated:NO];
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+    self.navigationController.navigationBar.shadowImage = [UIImage new];
+    self.navigationController.navigationBar.translucent = YES;
+    
+    
    
     AppDelegate* MyAppDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
     
@@ -33,6 +37,12 @@
     
     basicTshirtButton.selected = YES;
     mensCrewneckTshirtButton.selected = YES;
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+//    [[self navigationController] setNavigationBarHidden:YES animated:NO];
+    [super viewDidAppear:animated];
 }
 
 -(IBAction)onPrintCheckboxClicked:(UIButton*)sender

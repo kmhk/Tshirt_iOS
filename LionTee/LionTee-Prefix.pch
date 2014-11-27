@@ -21,9 +21,9 @@
 #define BASIC_TSHIRT_TYPE @"basic tshirt type";
 #define ALLOVER_TSHIRT_TYPE @"all over tshirt type";
 
-#define KIDS_CREWNECK @"kid's crewneck";
-#define MENS_CREWNECK @"men's crewneck";
-#define TRI_BLEND_VNECK @"tri blend v-neck";
-#define MENS_TANKTOP @"men's tanktop";
-#define HOODIE_PULLOVER @"hoodie pullover";
-#define LADIES_CREWNECK @"ladie's crewneck";
+#define KIDS_CREWNECK @"Kid's Crewneck";
+#define MENS_CREWNECK @"Men's Crewneck";
+#define TRI_BLEND_VNECK @"Tri Blend V-Neck";
+#define MENS_TANKTOP @"Men's Tanktop";
+#define HOODIE_PULLOVER @"Hoodie Pullover";
+#define LADIES_CREWNECK @"Ladie's Crewneck";
