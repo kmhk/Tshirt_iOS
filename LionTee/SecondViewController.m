@@ -103,6 +103,54 @@
     [super viewDidAppear:animated];
 }
 
+-(IBAction)onTakeImage:(id)sender
+{
+    
+    UIActionSheet * actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles: @"Take a Photo", @"Photo Library" ,nil];
+    
+    [actionSheet showInView:self.view];
+}
+
+- (void)onAddImageFromCamera
+{
+    
+    UIImagePickerController *pickerController = [[UIImagePickerController alloc] init];
+    pickerController.videoQuality = UIImagePickerControllerQualityTypeLow;
+    pickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
+    //    pickerController.sourceType = uiimagepi
+    pickerController.mediaTypes = [NSArray arrayWithObjects:(NSString *)kUTTypeImage, nil];
+    pickerController.allowsEditing = YES;
+    pickerController.delegate = self;
+    [self presentViewController:pickerController animated:YES completion:nil];
+}
+
+
+- (void)onAddImageFromLibrary
+{
+    
+    UIImagePickerController *pickerController = [[UIImagePickerController alloc] init];
+    pickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    pickerController.mediaTypes = [NSArray arrayWithObjects:(NSString *)kUTTypeImage, nil];
+    pickerController.allowsEditing = YES;
+    pickerController.delegate = self;
+    [self presentViewController:pickerController animated:YES completion:nil];
+    
+}
+
+#pragma mark - UIActionSheet Delegate
+
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    
+    if (buttonIndex == 0) {
+        [self onAddImageFromCamera];
+    }else if (buttonIndex == 1)
+    {
+        [self onAddImageFromLibrary];
+    }
+}
+
+
 
 #pragma mark - Gesture actions
 

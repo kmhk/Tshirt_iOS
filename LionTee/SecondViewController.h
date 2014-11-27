@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SelectShapeViewController.h"
+#import <MobileCoreServices/MobileCoreServices.h>
 
 @interface SecondViewController : UIViewController
 <
@@ -23,8 +25,8 @@ UIAlertViewDelegate,
 //MBProgressHUDDelegate,
 UIActionSheetDelegate,
 UIPickerViewDataSource,
-UIPickerViewDelegate//,
-//SelectShapeDelegate
+UIPickerViewDelegate,
+SelectShapeDelegate
 >{
     IBOutlet UIImageView *frontImage;
     IBOutlet UIImageView *backImage;
