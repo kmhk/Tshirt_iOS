@@ -581,9 +581,36 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JdT-hZ-Opi">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JdT-hZ-Opi" userLabel="Gray View">
                                 <rect key="frame" x="0.0" y="64" width="320" height="454"/>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OQC-QU-kbj">
+                                        <rect key="frame" x="0.0" y="-8" width="320" height="454"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Kids Crewneck front.png" translatesAutoresizingMaskIntoConstraints="NO" id="L16-K5-RaY">
+                                                <rect key="frame" x="0.0" y="8" width="320" height="360"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Kids Crewneck back.png" translatesAutoresizingMaskIntoConstraints="NO" id="30z-bS-yNI">
+                                                <rect key="frame" x="320" y="8" width="320" height="360"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="L16-K5-RaY" firstAttribute="width" secondItem="OQC-QU-kbj" secondAttribute="width" id="6uB-po-hfc"/>
+                                            <constraint firstItem="L16-K5-RaY" firstAttribute="width" secondItem="30z-bS-yNI" secondAttribute="width" id="Cs4-2N-R1u"/>
+                                            <constraint firstAttribute="width" constant="320" id="GM4-mZ-fPb"/>
+                                            <constraint firstAttribute="width" secondItem="OQC-QU-kbj" secondAttribute="height" multiplier="160:227" id="TX2-Gb-mGe"/>
+                                            <constraint firstItem="L16-K5-RaY" firstAttribute="height" secondItem="30z-bS-yNI" secondAttribute="height" id="Utf-ed-chQ"/>
+                                            <constraint firstItem="L16-K5-RaY" firstAttribute="height" secondItem="OQC-QU-kbj" secondAttribute="height" id="gPN-7i-YCx"/>
+                                        </constraints>
+                                    </scrollView>
+                                </subviews>
                                 <color key="backgroundColor" red="0.90980392160000001" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="OQC-QU-kbj" firstAttribute="leading" secondItem="JdT-hZ-Opi" secondAttribute="leading" id="K2d-yy-Tp0"/>
+                                    <constraint firstAttribute="bottom" secondItem="OQC-QU-kbj" secondAttribute="bottom" constant="8" id="SAg-87-lwH"/>
+                                    <constraint firstItem="OQC-QU-kbj" firstAttribute="top" secondItem="JdT-hZ-Opi" secondAttribute="top" constant="-8" id="gLA-zh-quL"/>
+                                    <constraint firstAttribute="trailing" secondItem="OQC-QU-kbj" secondAttribute="trailing" id="oR2-iR-638"/>
+                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gFX-nw-eyx" userLabel="Orange Bottom Stripe">
                                 <rect key="frame" x="0.0" y="518" width="320" height="50"/>
@@ -691,6 +718,7 @@
     </scenes>
     <resources>
         <image name="Hoodie Pullover front.png" width="513" height="490"/>
+        <image name="Kids Crewneck back.png" width="371" height="430"/>
         <image name="Kids Crewneck front.png" width="370" height="416"/>
         <image name="Men's Crewneck front.png" width="513" height="490"/>
         <image name="Men's Tank Top front.png" width="513" height="490"/>
