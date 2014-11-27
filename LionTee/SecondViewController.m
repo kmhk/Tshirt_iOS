@@ -194,10 +194,6 @@
     
     [picker dismissViewControllerAnimated:YES completion:nil];
     
-    if (_isFullImage == NO && _index == 2) {
-        self.basePrice = 39.99f;
-        [basePriceButton setTitle:[NSString stringWithFormat:@"$%.2f" , self.basePrice] forState:UIControlStateNormal];
-    }
     
 }
 
