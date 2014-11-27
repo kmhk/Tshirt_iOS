@@ -16,6 +16,7 @@
 
 @property (strong, nonatomic) NSString *printType;
 @property (strong, nonatomic) NSString *tshirtType;
+@property (strong, nonatomic) NSString *tshirtColor;
 @property (nonatomic) int price;
 
 @end

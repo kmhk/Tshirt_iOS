@@ -32,7 +32,7 @@
                         <viewControllerLayoutGuide type="bottom" id="pg8-eP-c8S"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="RZn-lf-qOZ">
-                        <rect key="frame" x="0.0" y="64" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="edR-8u-shp">
@@ -111,7 +111,7 @@
                                 </connections>
                             </view>
                             <view tag="2" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TIH-Eg-qu0" userLabel="All Over T-Shirt" customClass="UIButton">
-                                <rect key="frame" x="169" y="53" width="140" height="205"/>
+                                <rect key="frame" x="168" y="53" width="140" height="205"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QuB-ir-ugb" userLabel="Checkbox">
                                         <rect key="frame" x="102" y="8" width="25" height="25"/>
@@ -183,7 +183,7 @@
                                 </connections>
                             </view>
                             <view tag="14" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PH6-Ff-Aj3" userLabel="Hoodie Pullover" customClass="UIButton">
-                                <rect key="frame" x="117" y="418" width="90" height="130"/>
+                                <rect key="frame" x="116" y="418" width="90" height="130"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Hoodie Pullover front.png" translatesAutoresizingMaskIntoConstraints="NO" id="Bes-rZ-vPJ">
                                         <rect key="frame" x="0.0" y="0.0" width="90" height="130"/>
@@ -239,8 +239,8 @@
                                             <constraint firstAttribute="height" constant="130" id="b9b-rX-dnM"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M2P-XB-OQS" userLabel="Checkbox">
-                                        <rect key="frame" x="70" y="0.0" width="20" height="20"/>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M2P-XB-OQS" userLabel="Checkbox">
+                                        <rect key="frame" x="69" y="0.0" width="20" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="FX0-Sn-Cdl"/>
                                             <constraint firstAttribute="width" constant="20" id="xFN-SB-gGp"/>
@@ -277,17 +277,17 @@
                                 </connections>
                             </view>
                             <view tag="15" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d6f-GW-oPi" userLabel="Ladie's Crewneck" customClass="UIButton">
-                                <rect key="frame" x="219" y="418" width="90" height="130"/>
+                                <rect key="frame" x="218" y="418" width="90" height="130"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Women's Crewneck front.png" translatesAutoresizingMaskIntoConstraints="NO" id="UFq-5M-Nwz">
-                                        <rect key="frame" x="0.0" y="0.0" width="90" height="130"/>
+                                        <rect key="frame" x="-1" y="0.0" width="90" height="130"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="90" id="ZGu-A0-u4h"/>
                                             <constraint firstAttribute="height" constant="130" id="eDB-TU-mUf"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lha-fM-10B" userLabel="Checkbox">
-                                        <rect key="frame" x="70" y="0.0" width="20" height="20"/>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lha-fM-10B" userLabel="Checkbox">
+                                        <rect key="frame" x="69" y="0.0" width="20" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="20" id="95d-l3-9ld"/>
                                             <constraint firstAttribute="height" constant="20" id="w16-52-ocJ"/>
@@ -333,8 +333,8 @@
                                             <constraint firstAttribute="width" constant="90" id="mZ4-5W-rqS"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eeP-p1-kTN" userLabel="Checkbox">
-                                        <rect key="frame" x="70" y="0.0" width="20" height="20"/>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eeP-p1-kTN" userLabel="Checkbox">
+                                        <rect key="frame" x="69" y="0.0" width="20" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="20" id="4ha-Af-OoM"/>
                                             <constraint firstAttribute="height" constant="20" id="aRf-v8-KYt"/>
@@ -371,17 +371,17 @@
                                 </connections>
                             </view>
                             <view tag="12" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lvw-Y9-NFj" userLabel="Tri Blend V-Neck" customClass="UIButton">
-                                <rect key="frame" x="219" y="271" width="90" height="130"/>
+                                <rect key="frame" x="218" y="271" width="90" height="130"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="V-Neck Tri-Blend front.png" translatesAutoresizingMaskIntoConstraints="NO" id="Rbo-ct-RVh">
-                                        <rect key="frame" x="0.0" y="0.0" width="90" height="130"/>
+                                        <rect key="frame" x="-1" y="0.0" width="90" height="130"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="130" id="2t1-RR-oIO"/>
                                             <constraint firstAttribute="width" constant="90" id="xiW-iG-EG3"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pAu-GM-QPY" userLabel="Checkbox">
-                                        <rect key="frame" x="70" y="0.0" width="20" height="20"/>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pAu-GM-QPY" userLabel="Checkbox">
+                                        <rect key="frame" x="69" y="0.0" width="20" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="Bgd-aj-lre"/>
                                             <constraint firstAttribute="width" constant="20" id="Sz5-u3-H82"/>
@@ -418,7 +418,7 @@
                                 </connections>
                             </view>
                             <view tag="11" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MzR-oW-Xlk" userLabel="Men's Crewneck" customClass="UIButton">
-                                <rect key="frame" x="117" y="271" width="90" height="130"/>
+                                <rect key="frame" x="116" y="271" width="90" height="130"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Men's Crewneck front.png" translatesAutoresizingMaskIntoConstraints="NO" id="UJX-tE-uMb">
                                         <rect key="frame" x="0.0" y="0.0" width="90" height="130"/>
@@ -578,156 +578,302 @@
                         <viewControllerLayoutGuide type="bottom" id="O31-S2-rvA"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Cck-bJ-fc7">
-                        <rect key="frame" x="0.0" y="64" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JdT-hZ-Opi" userLabel="Gray View">
+                            <view contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JdT-hZ-Opi" userLabel="Gray View">
                                 <rect key="frame" x="0.0" y="64" width="320" height="454"/>
                                 <subviews>
-                                    <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I2s-NC-ec0">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="454"/>
+                                    <scrollView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QuS-Ii-w09">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="370"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Kids Crewneck front.png" translatesAutoresizingMaskIntoConstraints="NO" id="3c6-bp-JgK">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="360"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Kids Crewneck back.png" translatesAutoresizingMaskIntoConstraints="NO" id="BVF-Z6-zC8">
+                                                <rect key="frame" x="320" y="0.0" width="320" height="360"/>
+                                            </imageView>
+                                        </subviews>
                                         <connections>
-                                            <segue destination="v7z-TH-El0" kind="embed" id="HC9-C7-8Zw"/>
+                                            <outlet property="delegate" destination="lmk-Xh-Ejh" id="BK5-Qk-MvU"/>
                                         </connections>
-                                    </containerView>
+                                    </scrollView>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rhI-v5-0Pm" userLabel="Control Panel View">
+                                        <rect key="frame" x="0.0" y="380" width="320" height="75"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSw-fC-dCH">
+                                                <rect key="frame" x="8" y="37" width="108" height="30"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
+                                                <state key="normal" title="Helvetica-Neue">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pwC-Fg-X8Y">
+                                                <rect key="frame" x="204" y="37" width="108" height="30"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
+                                                <state key="normal" title="Remove">
+                                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7kf-WJ-5e8">
+                                                <rect key="frame" x="130" y="37" width="60" height="30"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
+                                                <state key="normal" title="Color">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="black-aa-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="Rx8-MP-dbD">
+                                                <rect key="frame" x="8" y="0.0" width="30" height="30"/>
+                                            </imageView>
+                                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="qSj-61-QUf" userLabel="Font Size Horizontal Slider">
+                                                <rect key="frame" x="44" y="0.0" width="262" height="31"/>
+                                            </slider>
+                                        </subviews>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.90980392160000001" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gFX-nw-eyx" userLabel="Orange Bottom Stripe">
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="CXn-tf-1bx">
+                                <rect key="frame" x="140" y="420" width="39" height="37"/>
+                            </pageControl>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gFX-nw-eyx" userLabel="Orange Bottom Stripe">
                                 <rect key="frame" x="0.0" y="518" width="320" height="50"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqn-Aj-ngG" userLabel="Text button">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqn-Aj-ngG" userLabel="Text button">
                                         <rect key="frame" x="8" y="2" width="45" height="45"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="45" id="Flz-u3-XAq"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="45" id="IJX-oV-i7l"/>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="VTw-AF-fL8"/>
-                                            <constraint firstAttribute="height" constant="45" id="umo-ys-Mb9"/>
-                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <state key="normal" backgroundImage="aa-icon.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RvS-1O-SXU" userLabel="Photo button">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RvS-1O-SXU" userLabel="Photo button">
                                         <rect key="frame" x="100" y="2" width="45" height="45"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="45" id="AwK-Hw-rjl"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="45" id="Mpe-r4-BwR"/>
-                                            <constraint firstAttribute="height" constant="45" id="ZCm-cO-lbW"/>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="aKo-SO-PIl"/>
-                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" backgroundImage="photo-icon.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndW-A0-XK4" userLabel="Shape button">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndW-A0-XK4" userLabel="Shape button">
                                         <rect key="frame" x="187" y="2" width="45" height="45"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="C6V-rx-oO9"/>
-                                            <constraint firstAttribute="width" constant="45" id="ZGN-fk-ajG"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="45" id="g3j-Dd-oq4"/>
-                                            <constraint firstAttribute="height" constant="45" id="z4E-Ng-tMD"/>
-                                        </constraints>
                                         <state key="normal" backgroundImage="star-icon.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="haC-dw-jDd" userLabel="Color button">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="haC-dw-jDd" userLabel="Color button">
                                         <rect key="frame" x="267" y="2" width="45" height="45"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="45" id="KhA-Pv-SWR"/>
-                                            <constraint firstAttribute="width" constant="45" id="Ko0-gi-cTP"/>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="PgL-ZX-0aX"/>
-                                            <constraint firstAttribute="height" constant="45" id="frP-tJ-mG4"/>
-                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" backgroundImage="color-icon.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="aPc-3V-S2V" kind="show" id="zvi-yQ-eUz"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.98431372549999996" green="0.30588235289999999" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="bqn-Aj-ngG" firstAttribute="top" secondItem="gFX-nw-eyx" secondAttribute="top" constant="2" id="2vp-Wf-cpn"/>
-                                    <constraint firstItem="RvS-1O-SXU" firstAttribute="width" secondItem="haC-dw-jDd" secondAttribute="width" id="4xm-w1-API"/>
-                                    <constraint firstItem="bqn-Aj-ngG" firstAttribute="leading" secondItem="gFX-nw-eyx" secondAttribute="leading" constant="8" id="5Nm-Pm-y6n"/>
-                                    <constraint firstAttribute="trailing" secondItem="haC-dw-jDd" secondAttribute="trailing" constant="8" id="BKq-Ft-ugH"/>
-                                    <constraint firstAttribute="bottom" secondItem="RvS-1O-SXU" secondAttribute="bottom" constant="3" id="FTz-KA-n72"/>
-                                    <constraint firstAttribute="width" constant="320" id="I8u-SI-eJv"/>
-                                    <constraint firstItem="ndW-A0-XK4" firstAttribute="leading" secondItem="RvS-1O-SXU" secondAttribute="trailing" constant="42" id="LUf-93-w3f"/>
-                                    <constraint firstItem="RvS-1O-SXU" firstAttribute="height" secondItem="bqn-Aj-ngG" secondAttribute="height" id="OH0-eV-8ca"/>
-                                    <constraint firstItem="RvS-1O-SXU" firstAttribute="top" secondItem="gFX-nw-eyx" secondAttribute="top" constant="2" id="Ph1-1J-YY4"/>
-                                    <constraint firstAttribute="bottom" secondItem="bqn-Aj-ngG" secondAttribute="bottom" constant="3" id="Q4g-XY-8Lt"/>
-                                    <constraint firstItem="RvS-1O-SXU" firstAttribute="leading" secondItem="bqn-Aj-ngG" secondAttribute="trailing" constant="47" id="Syd-sP-Chc"/>
-                                    <constraint firstItem="RvS-1O-SXU" firstAttribute="width" secondItem="bqn-Aj-ngG" secondAttribute="width" id="XeV-hM-civ"/>
-                                    <constraint firstItem="RvS-1O-SXU" firstAttribute="height" secondItem="ndW-A0-XK4" secondAttribute="height" id="Z3b-Yl-QhR"/>
-                                    <constraint firstItem="RvS-1O-SXU" firstAttribute="width" secondItem="haC-dw-jDd" secondAttribute="height" multiplier="1:1" id="aBL-sT-oeJ"/>
-                                    <constraint firstItem="ndW-A0-XK4" firstAttribute="top" secondItem="gFX-nw-eyx" secondAttribute="top" constant="2" id="fle-7c-hI9"/>
-                                    <constraint firstAttribute="bottom" secondItem="ndW-A0-XK4" secondAttribute="bottom" constant="3" id="foq-kR-45O"/>
-                                    <constraint firstItem="haC-dw-jDd" firstAttribute="leading" secondItem="ndW-A0-XK4" secondAttribute="trailing" constant="35" id="gb5-AT-ojJ"/>
-                                    <constraint firstItem="haC-dw-jDd" firstAttribute="top" secondItem="gFX-nw-eyx" secondAttribute="top" constant="2" id="h2Y-4g-Ngk"/>
-                                    <constraint firstItem="RvS-1O-SXU" firstAttribute="height" secondItem="haC-dw-jDd" secondAttribute="height" id="oAj-hs-ey0"/>
-                                    <constraint firstAttribute="bottom" secondItem="haC-dw-jDd" secondAttribute="bottom" constant="3" id="ou1-G5-fKx"/>
-                                    <constraint firstItem="RvS-1O-SXU" firstAttribute="width" secondItem="ndW-A0-XK4" secondAttribute="width" id="ozs-H2-na9"/>
-                                    <constraint firstItem="RvS-1O-SXU" firstAttribute="width" secondItem="bqn-Aj-ngG" secondAttribute="height" multiplier="1:1" id="pOv-Ab-g1t"/>
-                                    <constraint firstItem="RvS-1O-SXU" firstAttribute="width" secondItem="ndW-A0-XK4" secondAttribute="height" multiplier="1:1" id="wKJ-7D-Op5"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="JdT-hZ-Opi" firstAttribute="top" secondItem="HFG-gj-Crd" secondAttribute="bottom" id="6ks-Rs-jSI"/>
-                            <constraint firstItem="O31-S2-rvA" firstAttribute="top" secondItem="gFX-nw-eyx" secondAttribute="bottom" id="AgG-rv-r8I"/>
-                            <constraint firstItem="JdT-hZ-Opi" firstAttribute="trailing" secondItem="gFX-nw-eyx" secondAttribute="trailing" id="CYU-Qj-NGn"/>
-                            <constraint firstItem="JdT-hZ-Opi" firstAttribute="leading" secondItem="gFX-nw-eyx" secondAttribute="leading" id="JRb-tP-sM1"/>
-                            <constraint firstItem="gFX-nw-eyx" firstAttribute="top" secondItem="JdT-hZ-Opi" secondAttribute="bottom" id="aPx-zI-i9z"/>
-                            <constraint firstItem="gFX-nw-eyx" firstAttribute="leading" secondItem="Cck-bJ-fc7" secondAttribute="leading" id="cIW-Tr-U8h"/>
-                            <constraint firstAttribute="trailing" secondItem="gFX-nw-eyx" secondAttribute="trailing" id="pVI-w2-1rV"/>
-                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="_page" destination="CXn-tf-1bx" id="ZY7-zP-qd0"/>
+                        <outlet property="backImage" destination="BVF-Z6-zC8" id="MZ9-nq-efA"/>
+                        <outlet property="colorPanelButton" destination="7kf-WJ-5e8" id="bqJ-CV-Uxf"/>
+                        <outlet property="fontPanelButton" destination="dSw-fC-dCH" id="DwK-j6-Z0a"/>
+                        <outlet property="fontSizeHorizontalSlider" destination="qSj-61-QUf" id="VWy-H9-Dfn"/>
+                        <outlet property="frontImage" destination="3c6-bp-JgK" id="WmW-iV-bYC"/>
+                        <outlet property="imagesScrollView" destination="QuS-Ii-w09" id="jpr-ag-ONX"/>
+                        <outlet property="removePanelButton" destination="pwC-Fg-X8Y" id="gqY-t8-hRk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dd0-9Q-Ku5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1107" y="354"/>
+            <point key="canvasLocation" x="1171" y="354"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="dts-PP-czW">
+        <!--Color View Controller-->
+        <scene sceneID="r3P-bF-BKr">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="v7z-TH-El0" sceneMemberID="viewController">
+                <viewController id="aPc-3V-S2V" customClass="ColorViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Hpw-OU-ZSs"/>
-                        <viewControllerLayoutGuide type="bottom" id="Dge-MQ-u1L"/>
+                        <viewControllerLayoutGuide type="top" id="cog-JQ-Td4"/>
+                        <viewControllerLayoutGuide type="bottom" id="1R2-X3-DAh"/>
                     </layoutGuides>
-                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="E1f-Ky-pWX">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="454"/>
+                    <view key="view" contentMode="scaleToFill" id="Exl-oW-0ug">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vT5-zK-CvZ">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="454"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Kids Crewneck back.png" translatesAutoresizingMaskIntoConstraints="NO" id="ryQ-7m-Ks8">
-                                        <rect key="frame" x="140" y="47" width="320" height="360"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Kids Crewneck front.png" translatesAutoresizingMaskIntoConstraints="NO" id="Do4-Ug-9aV">
-                                        <rect key="frame" x="140" y="47" width="320" height="360"/>
-                                    </imageView>
-                                </subviews>
-                            </scrollView>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KT5-48-Wkz">
+                                <rect key="frame" x="0.0" y="64" width="100" height="100"/>
+                                <state key="normal" image="apple_red_shirt.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectAppleRedShirt:" destination="aPc-3V-S2V" eventType="touchUpInside" id="JCJ-du-ami"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rpa-fU-O2i">
+                                <rect key="frame" x="110" y="64" width="100" height="100"/>
+                                <state key="normal" image="asphalt_shirt.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectAsphaltShirt:" destination="aPc-3V-S2V" eventType="touchUpInside" id="MFQ-Xw-bG4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f28-sU-Hs5">
+                                <rect key="frame" x="220" y="64" width="100" height="100"/>
+                                <state key="normal" image="black_shirt.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectBlackShirt:" destination="aPc-3V-S2V" eventType="touchUpInside" id="mEw-PO-A6w"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oLB-lo-knx">
+                                <rect key="frame" x="0.0" y="172" width="100" height="100"/>
+                                <state key="normal" image="brown_shirt.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectBrownShirt:" destination="aPc-3V-S2V" eventType="touchUpInside" id="MrE-4R-0qf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gNY-8f-Bt2">
+                                <rect key="frame" x="110" y="172" width="100" height="100"/>
+                                <state key="normal" image="cream_shirt.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectCreamShirt:" destination="aPc-3V-S2V" eventType="touchUpInside" id="AG6-Oz-KcF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDV-nO-dyu">
+                                <rect key="frame" x="220" y="172" width="100" height="100"/>
+                                <state key="normal" image="heather_grey_shirt.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectHeatherGreyShirt:" destination="aPc-3V-S2V" eventType="touchUpInside" id="M3p-oI-008"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14S-m1-TNi">
+                                <rect key="frame" x="0.0" y="280" width="100" height="100"/>
+                                <state key="normal" image="hunter_green.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectHunterShirt:" destination="aPc-3V-S2V" eventType="touchUpInside" id="kM8-zV-MBT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v7S-9M-l2Y">
+                                <rect key="frame" x="110" y="280" width="100" height="100"/>
+                                <state key="normal" image="midnight_shirt.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectMidnightShirt:" destination="aPc-3V-S2V" eventType="touchUpInside" id="XjS-8o-vRZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c6H-u2-JuT">
+                                <rect key="frame" x="220" y="280" width="100" height="100"/>
+                                <state key="normal" image="navy_shirt.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectNavyShirt:" destination="aPc-3V-S2V" eventType="touchUpInside" id="HDI-jv-7dC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rgy-is-s5u">
+                                <rect key="frame" x="0.0" y="388" width="100" height="100"/>
+                                <state key="normal" image="orange_shirt.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectOrangeShirt:" destination="aPc-3V-S2V" eventType="touchUpInside" id="yzv-8m-qmt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z7I-JM-kih">
+                                <rect key="frame" x="110" y="388" width="100" height="100"/>
+                                <state key="normal" image="powder_blue_shirt.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectPowderBlueShirt:" destination="aPc-3V-S2V" eventType="touchUpInside" id="abX-fY-NXm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWv-Le-3aa">
+                                <rect key="frame" x="220" y="388" width="100" height="100"/>
+                                <state key="normal" image="purple_shirt.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectPurpleShirt:" destination="aPc-3V-S2V" eventType="touchUpInside" id="8dN-Rd-Zf8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ey6-mw-obN">
+                                <rect key="frame" x="0.0" y="496" width="100" height="100"/>
+                                <state key="normal" image="royal_shirt.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectRoyalShirt:" destination="aPc-3V-S2V" eventType="touchUpInside" id="ehV-SQ-a8V"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JwU-1f-gVJ">
+                                <rect key="frame" x="110" y="496" width="100" height="100"/>
+                                <state key="normal" image="silver_shirt.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectSilverShirt:" destination="aPc-3V-S2V" eventType="touchUpInside" id="sb5-91-hri"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yoe-e7-R1K">
+                                <rect key="frame" x="220" y="496" width="100" height="100"/>
+                                <state key="normal" image="turq_shirt.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectTurqShirt:" destination="aPc-3V-S2V" eventType="touchUpInside" id="ayI-oZ-kBd"/>
+                                </connections>
+                            </button>
                         </subviews>
+                        <color key="backgroundColor" red="0.90980392160000001" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <toolbarItems/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="600" height="454"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1r2-PF-Uhf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JpT-cN-zgc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1601" y="297"/>
+            <point key="canvasLocation" x="724" y="1076"/>
         </scene>
     </scenes>
     <resources>
@@ -740,13 +886,29 @@
         <image name="Women's Crewneck front.png" width="513" height="490"/>
         <image name="aa-icon.png" width="82" height="82"/>
         <image name="allover-tshirt.png" width="373" height="373"/>
+        <image name="apple_red_shirt.png" width="940" height="1050"/>
+        <image name="asphalt_shirt.png" width="940" height="1050"/>
         <image name="background.png" width="750" height="1334"/>
         <image name="basic-tshirt.png" width="359" height="359"/>
+        <image name="black-aa-icon.png" width="50" height="50"/>
+        <image name="black_shirt.png" width="940" height="1050"/>
+        <image name="brown_shirt.png" width="940" height="1050"/>
         <image name="color-icon.png" width="82" height="82"/>
+        <image name="cream_shirt.png" width="940" height="1050"/>
+        <image name="heather_grey_shirt.png" width="940" height="1050"/>
+        <image name="hunter_green.png" width="940" height="1050"/>
+        <image name="midnight_shirt.png" width="940" height="1050"/>
+        <image name="navy_shirt.png" width="940" height="1050"/>
         <image name="not-selected.png" width="63" height="63"/>
+        <image name="orange_shirt.png" width="940" height="1050"/>
         <image name="photo-icon.png" width="82" height="82"/>
+        <image name="powder_blue_shirt.png" width="940" height="1050"/>
+        <image name="purple_shirt.png" width="940" height="1050"/>
         <image name="right-arrow.png" width="52" height="52"/>
+        <image name="royal_shirt.png" width="940" height="1050"/>
         <image name="selected.png" width="61" height="61"/>
+        <image name="silver_shirt.png" width="940" height="1050"/>
         <image name="star-icon.png" width="82" height="82"/>
+        <image name="turq_shirt.png" width="940" height="1050"/>
     </resources>
 </document>

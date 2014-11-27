@@ -31,13 +31,61 @@
     button.frame = CGRectMake(0, 0, 60, 30);
     button.layer.borderColor = [self.view tintColor].CGColor;
     button.layer.borderWidth = 1.0f;
-    button.clipsToBounds = YES;
     button.layer.cornerRadius = 5;
+    button.clipsToBounds = YES;
+    
+    fontPanelButton.layer.borderColor = [self.view tintColor].CGColor;
+    fontPanelButton.layer.borderWidth = 1.0f;
+    fontPanelButton.layer.cornerRadius = 5;
+    
+    colorPanelButton.layer.borderColor = [self.view tintColor].CGColor;
+    colorPanelButton.layer.borderWidth = 1.0f;
+    colorPanelButton.layer.cornerRadius = 5;
+    
+    removePanelButton.layer.borderColor = [UIColor redColor].CGColor;
+    removePanelButton.layer.borderWidth = 1.0f;
+    removePanelButton.layer.cornerRadius = 5;
     
     UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithCustomView:button];
     [button addTarget:self action:@selector(clickPayButton:) forControlEvents:UIControlEventTouchUpInside];
     
     self.navigationItem.rightBarButtonItem = rightButton;
+    
+    [self setImagesScrollView];
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    imagesScrollView.contentOffset = CGPointMake(0, 64);
+    [super viewWillAppear:animated];
+    
+    AppDelegate* MyAppDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    
+    NSString *frontImageName = [NSString stringWithFormat:@"%@1.png",MyAppDelegate.tshirtColor];
+    [frontImage setImage:[UIImage imageNamed:frontImageName]];
+//    NSLog(@"SecondViewController viewWillAppear frontImage - %@",frontImageName);
+    
+    NSString *backImageName = [NSString stringWithFormat:@"%@1.png",MyAppDelegate.tshirtColor];
+    [backImage setImage:[UIImage imageNamed:backImageName]];
+//    NSLog(@"SecondViewController viewWillAppear backImage - %@",backImageName);
+}
+
+-(void)setImagesScrollView
+{
+    imagesScrollView.contentSize = CGSizeMake(imagesScrollView.frame.size.width * 3, imagesScrollView.frame.size.height);
+    imagesScrollView.scrollEnabled = NO;
+    
+    frontImage.frame = CGRectMake(0, 0, imagesScrollView.frame.size.width, imagesScrollView.frame.size.height);
+    backImage.frame = CGRectMake(imagesScrollView.frame.size.width, 0, imagesScrollView.frame.size.width, imagesScrollView.frame.size.height);
+//    [imagesScrollView setContentOffset:CGPointMake(0, 64) animated:NO];
+    
+    UISwipeGestureRecognizer *gestureLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(onSwipShirtRight:)];
+    gestureLeft.direction = UISwipeGestureRecognizerDirectionLeft;
+    [imagesScrollView addGestureRecognizer:gestureLeft];
+    
+    UISwipeGestureRecognizer *gestureRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(onSwipShirtLeft:)];
+    gestureRight.direction = UISwipeGestureRecognizerDirectionRight;
+    [imagesScrollView addGestureRecognizer:gestureRight];
 }
 
 -(void) clickPayButton:(id)sender{
@@ -54,6 +102,32 @@
     [[self navigationController] setNavigationBarHidden:NO animated:NO];
     [super viewDidAppear:animated];
 }
+
+
+#pragma mark - Gesture actions
+
+- (void)onSwipShirtLeft:(id)sender
+{
+    _index --;
+    if (_index < 1) {
+        _index = 1;
+    }
+    
+    _page.currentPage = _index - 1;
+    [imagesScrollView setContentOffset:CGPointMake(imagesScrollView.frame.size.width * (_index - 1), 0) animated:YES];
+}
+
+- (void)onSwipShirtRight:(id)sender
+{
+    _index ++;
+    if (_index > 2) {
+        _index = 2;
+    }
+    
+    _page.currentPage = _index - 1;
+    [imagesScrollView setContentOffset:CGPointMake(imagesScrollView.frame.size.width * (_index - 1), 0) animated:YES];
+}
+
 
 /*
 #pragma mark - Navigation

@@ -119,6 +119,8 @@
 		29399EC31A24ACCA004DC983 /* color-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 29399EBF1A24ACCA004DC983 /* color-icon.png */; };
 		29399EC51A24DA10004DC983 /* Adaptive_Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29399EC41A24DA10004DC983 /* Adaptive_Main.storyboard */; };
 		2952E3A91A2720FE00E0821A /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2952E3A81A2720FE00E0821A /* SecondViewController.m */; };
+		29CC09A41A27CDA100D4EC97 /* black-aa-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 29CC09A31A27CDA100D4EC97 /* black-aa-icon.png */; };
+		29CC09A81A27CFC500D4EC97 /* ColorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CC09A71A27CFC500D4EC97 /* ColorViewController.m */; };
 		29FA0D091A1AC23500ECA9E9 /* libFTPKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29FA0D041A1AC20200ECA9E9 /* libFTPKit.a */; };
 		3F064B0219F11C050018C248 /* MovableLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F064B0119F11C050018C248 /* MovableLabel.m */; };
 		3F064B0619F11E3A0018C248 /* MovableImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F064B0519F11E3A0018C248 /* MovableImageView.m */; };
@@ -392,6 +394,9 @@
 		29399EC41A24DA10004DC983 /* Adaptive_Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Adaptive_Main.storyboard; path = ../Adaptive_Main.storyboard; sourceTree = "<group>"; };
 		2952E3A71A2720FE00E0821A /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		2952E3A81A2720FE00E0821A /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		29CC09A31A27CDA100D4EC97 /* black-aa-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "black-aa-icon.png"; sourceTree = "<group>"; };
+		29CC09A61A27CFC500D4EC97 /* ColorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorViewController.h; sourceTree = "<group>"; };
+		29CC09A71A27CFC500D4EC97 /* ColorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorViewController.m; sourceTree = "<group>"; };
 		29FA0CFE1A1AC20100ECA9E9 /* FTPKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FTPKit.xcodeproj; path = "FTPKit-master/FTPKit.xcodeproj"; sourceTree = "<group>"; };
 		3F064B0019F11C050018C248 /* MovableLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovableLabel.h; sourceTree = "<group>"; };
 		3F064B0119F11C050018C248 /* MovableLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovableLabel.m; sourceTree = "<group>"; };
@@ -681,6 +686,7 @@
 		29399E931A2472AD004DC983 /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				29CC09A31A27CDA100D4EC97 /* black-aa-icon.png */,
 				29399EBC1A24ACCA004DC983 /* aa-icon.png */,
 				29399EBD1A24ACCA004DC983 /* photo-icon.png */,
 				29399EBE1A24ACCA004DC983 /* star-icon.png */,
@@ -999,6 +1005,8 @@
 		3FFCDCD319EFBFB600A7C43B = {
 			isa = PBXGroup;
 			children = (
+				29CC09A61A27CFC500D4EC97 /* ColorViewController.h */,
+				29CC09A71A27CFC500D4EC97 /* ColorViewController.m */,
 				29399E931A2472AD004DC983 /* assets */,
 				29FA0CFE1A1AC20100ECA9E9 /* FTPKit.xcodeproj */,
 				2282B0F01A15045E0004FF8C /* MyriadPro-Light.otf */,
@@ -1282,6 +1290,7 @@
 				3F76957D1A0334CA000B517D /* orange_shirt3.png in Resources */,
 				3F7695731A0334CA000B517D /* hunter_green2.png in Resources */,
 				219A76951A0B821E0050A70F /* amex@2x.png in Resources */,
+				29CC09A41A27CDA100D4EC97 /* black-aa-icon.png in Resources */,
 				21BA0C961A14A9120000B172 /* mask_v2.png in Resources */,
 				3F76956A1A0334CA000B517D /* brown_shirt2.png in Resources */,
 				21BC87FF1A121B5000071CBA /* basic.png in Resources */,
@@ -1464,6 +1473,7 @@
 				3F12EA4F19F795BC00AADDFB /* STPToken.m in Sources */,
 				219A76921A0B821E0050A70F /* PTKUSAddressZip.m in Sources */,
 				219A76BF1A0BB1E60050A70F /* PKPayment+STPTestKeys.m in Sources */,
+				29CC09A81A27CFC500D4EC97 /* ColorViewController.m in Sources */,
 				3F12EA4E19F795BC00AADDFB /* STPCard.m in Sources */,
 				219A76901A0B821E0050A70F /* PTKComponent.m in Sources */,
 				21AB26331A0BF98E0060FD4D /* ShippinngEditViewController.m in Sources */,

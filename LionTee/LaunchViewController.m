@@ -21,14 +21,13 @@
     [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
     self.navigationController.navigationBar.shadowImage = [UIImage new];
     self.navigationController.navigationBar.translucent = YES;
-    
-    
    
     AppDelegate* MyAppDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
     
     MyAppDelegate.printType = BASIC_TSHIRT_TYPE;
     MyAppDelegate.price = 1799;
     MyAppDelegate.tshirtType = MENS_CREWNECK;
+    MyAppDelegate.tshirtColor = @"apple_red_shirt";
     
     printCheckboxes = [NSArray arrayWithObjects:basicTshirtButton,alloverTshirtButton, nil];
     
