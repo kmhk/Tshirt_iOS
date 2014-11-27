@@ -150,6 +150,57 @@
     }
 }
 
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    NSString *mediaType = [info objectForKey: UIImagePickerControllerMediaType];
+    AppDelegate* MyAppDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    NSString *printType = MyAppDelegate.printType;
+    NSString *isAllOver = ALLOVER_TSHIRT_TYPE;
+    BOOL isFullImage = [printType isEqualToString:isAllOver];
+    
+    if (CFStringCompare ((__bridge CFStringRef) mediaType, kUTTypeImage, 0) == kCFCompareEqualTo) {
+        
+        UIImage *img = [info objectForKey:UIImagePickerControllerEditedImage];
+        if (!img) {
+            img = [info objectForKey:UIImagePickerControllerOriginalImage];
+        }
+        
+        if (isFullImage) {
+//            UIScrollView *scrollContainer = (UIScrollView *)[_imgViewShirts[(_index - 1)] viewWithTag:100];
+//            MovableImageView *imgView = (MovableImageView *)[scrollContainer viewWithTag:200];
+//            [addImgs replaceObjectAtIndex:_index-1 withObject:img];
+//            [imgView setHidden:NO];
+//            
+//            CGSize s= img.size;
+//            imgView.image = img;
+//            imgView.frame = CGRectMake(imgView.frame.origin.x, imgView.frame.origin.y, img.size.width / movableImageViwScale, img.size.height / movableImageViwScale);
+            
+        } else {
+//            UIImageView *shirtImgView = _imgViewShirts[(_index - 1)];
+//            UIScrollView *scrollContainer = (UIScrollView *)[shirtImgView viewWithTag:100];
+//            NSString *name = [NSString stringWithFormat:@"%@%d.png", _ShirtColors[_colorIndex], _index];
+//            UIImage *imgOrigin = [UIImage imageNamed:name];
+//            
+//            UIImage * tempImage = [imgOrigin imageWithMappingImage:img];
+//            shirtImgView.image = tempImage; //[self maskImage:imgOrigin withMask:img];
+//            
+//            MovableImageView *imgView = (MovableImageView *)[scrollContainer viewWithTag:200];
+//            imgView.image = img;
+//            [addImgs replaceObjectAtIndex:_index-1 withObject:tempImage];
+//            [imgView setHidden:YES];
+            
+        }
+    }
+    
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    
+    if (_isFullImage == NO && _index == 2) {
+        self.basePrice = 39.99f;
+        [basePriceButton setTitle:[NSString stringWithFormat:@"$%.2f" , self.basePrice] forState:UIControlStateNormal];
+    }
+    
+}
+
 
 
 #pragma mark - Gesture actions

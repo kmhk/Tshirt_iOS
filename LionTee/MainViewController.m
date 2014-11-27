@@ -1217,19 +1217,6 @@
 }
 
 
-#pragma mark - UIActionSheet Delegate 
-
--(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    
-    if (buttonIndex == 0) {
-        [self onAddImageFromCamera];
-    }else if (buttonIndex == 1)
-    {
-        [self onAddImageFromLibrary];
-    }
-}
-
 //-(void)willPresentActionSheet:(UIActionSheet *)actionSheet
 //{
 //    NSArray * array = actionSheet.subviews;
