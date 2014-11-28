@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "SelectShapeViewController.h"
 #import <MobileCoreServices/MobileCoreServices.h>
+#import "UIImage+tintImage.h"
 
 @interface SecondViewController : UIViewController
 <

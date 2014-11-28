@@ -176,6 +176,17 @@
 //            imgView.frame = CGRectMake(imgView.frame.origin.x, imgView.frame.origin.y, img.size.width / movableImageViwScale, img.size.height / movableImageViwScale);
             
         } else {
+                NSLog(@"HERE");
+                AppDelegate* MyAppDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+                NSString *name = [NSString stringWithFormat:@"%@%ld.png", MyAppDelegate.tshirtColor, (long)_index+1];
+                UIImage *imgOrigin = [UIImage imageNamed:name];
+                UIImage * tempImage = [imgOrigin imageWithMappingImage:img];
+                NSLog(@"HERE %@",name);
+            
+                UIImageView *imageView = [[UIImageView alloc] initWithImage:tempImage];
+                imageView.frame = frontImage.frame;
+                [imagesScrollView addSubview:imageView];
+            
 //            UIImageView *shirtImgView = _imgViewShirts[(_index - 1)];
 //            UIScrollView *scrollContainer = (UIScrollView *)[shirtImgView viewWithTag:100];
 //            NSString *name = [NSString stringWithFormat:@"%@%d.png", _ShirtColors[_colorIndex], _index];

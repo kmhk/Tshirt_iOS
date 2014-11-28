@@ -113,7 +113,8 @@
 {
     UICollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"shapecell" forIndexPath:indexPath];
     UIImageView * shapeView = (UIImageView *)[cell viewWithTag:456];
-    UIImage * customImage = [self maskImage1:self.originalImage withMask:[UIImage imageNamed:[NSString stringWithFormat:@"mask_%ld", (long)indexPath.row + 1]]];
+//    UIImage * customImage = [self maskImage1:self.originalImage withMask:[UIImage imageNamed:[NSString stringWithFormat:@"mask_%ld", (long)indexPath.row + 1]]];
+    UIImage *customImage = [UIImage imageNamed:[NSString stringWithFormat:@"mask_%ld", (long)indexPath.row + 1]];
     [shapeView setImage:customImage];
     
     UILabel * titleLabel = (UILabel *)[cell viewWithTag:123];
