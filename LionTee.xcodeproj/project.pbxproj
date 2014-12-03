@@ -121,6 +121,8 @@
 		2952E3A91A2720FE00E0821A /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2952E3A81A2720FE00E0821A /* SecondViewController.m */; };
 		29CC09A41A27CDA100D4EC97 /* black-aa-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 29CC09A31A27CDA100D4EC97 /* black-aa-icon.png */; };
 		29CC09A81A27CFC500D4EC97 /* ColorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CC09A71A27CFC500D4EC97 /* ColorViewController.m */; };
+		29CC09AB1A2F793700D4EC97 /* CheckoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CC09AA1A2F793700D4EC97 /* CheckoutViewController.m */; };
+		29CC09AD1A2F7CBD00D4EC97 /* checkout.png in Resources */ = {isa = PBXBuildFile; fileRef = 29CC09AC1A2F7CBD00D4EC97 /* checkout.png */; };
 		29FA0D091A1AC23500ECA9E9 /* libFTPKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29FA0D041A1AC20200ECA9E9 /* libFTPKit.a */; };
 		3F064B0219F11C050018C248 /* MovableLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F064B0119F11C050018C248 /* MovableLabel.m */; };
 		3F064B0619F11E3A0018C248 /* MovableImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F064B0519F11E3A0018C248 /* MovableImageView.m */; };
@@ -397,6 +399,9 @@
 		29CC09A31A27CDA100D4EC97 /* black-aa-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "black-aa-icon.png"; sourceTree = "<group>"; };
 		29CC09A61A27CFC500D4EC97 /* ColorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorViewController.h; sourceTree = "<group>"; };
 		29CC09A71A27CFC500D4EC97 /* ColorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorViewController.m; sourceTree = "<group>"; };
+		29CC09A91A2F793700D4EC97 /* CheckoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckoutViewController.h; sourceTree = "<group>"; };
+		29CC09AA1A2F793700D4EC97 /* CheckoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckoutViewController.m; sourceTree = "<group>"; };
+		29CC09AC1A2F7CBD00D4EC97 /* checkout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkout.png; sourceTree = "<group>"; };
 		29FA0CFE1A1AC20100ECA9E9 /* FTPKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FTPKit.xcodeproj; path = "FTPKit-master/FTPKit.xcodeproj"; sourceTree = "<group>"; };
 		3F064B0019F11C050018C248 /* MovableLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovableLabel.h; sourceTree = "<group>"; };
 		3F064B0119F11C050018C248 /* MovableLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovableLabel.m; sourceTree = "<group>"; };
@@ -686,6 +691,7 @@
 		29399E931A2472AD004DC983 /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				29CC09AC1A2F7CBD00D4EC97 /* checkout.png */,
 				29CC09A31A27CDA100D4EC97 /* black-aa-icon.png */,
 				29399EBC1A24ACCA004DC983 /* aa-icon.png */,
 				29399EBD1A24ACCA004DC983 /* photo-icon.png */,
@@ -1005,6 +1011,8 @@
 		3FFCDCD319EFBFB600A7C43B = {
 			isa = PBXGroup;
 			children = (
+				29CC09A91A2F793700D4EC97 /* CheckoutViewController.h */,
+				29CC09AA1A2F793700D4EC97 /* CheckoutViewController.m */,
 				29CC09A61A27CFC500D4EC97 /* ColorViewController.h */,
 				29CC09A71A27CFC500D4EC97 /* ColorViewController.m */,
 				29399E931A2472AD004DC983 /* assets */,
@@ -1396,6 +1404,7 @@
 				3FFCDD1A19EFC24700A7C43B /* background_1.png in Resources */,
 				21F04A3B1A0D38CE001194AF /* mask_5.png in Resources */,
 				29399EB61A24889D004DC983 /* V-Neck Tri-Blend front.png in Resources */,
+				29CC09AD1A2F7CBD00D4EC97 /* checkout.png in Resources */,
 				3F76956D1A0334CA000B517D /* cream_shirt2.png in Resources */,
 				21BA0C991A14A9120000B172 /* mask_v5.png in Resources */,
 				3FF08D7319F5A125005D798E /* silver_shirt.png in Resources */,
@@ -1456,6 +1465,7 @@
 				3F064B0619F11E3A0018C248 /* MovableImageView.m in Sources */,
 				219A768B1A0B821E0050A70F /* PTKAddressZip.m in Sources */,
 				219A768A1A0B821E0050A70F /* MBProgressHUD.m in Sources */,
+				29CC09AB1A2F793700D4EC97 /* CheckoutViewController.m in Sources */,
 				3F064B1919F123440018C248 /* InfColorIndicatorView.m in Sources */,
 				3F12EA5119F795BC00AADDFB /* Stripe.m in Sources */,
 				3FFCDCEC19EFBFB600A7C43B /* main.m in Sources */,

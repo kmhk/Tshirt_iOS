@@ -56,6 +56,8 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
+    self.navigationController.navigationBar.tintColor = [self.view tintColor];
+    
     imagesScrollView.contentOffset = CGPointMake(0, 64);
     [super viewWillAppear:animated];
     
@@ -90,6 +92,7 @@
 
 -(void) clickPayButton:(id)sender{
     NSLog(@"Click pay button clicked");
+    [self performSegueWithIdentifier:@"checkoutSegue" sender:self];
 }
 
 - (void)didReceiveMemoryWarning {

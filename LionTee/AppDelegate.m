@@ -15,6 +15,13 @@ NSString * const StripePublishableKey = @"pk_test_faqlcakROako6GtlwIbOehIN";
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    self.smallNumber = 1;
+    self.mediumNumber = 0;
+    self.largeNumber = 0;
+    self.xLargeNumber = 0;
+    self.xxLargeNumber = 0;
+    self.xxxLargeNumber = 0;
+    
     // Override point for customization after application launch.
 	[Stripe setDefaultPublishableKey:StripePublishableKey];
     UIStoryboard *iPhoneStoryBoard = [UIStoryboard storyboardWithName:@"Adaptive_Main" bundle:nil];

@@ -19,4 +19,12 @@
 @property (strong, nonatomic) NSString *tshirtColor;
 @property (nonatomic) int price;
 
+@property (nonatomic) int smallNumber;
+@property (nonatomic) int mediumNumber;
+@property (nonatomic) int largeNumber;
+@property (nonatomic) int xLargeNumber;
+@property (nonatomic) int xxLargeNumber;
+@property (nonatomic) int xxxLargeNumber;
+
+
 @end
