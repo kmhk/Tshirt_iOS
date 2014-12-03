@@ -20,7 +20,7 @@
     
     AppDelegate* MyAppDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
     
-    self.title = MyAppDelegate.tshirtType;
+//    self.title = MyAppDelegate.tshirtType;
     [self.navigationController setNavigationBarHidden:NO];
     
     float price = MyAppDelegate.price/100.00;
@@ -56,12 +56,13 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
+    AppDelegate* MyAppDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    
+    self.title = MyAppDelegate.tshirtType;
     self.navigationController.navigationBar.tintColor = [self.view tintColor];
     
     imagesScrollView.contentOffset = CGPointMake(0, 64);
     [super viewWillAppear:animated];
-    
-    AppDelegate* MyAppDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
     
     NSString *frontImageName = [NSString stringWithFormat:@"%@1.png",MyAppDelegate.tshirtColor];
     [frontImage setImage:[UIImage imageNamed:frontImageName]];
