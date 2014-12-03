@@ -586,7 +586,7 @@
                             <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="JdT-hZ-Opi" userLabel="Gray View">
                                 <rect key="frame" x="0.0" y="64" width="320" height="460"/>
                                 <subviews>
-                                    <scrollView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QuS-Ii-w09">
+                                    <scrollView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QuS-Ii-w09">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="370"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Kids Crewneck front.png" translatesAutoresizingMaskIntoConstraints="NO" id="3c6-bp-JgK">
@@ -693,9 +693,10 @@
                                     <constraint firstItem="rhI-v5-0Pm" firstAttribute="leading" secondItem="JdT-hZ-Opi" secondAttribute="leading" id="a0f-TI-f4J"/>
                                     <constraint firstAttribute="bottom" secondItem="rhI-v5-0Pm" secondAttribute="bottom" constant="5" id="o0L-Ix-kGI"/>
                                     <constraint firstAttribute="trailing" secondItem="rhI-v5-0Pm" secondAttribute="trailing" id="wGN-c2-1gv"/>
+                                    <constraint firstAttribute="centerX" secondItem="QuS-Ii-w09" secondAttribute="centerX" id="zEY-Mb-oYh"/>
                                 </constraints>
                             </view>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="CXn-tf-1bx">
+                            <pageControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="CXn-tf-1bx">
                                 <rect key="frame" x="140" y="420" width="39" height="37"/>
                             </pageControl>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gFX-nw-eyx" userLabel="Orange Bottom Stripe">
@@ -791,6 +792,7 @@
                             <constraint firstAttribute="trailing" secondItem="JdT-hZ-Opi" secondAttribute="trailing" id="AIs-zI-Aqr"/>
                             <constraint firstItem="JdT-hZ-Opi" firstAttribute="top" secondItem="HFG-gj-Crd" secondAttribute="bottom" id="mWt-z7-bih"/>
                             <constraint firstItem="gFX-nw-eyx" firstAttribute="leading" secondItem="Cck-bJ-fc7" secondAttribute="leading" id="oCV-Ij-hiU"/>
+                            <constraint firstAttribute="centerX" secondItem="CXn-tf-1bx" secondAttribute="centerX" id="oty-LD-vJi"/>
                             <constraint firstItem="O31-S2-rvA" firstAttribute="top" secondItem="JdT-hZ-Opi" secondAttribute="bottom" constant="44" id="qK0-Wd-3Z1"/>
                             <constraint firstAttribute="trailing" secondItem="gFX-nw-eyx" secondAttribute="trailing" id="ynl-Ml-BIW"/>
                         </constraints>
