@@ -323,7 +323,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="B1z-jk-fPO">
                                                 <rect key="frame" x="186" y="52" width="125" height="42"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" backgroundImage="26C3BBED-C810-4691-9CB5-9D3F0586B639">
+                                                <state key="normal" backgroundImage="39EB8F46-B2BD-497A-9773-F04DEC396D71">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
@@ -1169,7 +1169,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="26C3BBED-C810-4691-9CB5-9D3F0586B639" width="299" height="98">
+        <image name="39EB8F46-B2BD-497A-9773-F04DEC396D71" width="299" height="98">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOzxYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISksLzU4VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA
