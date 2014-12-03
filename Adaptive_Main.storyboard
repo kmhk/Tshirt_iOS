@@ -738,10 +738,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="rmk-7c-zWe">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="rmk-7c-zWe">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mzZ-91-Qh2" userLabel="SmallMediumLarge">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mzZ-91-Qh2" userLabel="SmallMediumLarge">
                                 <rect key="frame" x="16" y="72" width="140" height="227"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Small" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gV6-wx-hzU">
@@ -926,7 +926,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nj0-5m-uOr" userLabel="SmallMediumLarge">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nj0-5m-uOr" userLabel="xLargeXxLargeXxxLarge">
                                 <rect key="frame" x="164" y="72" width="140" height="227"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="X-Large" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IfK-bJ-9Os">
@@ -1113,6 +1113,20 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rmk-7c-zWe" firstAttribute="top" secondItem="Hci-46-Fao" secondAttribute="top" id="0KG-E2-hT4"/>
+                            <constraint firstAttribute="trailing" secondItem="nj0-5m-uOr" secondAttribute="trailing" constant="16" id="1Ac-Oq-1Eu"/>
+                            <constraint firstItem="nj0-5m-uOr" firstAttribute="leading" secondItem="mzZ-91-Qh2" secondAttribute="trailing" constant="8" id="1SP-MX-ubc"/>
+                            <constraint firstItem="nj0-5m-uOr" firstAttribute="height" secondItem="mzZ-91-Qh2" secondAttribute="height" id="C1M-rR-PxR"/>
+                            <constraint firstItem="nj0-5m-uOr" firstAttribute="width" secondItem="mzZ-91-Qh2" secondAttribute="height" multiplier="140:227" id="CHV-fT-o5C"/>
+                            <constraint firstItem="rmk-7c-zWe" firstAttribute="leading" secondItem="Hci-46-Fao" secondAttribute="leading" id="JV3-aL-HTR"/>
+                            <constraint firstItem="m3d-kr-qnn" firstAttribute="top" secondItem="rmk-7c-zWe" secondAttribute="bottom" id="Srv-IP-DMZ"/>
+                            <constraint firstItem="nj0-5m-uOr" firstAttribute="width" secondItem="mzZ-91-Qh2" secondAttribute="width" id="YTh-et-0PX"/>
+                            <constraint firstItem="nj0-5m-uOr" firstAttribute="top" secondItem="UWp-ej-6gx" secondAttribute="bottom" constant="8" id="cKZ-Zb-LU7"/>
+                            <constraint firstAttribute="trailing" secondItem="rmk-7c-zWe" secondAttribute="trailing" id="eOo-cq-mtt"/>
+                            <constraint firstItem="mzZ-91-Qh2" firstAttribute="top" secondItem="UWp-ej-6gx" secondAttribute="bottom" constant="8" id="oGS-8w-kjM"/>
+                            <constraint firstItem="mzZ-91-Qh2" firstAttribute="leading" secondItem="Hci-46-Fao" secondAttribute="leading" constant="16" id="x93-lO-YPg"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8fO-sj-3Hv">
                         <nil key="title"/>
