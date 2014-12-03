@@ -582,7 +582,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JdT-hZ-Opi" userLabel="Gray View">
-                                <rect key="frame" x="0.0" y="64" width="320" height="454"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="460"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QuS-Ii-w09">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="370"/>
@@ -661,19 +661,31 @@
                             <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="CXn-tf-1bx">
                                 <rect key="frame" x="140" y="420" width="39" height="37"/>
                             </pageControl>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gFX-nw-eyx" userLabel="Orange Bottom Stripe">
-                                <rect key="frame" x="0.0" y="518" width="320" height="50"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gFX-nw-eyx" userLabel="Orange Bottom Stripe">
+                                <rect key="frame" x="0.0" y="523" width="320" height="45"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqn-Aj-ngG" userLabel="Text button">
-                                        <rect key="frame" x="8" y="2" width="45" height="45"/>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqn-Aj-ngG" userLabel="Text button">
+                                        <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="45" id="Tgw-vf-BkR"/>
+                                            <constraint firstAttribute="height" constant="45" id="hf7-Rq-fb0"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <state key="normal" backgroundImage="aa-icon.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RvS-1O-SXU" userLabel="Photo button">
-                                        <rect key="frame" x="100" y="2" width="45" height="45"/>
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g9p-ef-Tea" userLabel="First Spacer View">
+                                        <rect key="frame" x="45" y="0.0" width="45" height="45"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RvS-1O-SXU" userLabel="Photo button">
+                                        <rect key="frame" x="90" y="0.0" width="45" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="dzG-O0-YMW"/>
+                                            <constraint firstAttribute="width" constant="45" id="sZg-uv-bH7"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" backgroundImage="photo-icon.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -683,8 +695,16 @@
                                             <action selector="onTakeImage:" destination="lmk-Xh-Ejh" eventType="touchUpInside" id="dL2-dF-n9j"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndW-A0-XK4" userLabel="Shape button">
-                                        <rect key="frame" x="187" y="2" width="45" height="45"/>
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PEA-gz-n6C" userLabel="Second Spacer View">
+                                        <rect key="frame" x="135" y="0.0" width="45" height="45"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndW-A0-XK4" userLabel="Shape button">
+                                        <rect key="frame" x="180" y="0.0" width="45" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="3e7-bs-BqS"/>
+                                            <constraint firstAttribute="width" constant="45" id="FXU-tD-hRc"/>
+                                        </constraints>
                                         <state key="normal" backgroundImage="star-icon.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -692,8 +712,12 @@
                                             <segue destination="LN6-w2-gE7" kind="show" id="pfd-Bc-TXc"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="haC-dw-jDd" userLabel="Color button">
-                                        <rect key="frame" x="267" y="2" width="45" height="45"/>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="haC-dw-jDd" userLabel="Color button">
+                                        <rect key="frame" x="270" y="0.0" width="45" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="45" id="1xC-53-P3q"/>
+                                            <constraint firstAttribute="height" constant="45" id="Byx-Qn-r6n"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" backgroundImage="color-icon.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -703,11 +727,35 @@
                                             <segue destination="aPc-3V-S2V" kind="show" id="zvi-yQ-eUz"/>
                                         </connections>
                                     </button>
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mN2-U0-MF1" userLabel="Third Spacer View">
+                                        <rect key="frame" x="225" y="0.0" width="45" height="45"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.98431372549999996" green="0.30588235289999999" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="mN2-U0-MF1" firstAttribute="height" secondItem="g9p-ef-Tea" secondAttribute="height" id="2Zh-qR-vdc"/>
+                                    <constraint firstItem="mN2-U0-MF1" firstAttribute="leading" secondItem="ndW-A0-XK4" secondAttribute="trailing" id="3Cw-r6-E18"/>
+                                    <constraint firstItem="mN2-U0-MF1" firstAttribute="width" secondItem="g9p-ef-Tea" secondAttribute="height" multiplier="1:1" id="7El-e3-ZV8"/>
+                                    <constraint firstItem="mN2-U0-MF1" firstAttribute="width" secondItem="PEA-gz-n6C" secondAttribute="height" multiplier="1:1" id="AnS-mv-XSb"/>
+                                    <constraint firstItem="ndW-A0-XK4" firstAttribute="leading" secondItem="PEA-gz-n6C" secondAttribute="trailing" id="TMG-mr-kCq"/>
+                                    <constraint firstItem="mN2-U0-MF1" firstAttribute="height" secondItem="PEA-gz-n6C" secondAttribute="height" id="Xba-jY-g4j"/>
+                                    <constraint firstItem="mN2-U0-MF1" firstAttribute="width" secondItem="PEA-gz-n6C" secondAttribute="width" id="cyr-at-bzN"/>
+                                    <constraint firstAttribute="trailing" secondItem="haC-dw-jDd" secondAttribute="trailing" constant="5" id="eik-Za-9Rm"/>
+                                    <constraint firstItem="haC-dw-jDd" firstAttribute="leading" secondItem="mN2-U0-MF1" secondAttribute="trailing" id="j44-1j-XWH"/>
+                                    <constraint firstItem="RvS-1O-SXU" firstAttribute="leading" secondItem="g9p-ef-Tea" secondAttribute="trailing" id="jO5-Ji-1NF"/>
+                                    <constraint firstItem="g9p-ef-Tea" firstAttribute="leading" secondItem="bqn-Aj-ngG" secondAttribute="trailing" id="r5W-2a-FXd"/>
+                                    <constraint firstItem="mN2-U0-MF1" firstAttribute="width" secondItem="g9p-ef-Tea" secondAttribute="width" id="y3e-1p-VwC"/>
+                                    <constraint firstItem="PEA-gz-n6C" firstAttribute="leading" secondItem="RvS-1O-SXU" secondAttribute="trailing" id="yqu-bN-6ce"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="O31-S2-rvA" firstAttribute="top" secondItem="gFX-nw-eyx" secondAttribute="bottom" id="37v-pU-1eS"/>
+                            <constraint firstItem="gFX-nw-eyx" firstAttribute="leading" secondItem="Cck-bJ-fc7" secondAttribute="leading" id="oCV-Ij-hiU"/>
+                            <constraint firstAttribute="trailing" secondItem="gFX-nw-eyx" secondAttribute="trailing" id="ynl-Ml-BIW"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
