@@ -13,6 +13,7 @@
 @protocol MovableLabelDelegate <NSObject>
 
 - (void)setCurrentTextLabel:(MovableLabel *)label;
+- (void)showCurrentTextLabel:(MovableLabel *)label;
 
 @end
 

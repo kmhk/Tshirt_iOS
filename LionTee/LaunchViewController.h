@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+static NSDictionary * shirtColorList;
 @interface LaunchViewController : UIViewController
 {
     
@@ -43,4 +44,6 @@
 
 -(IBAction)onPrintCheckboxClicked:(id)sender;
 -(IBAction)onCheckboxClicked:(id)sender;
++(NSArray *)sharedShirtColorList:(NSString *) styleName;
+
 @end

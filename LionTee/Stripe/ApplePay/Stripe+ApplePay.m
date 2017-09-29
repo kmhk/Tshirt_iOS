@@ -29,6 +29,9 @@
     if (![PKPaymentRequest class]) {
         return nil;
     }
+    
+    AppDelegate* MyAppDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+
     PKPaymentRequest *paymentRequest = [PKPaymentRequest new];
     [paymentRequest setMerchantIdentifier:merchantIdentifier];
     [paymentRequest setSupportedNetworks:@[PKPaymentNetworkAmex, PKPaymentNetworkMasterCard, PKPaymentNetworkVisa]];
@@ -43,10 +46,22 @@
     PKShippingMethod *method1 = [self shippingMethodWithLabel:@"UPS Next Day Air" amount:5.00f];
     PKShippingMethod *method2 = [self shippingMethodWithLabel:@"USPS Standard Mail" amount:0.00f];
     */
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSMutableString *string = [defaults objectForKey:@"PRICEKEY"];
+//   NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+//    NSMutableString *string = [defaults objectForKey:@"PRICEKEY"];
     
-    NSString *applePrice = [string stringByReplacingOccurrencesOfString:@"$" withString:@""];
+//    NSMutableString *appleString = [defaults objectForKey:@"APPLEPAYPRICE"];
+//    NSLog(@"String: %@", appleString);
+    
+
+    
+    NSInteger count = MyAppDelegate.smallNumber + MyAppDelegate.mediumNumber + MyAppDelegate.largeNumber + MyAppDelegate.xLargeNumber + MyAppDelegate.xxLargeNumber + MyAppDelegate.xxxLargeNumber;
+    float price = MyAppDelegate.price/100.00;
+    
+    float totalPrice  = price * count;
+    NSString *priceTitle = [NSString stringWithFormat:@"$%.2f",totalPrice];
+    NSLog(@"priceTitle: %@", priceTitle);
+    
+    NSString *applePrice = [priceTitle stringByReplacingOccurrencesOfString:@"$" withString:@""];
     NSString *finalPrice = [applePrice stringByReplacingOccurrencesOfString:@"." withString:@""];
     NSLog(@"Price Key: %@", finalPrice);
 

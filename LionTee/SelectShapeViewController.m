@@ -7,7 +7,7 @@
 //
 
 #import "SelectShapeViewController.h"
-
+#import "SecondViewController.h"
 
 @implementation SelectShapeViewController
 
@@ -16,7 +16,8 @@
 
 - (void)viewDidLoad {
     
-    titleArray = [[NSArray alloc] initWithObjects:@"Heart",@"Circle", @"Curved Frame" , @"Rectangle" , @"Triangle" ,@"Arrow", @"Star", @"Comic", nil];
+    titleArray = [[NSArray alloc] initWithObjects:@"Heart",@"Circle", @"Curved Frame" , @"Rectangle" , @"Triangle" ,@"Arrow", @"Star", @"Comic", @"Square", nil];
+        
     [super viewDidLoad];
     [sourceImageView setImage:nil];
     
@@ -48,6 +49,8 @@
 
 - (IBAction)onBackEdit:(id)sender
 {
+    
+    [self.navigationController.navigationBar setHidden:NO];
     [UIView animateWithDuration:0.5 animations:^(void){
         
         [editView setFrame: CGRectMake(self.view.frame.size.width, 0, editView.frame.size.width, editView.frame.size.height)];
@@ -59,6 +62,8 @@
     if (delegate != nil && [delegate respondsToSelector:@selector(shapeEditDone:)]) {
         [delegate shapeEditDone:shapeImageView.image];
     }
+    
+    [self.navigationController.navigationBar setHidden:NO];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -85,6 +90,9 @@
     
     currentMask = [UIImage imageNamed:[NSString stringWithFormat:@"mask_%ld", (long)indexPath.row + 1]];
     [self setShapeImage];
+    
+    [self.navigationController.navigationBar setHidden:YES];
+    
     [UIView animateWithDuration:0.5 animations:^(void){
     
         [editView setFrame: CGRectMake(0, 0, editView.frame.size.width, editView.frame.size.height)];
@@ -106,15 +114,15 @@
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 8;
+    return 9;
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     UICollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"shapecell" forIndexPath:indexPath];
     UIImageView * shapeView = (UIImageView *)[cell viewWithTag:456];
-//    UIImage * customImage = [self maskImage1:self.originalImage withMask:[UIImage imageNamed:[NSString stringWithFormat:@"mask_%ld", (long)indexPath.row + 1]]];
-    UIImage *customImage = [UIImage imageNamed:[NSString stringWithFormat:@"mask_%ld", (long)indexPath.row + 1]];
+    UIImage * customImage = [self maskImage1:self.originalImage withMask:[UIImage imageNamed:[NSString stringWithFormat:@"mask_%ld", (long)indexPath.row + 1]]];
+ ///   UIImage *customImage = [UIImage imageNamed:[NSString stringWithFormat:@"mask_%ld", (long)indexPath.row + 1]];
     [shapeView setImage:customImage];
     
     UILabel * titleLabel = (UILabel *)[cell viewWithTag:123];

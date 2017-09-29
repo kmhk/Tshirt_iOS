@@ -11,6 +11,7 @@
 
 @protocol SelectShapeDelegate <NSObject>
 -(void)shapeEditDone:(UIImage *)image;
+
 @end
 
 

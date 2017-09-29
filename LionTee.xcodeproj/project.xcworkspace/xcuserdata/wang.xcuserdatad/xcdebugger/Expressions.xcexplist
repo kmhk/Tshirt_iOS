@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[EditTextController viewDidLoad]:EditTextController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.navigationItem.rightBarButtonItem">
+            </PersistentString>
+            <PersistentString
+               value = "self.navigationItem">
+            </PersistentString>
+            <PersistentString
+               value = "self.navigationController">
+            </PersistentString>
+            <PersistentString
+               value = "self.navigationController.title">
+            </PersistentString>
+            <PersistentString
+               value = "[self.navigationController setTitle:@&quot;Edit Text&quot;];">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[SecondViewController viewDidLoad]:SecondViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[LaunchViewController sharedShirtColorList] ">
+            </PersistentString>
+            <PersistentString
+               value = "[[LaunchViewController sharedShirtColorList] objectForKey:currentShirtStyle]">
+            </PersistentString>
+            <PersistentString
+               value = "containerView.frame.size.height">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

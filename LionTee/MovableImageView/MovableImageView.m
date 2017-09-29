@@ -10,6 +10,7 @@
 
 @implementation MovableImageView
 
+@synthesize originalImag, filterNumber,isMovalbleFlag;
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -20,6 +21,10 @@
 		UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleTap:)];
 		[doubleTap setNumberOfTapsRequired:2];
 		[self addGestureRecognizer:doubleTap];
+        
+        UITapGestureRecognizer *oneTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(oneTap:)];
+        [oneTap setNumberOfTapsRequired:1];
+        [self addGestureRecognizer:oneTap];
     }
     return self;
 }
@@ -49,16 +54,29 @@
 }
 
 
+- (void)oneTap:(UITapGestureRecognizer *)gesture
+{
+    [self.delegate showCurrentImageView:self];
+}
+
 #pragma mark - drag action
 
 -(void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    if (!self.isMovalbleFlag) {
+        return;
+    }
 	UITouch *touch = [[event allTouches] anyObject];
 	_start = [touch locationInView:self];
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    
+    if (!self.isMovalbleFlag) {
+        return;
+    }
+    
 	UITouch *touch = [[event allTouches] anyObject];
 	CGPoint location = [touch locationInView:self];
 	
@@ -83,6 +101,9 @@
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    if (!self.isMovalbleFlag) {
+        return;
+    }
 	UITouch *touch = [[event allTouches] anyObject];
 	CGPoint location = [touch locationInView:self];
 	

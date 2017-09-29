@@ -14,6 +14,22 @@
 
 @implementation LaunchViewController
 
+
++(NSArray *)sharedShirtColorList:(NSString *) styleName
+{
+    if (shirtColorList == nil) {
+        shirtColorList = [[NSDictionary alloc] initWithObjectsAndKeys:
+         [[NSArray alloc] initWithObjects:@"white" ,@" black", @"green", @"grey" , @"huntergreen" , @"navy" , @"orange" , @"pink" , @"royal", @"saphire" ,  @"yellow",nil] ,@"kids",
+         [[NSArray alloc] initWithObjects:@"white" ,@"black", @"green",  @"grey" ,  @"navy" , @"orange" , @"purple" ,@"red", @"royal",  nil ] , @"mens",
+         [[NSArray alloc] initWithObjects: @"grey" , @"black", @"blue", @"green", @"red",nil] , @"neck",
+        [[NSArray alloc] initWithObjects: @"white" ,@"black",  @"grey" , @"navy" @"red",  nil], @"tank",
+         [[NSArray alloc] initWithObjects: @"white", @"black",  @"grey" , @"huntergreen" , @"maroon", @"navy" ,  @"royal", nil] , @"hoodie",
+         [[NSArray alloc] initWithObjects: @"white", @"black",  @"navy" ,  @"pink" , @"red", @"saphire" , nil] , @"women", nil];
+    }
+    
+    return [NSArray arrayWithArray: [shirtColorList objectForKey:styleName]];
+     
+}
 - (void)viewDidLoad {
     
     [super viewDidLoad];
@@ -27,7 +43,8 @@
     MyAppDelegate.printType = BASIC_TSHIRT_TYPE;
     MyAppDelegate.price = 1799;
     MyAppDelegate.tshirtType = MENS_CREWNECK;
-    MyAppDelegate.tshirtColor = @"apple_red_shirt";
+    MyAppDelegate.tshirtColor = @"";
+    MyAppDelegate.tshirtImageName = @"mens";
     
     printCheckboxes = [NSArray arrayWithObjects:basicTshirtButton,alloverTshirtButton, nil];
     
@@ -36,8 +53,17 @@
     
     basicTshirtButton.selected = YES;
     mensCrewneckTshirtButton.selected = YES;
+    
+    [self.view setBackgroundColor:[UIColor whiteColor]];
+    
+  
+
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+      [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+}
 - (void)viewDidAppear:(BOOL)animated
 {
 //    [[self navigationController] setNavigationBarHidden:YES animated:NO];
@@ -75,21 +101,27 @@
     if(sender.tag == 10){
         MyAppDelegate.tshirtType = KIDS_CREWNECK;
         kidsCrewneckTshirtButton.selected = YES;
+        MyAppDelegate.tshirtImageName = @"kids";
     }else if(sender.tag == 11){
         MyAppDelegate.tshirtType = MENS_CREWNECK;
         mensCrewneckTshirtButton.selected = YES;
+         MyAppDelegate.tshirtImageName = @"mens";
     }else if(sender.tag == 12){
         MyAppDelegate.tshirtType = TRI_BLEND_VNECK;
         triBlendVNeckTshirtButton.selected = YES;
+         MyAppDelegate.tshirtImageName = @"neck";
     }else if(sender.tag == 13){
         MyAppDelegate.tshirtType = MENS_TANKTOP;
         mensTanktopButton.selected = YES;
+         MyAppDelegate.tshirtImageName = @"tank";
     }else if(sender.tag == 14){
         MyAppDelegate.tshirtType = HOODIE_PULLOVER;
         hoodiePulloverButton.selected = YES;
+         MyAppDelegate.tshirtImageName = @"hoodle";
     }else if(sender.tag == 15){
         MyAppDelegate.tshirtType = LADIES_CREWNECK;
         ladiesCrewneckTshirtButton.selected = YES;
+         MyAppDelegate.tshirtImageName = @"women";
     }
     
     NSLog(@"onCheckboxClicked – %@ – %ld",MyAppDelegate.tshirtType,(long)sender.tag);

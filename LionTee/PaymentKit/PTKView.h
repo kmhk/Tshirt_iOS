@@ -19,6 +19,8 @@
 @protocol PTKViewDelegate <NSObject>
 @optional
 - (void)paymentView:(PTKView *)paymentView withCard:(PTKCard *)card isValid:(BOOL)valid;
+-(void)showWillKeyboard:(UITextField *)textField;
+-(void)hideWillKeyboard;
 @end
 
 @interface PTKView : UIView
@@ -33,7 +35,7 @@
 
 @property IBOutlet UIView *innerView;
 @property IBOutlet UIView *clipView;
-@property IBOutlet PTKTextField *cardNumberField;
+@property (nonatomic, strong) IBOutlet PTKTextField *cardNumberField;
 @property IBOutlet PTKTextField *cardExpiryField;
 @property IBOutlet PTKTextField *cardCVCField;
 @property IBOutlet UIImageView *placeholderView;

@@ -20,9 +20,14 @@
 		
 		//UIPinchGestureRecognizer *twoFingerPinch = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(twoFingerPinch:)];
 		//[self addGestureRecognizer:twoFingerPinch];
+       self.numberOfLines  = 0;
 		UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleTap:)];
 		[doubleTap setNumberOfTapsRequired:2];
 		[self addGestureRecognizer:doubleTap];
+        
+        UITapGestureRecognizer *oneTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(oneTap:)];
+        [oneTap setNumberOfTapsRequired:1];
+        [self addGestureRecognizer:oneTap];
 		
     }
     return self;
@@ -60,6 +65,11 @@
 	[self.delegate setCurrentTextLabel:self];
 }
 
+
+- (void)oneTap:(UITapGestureRecognizer *)gesture
+{
+    [self.delegate showCurrentTextLabel:self];
+}
 
 #pragma mark - drag action
 

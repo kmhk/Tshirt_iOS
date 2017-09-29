@@ -13,7 +13,7 @@
 @protocol MovableImageViewDelegate <NSObject>
 
 - (void)setCurrentImageView:(MovableImageView *)imgView;
-
+- (void)showCurrentImageView:(MovableImageView *)imgView;
 @end
 
 
@@ -23,5 +23,8 @@
 }
 
 @property (nonatomic) id<MovableImageViewDelegate> delegate;
+@property(nonatomic , strong) UIImage * originalImag;
+@property (nonatomic, assign) NSInteger  filterNumber;
+@property (nonatomic, assign) BOOL isMovalbleFlag;
 
 @end

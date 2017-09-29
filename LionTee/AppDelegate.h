@@ -9,16 +9,16 @@
 #import <UIKit/UIKit.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>{
-
 }
 
 @property (strong, nonatomic) UIWindow *window;
 
 @property (strong, nonatomic) NSString *printType;
+@property (strong, nonatomic) NSString *tshirtImageName;
 @property (strong, nonatomic) NSString *tshirtType;
 @property (strong, nonatomic) NSString *tshirtColor;
-@property (nonatomic) int price;
 
+@property (nonatomic) int price;
 @property (nonatomic) int smallNumber;
 @property (nonatomic) int mediumNumber;
 @property (nonatomic) int largeNumber;

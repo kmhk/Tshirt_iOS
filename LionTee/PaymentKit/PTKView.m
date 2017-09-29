@@ -9,15 +9,16 @@
 #define RGB(r,g,b) [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:1.0f]
 #define DarkGreyColor RGB(0,0,0)
 #define RedColor RGB(253,0,17)
-#define DefaultBoldFont [UIFont boldSystemFontOfSize:17]
+#define WhiteColor RGB(255,255,255)
+#define DefaultBoldFont [UIFont boldSystemFontOfSize:16]
 
 #define kPTKViewPlaceholderViewAnimationDuration 0.25
 
-#define kPTKViewCardExpiryFieldStartX 84 + 200
-#define kPTKViewCardCVCFieldStartX 177 + 200
+#define kPTKViewCardExpiryFieldStartX 60 + 170
+#define kPTKViewCardCVCFieldStartX 60 + 170+60
 
-#define kPTKViewCardExpiryFieldEndX 84
-#define kPTKViewCardCVCFieldEndX 177
+#define kPTKViewCardExpiryFieldEndX 60
+#define kPTKViewCardCVCFieldEndX 130
 
 static NSString *const kPTKLocalizedStringsTableName = @"PaymentKit";
 static NSString *const kPTKOldLocalizedStringsTableName = @"STPaymentLocalizable";
@@ -59,6 +60,8 @@ static NSString *const kPTKOldLocalizedStringsTableName = @"STPaymentLocalizable
 
 @implementation PTKView
 
+
+@synthesize cardNumberField;
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -79,15 +82,15 @@ static NSString *const kPTKOldLocalizedStringsTableName = @"STPaymentLocalizable
     _isInitialState = YES;
     _isValidState = NO;
 
-    self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, 290, 46);
+    self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, 260, 40);
     self.backgroundColor = [UIColor clearColor];
 
-    UIImageView *backgroundImageView = [[UIImageView alloc] initWithFrame:self.bounds];
-    backgroundImageView.image = [[UIImage imageNamed:@"textfield"]
-            resizableImageWithCapInsets:UIEdgeInsetsMake(0, 8, 0, 8)];
-    [self addSubview:backgroundImageView];
+//    UIImageView *backgroundImageView = [[UIImageView alloc] initWithFrame:self.bounds];
+//    backgroundImageView.image = [[UIImage imageNamed:@"textfield"]
+//            resizableImageWithCapInsets:UIEdgeInsetsMake(0, 8, 0, 8)];
+//    [self addSubview:backgroundImageView];
 
-    self.innerView = [[UIView alloc] initWithFrame:CGRectMake(40, 12, self.frame.size.width - 40, 20)];
+    self.innerView = [[UIView alloc] initWithFrame:CGRectMake(40, 10, self.frame.size.width - 40, 20)];
     self.innerView.clipsToBounds = YES;
 
     [self setupPlaceholderView];
@@ -97,16 +100,16 @@ static NSString *const kPTKOldLocalizedStringsTableName = @"STPaymentLocalizable
 
     [self.innerView addSubview:self.cardNumberField];
 
-    UIImageView *gradientImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 12, 34)];
-    gradientImageView.image = [UIImage imageNamed:@"gradient"];
- //     gradientImageView.image = [UIImage imageNamed:@"amex"];
-    [self.innerView addSubview:gradientImageView];
-
-    self.opaqueOverGradientView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 9, 34)];
-    self.opaqueOverGradientView.backgroundColor = [UIColor colorWithRed:0.9686 green:0.9686
-                                                                   blue:0.9686 alpha:1.0000];
-    self.opaqueOverGradientView.alpha = 0.0;
-    [self.innerView addSubview:self.opaqueOverGradientView];
+//    UIImageView *gradientImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 12, 24)];
+//    gradientImageView.image = [UIImage imageNamed:@"gradient"];
+// //     gradientImageView.image = [UIImage imageNamed:@"amex"];
+//    [self.innerView addSubview:gradientImageView];
+    [self.innerView setBackgroundColor:[UIColor clearColor]];
+//    self.opaqueOverGradientView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 9, 24)];
+//    self.opaqueOverGradientView.backgroundColor = [UIColor colorWithRed:0.9686 green:0.9686
+//                                                                   blue:0.9686 alpha:1.0000];
+//    self.opaqueOverGradientView.alpha = 0.0;
+//    [self.innerView addSubview:self.opaqueOverGradientView];
 
     [self addSubview:self.innerView];
     [self addSubview:self.placeholderView];
@@ -117,26 +120,28 @@ static NSString *const kPTKOldLocalizedStringsTableName = @"STPaymentLocalizable
 
 - (void)setupPlaceholderView
 {
-    self.placeholderView = [[UIImageView alloc] initWithFrame:CGRectMake(12, 13, 32, 20)];
+    self.placeholderView = [[UIImageView alloc] initWithFrame:CGRectMake(5, 10, 30, 25)];
     self.placeholderView.backgroundColor = [UIColor clearColor];
     self.placeholderView.image = [UIImage imageNamed:@"placeholder"];
 
     CALayer *clip = [CALayer layer];
-    clip.frame = CGRectMake(32, 0, 4, 20);
+    clip.frame = CGRectMake(30, 0, 4, 20);
     clip.backgroundColor = [UIColor clearColor].CGColor;
     [self.placeholderView.layer addSublayer:clip];
 }
 
 - (void)setupCardNumberField
 {
-    self.cardNumberField = [[PTKTextField alloc] initWithFrame:CGRectMake(12, 0, 170, 20)];
+    self.cardNumberField = [[PTKTextField alloc] initWithFrame:CGRectMake(20, 0, 170, 20)];
     self.cardNumberField.delegate = self;
     self.cardNumberField.placeholder = [self.class localizedStringWithKey:@"placeholder.card_number" defaultValue:@"1234 5678 9012 3456"];
+    [self.cardNumberField setValue:[UIColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:0.34f] forKeyPath:@"_placeholderLabel.textColor"];
   //  self.cardNumberField.keyboardType = UIKeyboardTypeNumberPad;
     self.cardNumberField.keyboardType = UIKeyboardTypeDefault;
-    self.cardNumberField.textColor = DarkGreyColor;
+    self.cardNumberField.textColor = WhiteColor;
     self.cardNumberField.font = DefaultBoldFont;
 
+    self.cardNumberField.backgroundColor = [UIColor clearColor];
     [self.cardNumberField.layer setMasksToBounds:YES];
 }
 
@@ -145,8 +150,9 @@ static NSString *const kPTKOldLocalizedStringsTableName = @"STPaymentLocalizable
     self.cardExpiryField = [[PTKTextField alloc] initWithFrame:CGRectMake(kPTKViewCardExpiryFieldStartX, 0, 60, 20)];
     self.cardExpiryField.delegate = self;
     self.cardExpiryField.placeholder = [self.class localizedStringWithKey:@"placeholder.card_expiry" defaultValue:@"MM/YY"];
+    [self.cardExpiryField setValue:[UIColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:0.34f] forKeyPath:@"_placeholderLabel.textColor"];
     self.cardExpiryField.keyboardType = UIKeyboardTypeDefault;
-    self.cardExpiryField.textColor = DarkGreyColor;
+    self.cardExpiryField.textColor = WhiteColor;
     self.cardExpiryField.font = DefaultBoldFont;
     
 
@@ -158,8 +164,9 @@ static NSString *const kPTKOldLocalizedStringsTableName = @"STPaymentLocalizable
     self.cardCVCField = [[PTKTextField alloc] initWithFrame:CGRectMake(kPTKViewCardCVCFieldStartX, 0, 55, 20)];
     self.cardCVCField.delegate = self;
     self.cardCVCField.placeholder = [self.class localizedStringWithKey:@"placeholder.card_cvc" defaultValue:@"CVC"];
+    [self.cardCVCField setValue:[UIColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:0.34f] forKeyPath:@"_placeholderLabel.textColor"];
     self.cardCVCField.keyboardType = UIKeyboardTypeDefault;
-    self.cardCVCField.textColor = DarkGreyColor;
+    self.cardCVCField.textColor = WhiteColor;
     self.cardCVCField.font = DefaultBoldFont;
 
     [self.cardCVCField.layer setMasksToBounds:YES];
@@ -235,7 +242,7 @@ static NSString *const kPTKOldLocalizedStringsTableName = @"STPaymentLocalizable
                          }];
     }
 
-    [self.cardNumberField becomeFirstResponder];
+   // [self.cardNumberField becomeFirstResponder];
 }
 
 - (void)stateMeta
@@ -389,14 +396,20 @@ static NSString *const kPTKOldLocalizedStringsTableName = @"STPaymentLocalizable
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
 {
+    [self.delegate hideWillKeyboard];
     [self.cardNumberField resignFirstResponder];
     [self.cardCVCField resignFirstResponder];
     [self.cardExpiryField resignFirstResponder];
     return YES;
 }
-
+-(BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+{
+    [self.delegate showWillKeyboard:textField];
+    return YES;
+}
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
+    
     if ([textField isEqual:self.cardCVCField]) {
         [self setPlaceholderToCVC];
     } else {
@@ -539,7 +552,7 @@ static NSString *const kPTKOldLocalizedStringsTableName = @"STPaymentLocalizable
 
 - (void)textFieldIsValid:(UITextField *)textField
 {
-    textField.textColor = DarkGreyColor;
+    textField.textColor = WhiteColor;
     [self checkValid];
 }
 
@@ -548,7 +561,7 @@ static NSString *const kPTKOldLocalizedStringsTableName = @"STPaymentLocalizable
     if (errors) {
         textField.textColor = RedColor;
     } else {
-        textField.textColor = DarkGreyColor;
+        textField.textColor = WhiteColor;
     }
 
     [self checkValid];
