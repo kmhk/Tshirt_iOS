@@ -4,7 +4,7 @@
 [![Platform](https://img.shields.io/badge/platform-%3C%3D%20iOS%207.0-lightgrey.svg?style=flat)]()
 [![Xcode](https://img.shields.io/badge/Xcode-7.3-blue.svg?style=flat)]()
 
-[**_This app is removed from the app store_**]()
+[**_This app is removed from the app store_**](https://itunes.apple.com/us/app/lion-tee/id926308630?l=es&mt=8)
 
 
 ## Overview
